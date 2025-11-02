@@ -1,0 +1,32 @@
+{
+  "name": "Paolo Diomede - Web3 Governance & Ecosystem Builder",
+  "short_name": "Paolo Diomede",
+  "description": "Personal portfolio of Paolo Diomede - Web3 Governance & Ecosystem Builder",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafafa",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "./images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "./images/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "portfolio", "web3"],
+  "lang": "en-US"
+}
+
