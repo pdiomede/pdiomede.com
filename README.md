@@ -14,9 +14,9 @@
 
 This is the source code for my personal portfolio website, highlighting my work in:
 
-- **Web3 Governance** - Operations Manager at 
-- **Ecosystem Building** - Advisory Board Member at Livepeer
-- **Community Leadership** - Former Ecosystem Manager Community at The Graph Foundation, Founder of [Graphtronauts](https://graphtronauts.app) and [Live Pioneers](https://livepioneers.app)
+- **Web3 Governance** - Operations Manager at [](https://.io)
+- **Ecosystem Building** - Advisory Board Member at [Livepeer](https://livepeer.org)
+- **Community Leadership** - Former Ecosystem Manager Community at [The Graph Foundation](https://thegraph.com), Founder of [Graphtronauts](https://graphtronauts.app) and [Live Pioneers](https://livepioneers.app)
 - **Innovation** - Creator of [IndexerScore.com](https://indexerscore.com) and [GraphTools.pro](https://graphtools.pro)
 
 ---
