@@ -82,7 +82,7 @@ php -S localhost:8000
 
 ```
 myWeb/
-├── index.html                              # Main HTML file (1,588 lines)
+├── index.html                              # Main HTML file (1,631 lines)
 ├── README.md                               # Project overview and setup guide
 ├── CHANGELOG.md                            # Complete version history and documentation
 ├── LICENSE.md                              # MIT License with content rights notice
