@@ -1251,13 +1251,13 @@
       if (currentTheme === 'dark') {
         html.setAttribute('data-theme', 'light');
         if (themeIcon) {
-          themeIcon.className = 'fas fa-moon';
+          themeIcon.className = 'fas fa-sun';
         }
         localStorage.setItem('theme', 'light');
       } else {
         html.setAttribute('data-theme', 'dark');
         if (themeIcon) {
-          themeIcon.className = 'fas fa-sun';
+          themeIcon.className = 'fas fa-moon';
         }
         localStorage.setItem('theme', 'dark');
       }
@@ -1278,13 +1278,13 @@
       if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
         if (themeIcon) {
-          themeIcon.className = 'fas fa-moon';
+          themeIcon.className = 'fas fa-sun';
         }
       } else {
         // Default to dark mode
         document.documentElement.setAttribute('data-theme', 'dark');
         if (themeIcon) {
-          themeIcon.className = 'fas fa-sun';
+          themeIcon.className = 'fas fa-moon';
         }
       }
     });
@@ -1294,8 +1294,8 @@
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
   
-  <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark mode" data-tooltip="Toggle theme">
-    <i class="fas fa-sun" id="theme-icon"></i>
+  <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme" data-tooltip="Toggle theme">
+    <i class="fas fa-moon" id="theme-icon"></i>
   </button>
 
   <main id="main-content" class="elegant-frame">
