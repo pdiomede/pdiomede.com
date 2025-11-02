@@ -551,6 +551,16 @@
       border: 1px solid rgba(16, 185, 129, 0.2);
     }
 
+    .badge-advisor {
+      background: rgba(249, 115, 22, 0.1);
+      color: #f97316;
+      border: 1px solid rgba(249, 115, 22, 0.2);
+    }
+
+    [data-theme="dark"] .badge-advisor {
+      color: #fb923c;
+    }
+
     .role-title {
       font-size: 1.2rem;
       font-weight: 700;
@@ -1363,7 +1373,10 @@
             <img class="brand-logo light" src="./images/Livepeer-Logo-Symbol_light_mode.svg" alt="Livepeer logo" loading="lazy" width="48" height="48" />
             <img class="brand-logo dark" src="./images/Livepeer-Logo-Symbol_dark_mode.svg" alt="Livepeer logo" loading="lazy" width="48" height="48" />
 
-            <div class="role-badge badge-governance">Governance</div>
+            <div style="display: flex; gap: 8px;">
+              <div class="role-badge badge-advisor">Advisor</div>
+              <div class="role-badge badge-governance">Governance</div>
+            </div>
           </div>
           <h3 class="role-title">Governance Advisory Board Member</h3>
           <p class="role-company">Livepeer</p>
