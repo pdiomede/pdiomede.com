@@ -177,15 +177,25 @@ The source code of this website is licensed under the **MIT License**.
 See [LICENSE.md](./LICENSE.md) for details.
 
 ### Content
-All personal content including but not limited to:
+**All personal content is protected and reserved.**
+
+This includes:
 - Personal information, biography, and descriptions
 - Profile photographs and images
 - Personal branding and design elements
 - Project descriptions and portfolio items
 
-**© 2025 Paolo Diomede. All Rights Reserved.**
+**You are welcome to:**
+- Use the code structure as reference
+- Learn from the implementation
+- Fork and adapt the technical approach
 
-You are welcome to use the code structure and learn from it, but please do not copy personal content, images, or present this work as your own.
+**Please do not:**
+- Copy personal content or images
+- Present this work as your own
+- Reuse branding without permission
+
+© 2025 Paolo Diomede
 
 
 ---
