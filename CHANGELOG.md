@@ -7,6 +7,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.3.2] - 2025-11-02
+
+### Added
+- **GitHub Repository Link**
+  - Added centered "View repo on GitHub" link below main frame
+  - Positioned outside the elegant frame for easy access to source code
+  - Includes GitHub icon with hover effects
+  - Opens repository in new tab with proper security attributes
+
+### Changed
+- **Documentation Improvements**
+  - Improved license content section readability in README.md
+  - Separated permissions into clear "welcome to" and "please do not" sections
+  - Added links to , Livepeer, and The Graph Foundation in About section
+  - Updated project structure to reflect current file count (1,631 lines)
+
+### Fixed
+- **Theme Switching Bug**
+  - Fixed bug where explicit light mode selection could be overridden by system preferences
+  - Changed from removing `data-theme` attribute to explicitly setting `data-theme="light"`
+  - Ensures user preferences always take precedence over system settings
+  - Updated CSS selectors to use explicit theme attributes instead of `:not([data-theme])`
+
+---
+
 ## [2.3.1] - 2025-11-02
 
 ### Fixed
