@@ -30,6 +30,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Ensures user preferences always take precedence over system settings
   - Updated CSS selectors to use explicit theme attributes instead of `:not([data-theme])`
 
+- **Theme Toggle Icon UX**
+  - Reversed icon logic to show CURRENT state instead of next state
+  - Dark mode now displays moon icon (represents night/dark state)
+  - Light mode now displays sun icon (represents day/light state)
+  - Follows standard UX pattern used by modern applications
+  - Updated aria-label to generic "Toggle theme" for better accessibility
+
 ---
 
 ## [2.3.1] - 2025-11-02
