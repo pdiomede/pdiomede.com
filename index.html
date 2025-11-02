@@ -978,6 +978,41 @@
       fill: white;
     }
 
+    /* GitHub repository link - centered below frame */
+    .github-repo-link {
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      margin-bottom: 20px;
+    }
+
+    .github-repo-link a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px var(--shadow);
+      border: 1px solid var(--border-color);
+    }
+
+    .github-repo-link a:hover {
+      background: var(--link-color);
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 16px var(--shadow-hover);
+      border-color: var(--link-color);
+    }
+
+    .github-repo-link a:hover i {
+      color: white;
+    }
+
     .footer {
       text-align: center;
       font-size: 0.9rem;
@@ -1584,5 +1619,13 @@
       <span class="footer-tagline">Leading innovation across multiple Web3 ecosystems</span>
     </footer>
   </main>
+  
+  <!-- GitHub Repository Link -->
+  <div class="github-repo-link">
+    <a href="https://github.com/pdiomede/pdiomede.com" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub">
+      <i class="fab fa-github"></i>
+      View repo on GitHub
+    </a>
+  </div>
 </body>
 </html>
