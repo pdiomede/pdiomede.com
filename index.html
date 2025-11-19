@@ -1203,6 +1203,7 @@
     function toggleTheme() {
       const html = document.documentElement;
       const themeIcon = document.getElementById('theme-icon');
+      const themeToggleBtn = document.getElementById('theme-toggle-btn');
       const currentTheme = html.getAttribute('data-theme');
       
       if (currentTheme === 'dark') {
@@ -1210,11 +1211,17 @@
         if (themeIcon) {
           themeIcon.className = 'fas fa-sun';
         }
+        if (themeToggleBtn) {
+          themeToggleBtn.setAttribute('aria-pressed', 'false');
+        }
         localStorage.setItem('theme', 'light');
       } else {
         html.setAttribute('data-theme', 'dark');
         if (themeIcon) {
           themeIcon.className = 'fas fa-moon';
+        }
+        if (themeToggleBtn) {
+          themeToggleBtn.setAttribute('aria-pressed', 'true');
         }
         localStorage.setItem('theme', 'dark');
       }
@@ -1237,11 +1244,17 @@
         if (themeIcon) {
           themeIcon.className = 'fas fa-sun';
         }
+        if (themeToggleBtn) {
+          themeToggleBtn.setAttribute('aria-pressed', 'false');
+        }
       } else {
         // Default to dark mode
         document.documentElement.setAttribute('data-theme', 'dark');
         if (themeIcon) {
           themeIcon.className = 'fas fa-moon';
+        }
+        if (themeToggleBtn) {
+          themeToggleBtn.setAttribute('aria-pressed', 'true');
         }
       }
     });
@@ -1251,7 +1264,7 @@
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
   
-  <button class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme" data-tooltip="Toggle theme">
+  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme" aria-pressed="true" data-tooltip="Toggle theme">
     <i class="fas fa-moon" id="theme-icon"></i>
   </button>
 
@@ -1366,8 +1379,8 @@
       <div class="section">
         <div class="ecosystem-highlight">
           <div style="margin: 0 auto 20px auto; display: flex; justify-content: center;">
-            <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" style="height: 48px; width: auto;" />
-            <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" style="height: 48px; width: auto;" />
+            <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px; width: auto;" loading="lazy" />
+            <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px; width: auto;" loading="lazy" />
           </div>
           <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color);">Ecosystem Communities</h3>
 
