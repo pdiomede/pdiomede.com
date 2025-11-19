@@ -80,7 +80,15 @@ php -S localhost:8000
 
 ## 🎨 Design Variants
 
-This project includes three distinct design style variants, each with unique visual characteristics:
+This project includes multiple design style variants, each with unique visual characteristics:
+
+### **Elegant Frame (Classic)** - `index.html` (Default)
+- **Solid background colors** with clean, professional aesthetic
+- **Traditional borders** with elegant 4px frame styling
+- **Classic box shadows** for depth without blur effects
+- **Corner decorations** with subtle accent lines
+- **Clean, minimalist design** with refined typography
+- **Subtle gradient overlays** for visual interest
 
 ### 1. **Liquid Glass (iPhone Style)** - `index-liquid-glass.html`
 - **Animated gradient backgrounds** with flowing color transitions
