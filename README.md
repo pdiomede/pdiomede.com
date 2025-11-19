@@ -55,8 +55,8 @@ This is the source code for my personal portfolio website, highlighting my work 
 
 1. **Clone or download** the repository:
 ```bash
-git clone https://github.com/pdiomede/portfolio.git
-cd portfolio
+git clone https://github.com/pdiomede/pdiomede.com.git
+cd pdiomede.com
 ```
 
 2. **Open the website**:
