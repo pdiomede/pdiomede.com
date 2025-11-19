@@ -251,7 +251,7 @@ Cache-Control: max-age=3600 for HTML
 
 **Author**: Paolo Diomede  
 **Portfolio**: [pdiomede.com](https://pdiomede.com)  
-**Contact**: pdiomede@me.com  
+**Contact**: pdiomede@yahoo.com  
 
 **Design & Development**: Paolo Diomede  
 **Last Updated**: January 2, 2026

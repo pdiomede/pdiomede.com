@@ -119,7 +119,7 @@ All variants maintain the same HTML structure and functionality, differing only 
 
 ```
 myWeb/
-├── index.html                              # Main HTML file (1,631 lines)
+├── index.html                              # Main HTML file (1,630 lines)
 ├── index-liquid-glass.html                 # Liquid Glass design variant
 ├── index-material.html                     # Material Design variant
 ├── index-glassmorphism.html                 # Glassmorphism design variant
