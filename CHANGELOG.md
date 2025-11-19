@@ -7,6 +7,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.0] - 2026-01-02
+
+### Added
+- **Design Variants**
+  - Added three distinct design style variants alongside the default Elegant Frame design
+  - **Liquid Glass (iPhone Style)** - `index-liquid-glass.html`
+    - Animated gradient backgrounds with flowing color transitions
+    - Backdrop blur effects creating frosted glass appearance
+    - Smooth cubic-bezier animations with scale and rotation effects
+    - Shimmer effects on interactive elements
+    - iPhone-inspired aesthetic with translucent surfaces
+  - **Material Design** - `index-material.html`
+    - Material Design elevation with layered shadows
+    - Ripple effects on cards and buttons for tactile feedback
+    - Material color palette (#1976d2 primary blue)
+    - Roboto typography following Material guidelines
+    - Card-based layout with proper depth hierarchy
+  - **Glassmorphism** - `index-glassmorphism.html`
+    - Frosted glass effect with backdrop blur
+    - Semi-transparent backgrounds with subtle borders
+    - Fixed gradient backgrounds for depth
+    - Consistent glass aesthetic across all elements
+    - Modern, minimalist visual style
+  - All variants maintain the same HTML structure and functionality, differing only in CSS styling
+  - Each variant supports dark mode and is fully responsive
+
+- **Documentation**
+  - Added comprehensive Design Variants section to README.md
+  - Documented Elegant Frame (Classic) style as the default design
+  - Added brief characteristics for each design variant
+  - Updated project structure to include all variant files
+
+### Fixed
+- **Material Design Variant**
+  - Fixed theme toggle positioning issue (was not fixed in top right corner)
+  - Removed conflicting `position: relative` that was overriding `position: fixed`
+  - Fixed pseudo-element conflict by changing tooltip to `::before` (ripple effect uses `::after`)
+  - Updated tooltip styling to match Material Design principles with proper colors and shadows
+
+---
+
 ## [2.3.2] - 2025-11-02
 
 ### Added
@@ -213,5 +254,5 @@ Cache-Control: max-age=3600 for HTML
 **Contact**: pdiomede@me.com  
 
 **Design & Development**: Paolo Diomede  
-**Last Updated**: November 2, 2025
+**Last Updated**: January 2, 2026
 
