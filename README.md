@@ -242,7 +242,7 @@ This includes:
 
 ## 📧 Contact
 
-- **Email**: pdiomede@me.com
+- **Email**: pdiomede@yahoo.com
 - **LinkedIn**: [linkedin.com/in/pdiomede](https://linkedin.com/in/pdiomede/)
 - **Twitter/X**: [@pdiomede](https://x.com/pdiomede)
 - **Farcaster**: [warpcast.com/pdiomede](https://warpcast.com/pdiomede)
