@@ -235,7 +235,7 @@ This includes:
 - Present this work as your own
 - Reuse branding without permission
 
-© 2025 Paolo Diomede
+© 2026 Paolo Diomede
 
 
 ---
