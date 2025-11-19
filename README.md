@@ -78,11 +78,43 @@ php -S localhost:8000
 
 ---
 
+## 🎨 Design Variants
+
+This project includes three distinct design style variants, each with unique visual characteristics:
+
+### 1. **Liquid Glass (iPhone Style)** - `index-liquid-glass.html`
+- **Animated gradient backgrounds** with flowing color transitions
+- **Backdrop blur effects** creating frosted glass appearance
+- **Smooth cubic-bezier animations** with scale and rotation effects
+- **Shimmer effects** on interactive elements
+- **iPhone-inspired aesthetic** with translucent surfaces
+
+### 2. **Material Design** - `index-material.html`
+- **Material Design elevation** with layered shadows
+- **Ripple effects** on cards and buttons for tactile feedback
+- **Material color palette** (#1976d2 primary blue)
+- **Roboto typography** following Material guidelines
+- **Card-based layout** with proper depth hierarchy
+
+### 3. **Glassmorphism** - `index-glassmorphism.html`
+- **Frosted glass effect** with backdrop blur
+- **Semi-transparent backgrounds** with subtle borders
+- **Fixed gradient backgrounds** for depth
+- **Consistent glass aesthetic** across all elements
+- **Modern, minimalist** visual style
+
+All variants maintain the same HTML structure and functionality, differing only in CSS styling. Each supports dark mode and is fully responsive.
+
+---
+
 ## 📁 Project Structure
 
 ```
 myWeb/
 ├── index.html                              # Main HTML file (1,631 lines)
+├── index-liquid-glass.html                 # Liquid Glass design variant
+├── index-material.html                     # Material Design variant
+├── index-glassmorphism.html                 # Glassmorphism design variant
 ├── README.md                               # Project overview and setup guide
 ├── CHANGELOG.md                            # Complete version history and documentation
 ├── LICENSE.md                              # MIT License with content rights notice
