@@ -1689,6 +1689,7 @@
     }
 
     // Dark mode functionality
+    let expandTimeout = null;
     function toggleTheme() {
       const html = document.documentElement;
       const themeIcon = document.getElementById('theme-icon');
@@ -1697,10 +1698,15 @@
       
       // Expand toggle to show label
       if (themeToggleBtn) {
+        // Clear any existing timeout to prevent memory leaks
+        if (expandTimeout) {
+          clearTimeout(expandTimeout);
+        }
         themeToggleBtn.classList.add('expanded');
         // Collapse after 2 seconds
-        setTimeout(() => {
+        expandTimeout = setTimeout(() => {
           themeToggleBtn.classList.remove('expanded');
+          expandTimeout = null;
         }, 2000);
       }
       
@@ -1814,7 +1820,7 @@
       
       // Close menu when clicking outside
       document.addEventListener('click', function(e) {
-        if (!selector.contains(e.target)) {
+        if (selector && button && !selector.contains(e.target)) {
           selector.classList.remove('expanded');
           button.setAttribute('aria-expanded', 'false');
         }

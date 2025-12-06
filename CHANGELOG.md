@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.6] - 2026-01-02
+
+### Fixed
+- **Memory Leak in Theme Toggle**
+  - Fixed setTimeout not being cleared on rapid theme toggle clicks
+  - Added `expandTimeout` variable to track and clear previous timeouts
+  - Prevents multiple timeouts from queuing and causing unexpected behavior
+  - Applied to all three HTML files
+
+- **Null Check in Document Click Handler**
+  - Added null checks for `selector` and `button` in document click event listener
+  - Prevents potential runtime errors if elements are removed from DOM
+  - Improves code robustness and error handling
+  - Applied to all three HTML files
+
+- **JavaScript Error Prevention**
+  - Enhanced safety checks in event handlers to prevent null reference errors
+  - Better defensive programming practices throughout JavaScript code
+  - Applied to: index.html, index-liquid-glass.html, index-material.html
+
+---
+
 ## [2.4.5] - 2026-01-02
 
 ### Fixed
