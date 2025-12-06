@@ -42,6 +42,7 @@ This is the source code for my personal portfolio website, highlighting my work 
 - 🌗 **Dark Mode** - System preference detection with manual toggle
 - 🎨 **Modern UI** - Clean, professional design with smooth animations
 - 🖼️ **Brand Integration** - Dynamic logos with light/dark variants
+- 🎛️ **Interactive Toggles** - Circular design selector and theme toggle that expand on click
 
 ---
 

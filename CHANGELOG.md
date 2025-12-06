@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.1] - 2026-01-02
+
+### Fixed
+- **Material Design Theme Toggle Bug**
+  - Fixed missing `toggle-label` span in theme toggle button HTML
+  - Added missing CSS for `.theme-toggle.expanded` state
+  - Added missing JavaScript expansion functionality to match other variants
+  - Theme toggle now properly expands to show "Dark/Light Mode" label on click
+  - Added responsive CSS for expanded toggle state on mobile devices
+
+- **SEO Improvements**
+  - Updated `og:url` and `twitter:url` meta tags for design variant files
+  - Liquid Glass variant now points to `/index-liquid-glass.html`
+  - Glassmorphism variant now points to `/index-glassmorphism.html`
+  - Material Design variant now points to `/index-material.html`
+  - Improves SEO by providing unique canonical URLs for each design variant
+
+### Changed
+- **Accessibility Enhancement**
+  - Updated Material Design theme toggle `aria-label` from "Toggle theme" to "Toggle dark/light mode" for consistency across all variants
+
+---
+
 ## [2.4.0] - 2026-01-02
 
 ### Added
