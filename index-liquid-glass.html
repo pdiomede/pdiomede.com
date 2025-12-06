@@ -1706,8 +1706,10 @@
       
       // Handle option clicks and keyboard events
       options.forEach(option => {
-        // Make option keyboard accessible
-        option.setAttribute('tabindex', '0');
+        // Make option keyboard accessible (already set in HTML, but ensure it's set)
+        if (!option.hasAttribute('tabindex')) {
+          option.setAttribute('tabindex', '0');
+        }
         
         const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
