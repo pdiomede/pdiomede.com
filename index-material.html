@@ -1729,6 +1729,12 @@
     function initDesignSelector() {
       const selector = document.getElementById('design-selector');
       const button = document.getElementById('design-selector-button');
+      
+      // Early return if elements don't exist
+      if (!selector || !button) {
+        return;
+      }
+      
       const options = selector.querySelectorAll('.design-selector-option');
       const currentThemeSpan = button.querySelector('.current-theme');
       
