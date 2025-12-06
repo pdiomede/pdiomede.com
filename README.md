@@ -123,8 +123,6 @@ myWeb/
 ├── manifest.json                           # PWA manifest
 └── images/
     ├── me2024.jpg                              # Profile image
-    ├── _light_mode.png                    #  logo (light)
-    ├── _dark_mode.png                     #  logo (dark)
     ├── Livepeer-Logo-Symbol_light_mode.svg     # Livepeer logo (light)
     ├── Livepeer-Logo-Symbol_dark_mode.svg      # Livepeer logo (dark)
     ├── The_Graph_Logomark_light_mode.png       # The Graph logo mark (light)
