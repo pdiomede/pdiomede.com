@@ -230,37 +230,78 @@
     body {
       font-family: 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
       background: linear-gradient(135deg, 
-        #f0f0f0 0%, 
-        #ffffff 20%, 
-        #e8e8e8 40%, 
-        #ffffff 60%, 
-        #f5f5f5 80%, 
+        #e0f2fe 0%, 
+        #f0f9ff 15%, 
+        #dbeafe 30%, 
+        #ffffff 45%, 
+        #e0e7ff 60%, 
+        #f5f3ff 75%, 
+        #fef3c7 90%, 
         #ffffff 100%);
       background-size: 400% 400%;
-      animation: liquidFlow 15s ease infinite;
+      animation: liquidFlow 20s ease infinite;
       color: var(--text-color);
       line-height: 1.6;
       overflow-x: hidden;
       transition: color 0.3s ease;
       padding: 60px 20px;
       min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 20%, rgba(251, 191, 36, 0.08) 0%, transparent 50%);
+      animation: shimmer 8s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 0;
     }
 
     [data-theme="dark"] body {
       background: linear-gradient(135deg, 
-        #0a0a0a 0%, 
-        #1a1a1a 20%, 
-        #0f0f0f 40%, 
-        #1a1a1a 60%, 
-        #121212 80%, 
+        #0a1628 0%, 
+        #1a1f2e 15%, 
+        #0f1419 30%, 
+        #1a1a1a 45%, 
+        #1e1b2e 60%, 
+        #1a1a1a 75%, 
+        #0f0a0a 90%, 
         #1a1a1a 100%);
       background-size: 400% 400%;
+    }
+
+    [data-theme="dark"] body::before {
+      background: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                  radial-gradient(circle at 40% 20%, rgba(251, 191, 36, 0.1) 0%, transparent 50%);
     }
 
     @keyframes liquidFlow {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+
+    @keyframes shimmer {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
+    }
+
+    @keyframes shimmerFrame {
+      0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+      100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    }
+
+    @keyframes shimmer {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.1); }
     }
 
     /* Skip to main content link for accessibility */
@@ -523,18 +564,32 @@
     .elegant-frame {
       max-width: 1200px;
       margin: 0 auto;
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 32px;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(30px) saturate(200%);
+      -webkit-backdrop-filter: blur(30px) saturate(200%);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 40px;
       box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
       position: relative;
       overflow: hidden;
       padding: 60px 50px;
+      z-index: 1;
+    }
+
+    .elegant-frame::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+      animation: shimmerFrame 3s ease-in-out infinite;
+      pointer-events: none;
     }
 
     [data-theme="dark"] .elegant-frame {
@@ -544,22 +599,6 @@
         0 8px 32px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.1),
         inset 0 -1px 0 rgba(255, 255, 255, 0.05);
-    }
-
-    .elegant-frame::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(
-        135deg, 
-        transparent 0%, 
-        rgba(255, 255, 255, 0.02) 50%, 
-        transparent 100%
-      );
-      pointer-events: none;
     }
 
     .elegant-frame::after {
