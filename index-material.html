@@ -1741,15 +1741,22 @@
       };
       
       // Update button text and active state
-      currentThemeSpan.textContent = themeNames[currentPage] || 'Elegant Frame';
+      if (currentThemeSpan) {
+        currentThemeSpan.textContent = themeNames[currentPage] || 'Elegant Frame';
+      }
       options.forEach(option => {
         const themeFile = option.getAttribute('data-theme');
+        const icon = option.querySelector('i');
         if (themeFile === currentPage) {
           option.classList.add('active');
-          option.querySelector('i').className = 'fas fa-check';
+          if (icon) {
+            icon.className = 'fas fa-check';
+          }
         } else {
           option.classList.remove('active');
-          option.querySelector('i').className = '';
+          if (icon) {
+            icon.className = '';
+          }
         }
       });
       
