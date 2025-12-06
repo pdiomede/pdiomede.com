@@ -1419,7 +1419,13 @@
     }
 
     // Design selector functionality
+    let designSelectorInitialized = false;
     function initDesignSelector() {
+      // Prevent multiple initializations
+      if (designSelectorInitialized) {
+        return;
+      }
+      
       const selector = document.getElementById('design-selector');
       const button = document.getElementById('design-selector-button');
       
@@ -1427,6 +1433,8 @@
       if (!selector || !button) {
         return;
       }
+      
+      designSelectorInitialized = true;
       
       const options = selector.querySelectorAll('.design-selector-option');
       const currentThemeSpan = button.querySelector('.current-theme');
