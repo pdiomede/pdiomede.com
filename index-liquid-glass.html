@@ -1704,15 +1704,31 @@
         button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
       });
       
-      // Handle option clicks
+      // Handle option clicks and keyboard events
       options.forEach(option => {
-        option.addEventListener('click', function() {
+        // Make option keyboard accessible
+        option.setAttribute('tabindex', '0');
+        
+        const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
           if (themeFile !== currentPage) {
             window.location.href = themeFile;
           } else {
             selector.classList.remove('expanded');
             button.setAttribute('aria-expanded', 'false');
+          }
+        };
+        
+        option.addEventListener('click', function(e) {
+          e.stopPropagation();
+          handleOptionSelect.call(this);
+        });
+        
+        option.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            e.stopPropagation();
+            handleOptionSelect.call(this);
           }
         });
       });
