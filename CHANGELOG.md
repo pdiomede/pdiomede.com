@@ -7,6 +7,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.3] - 2026-01-02
+
+### Fixed
+- **Design Selector Keyboard Accessibility**
+  - Added `tabindex="0"` to menu items for keyboard navigation
+  - Added keyboard event handlers (Enter/Space keys) for menu item selection
+  - Menu items are now fully keyboard accessible
+  - Improves WCAG compliance for keyboard users
+
+- **Design Selector Event Propagation**
+  - Added `e.stopPropagation()` to option click handlers
+  - Prevents unnecessary event bubbling to document click handler
+  - Improves performance by reducing unnecessary event handling
+
+- **Design Selector Escape Key Support**
+  - Added Escape key handler to close menu when pressed
+  - Returns focus to button after closing menu for better keyboard navigation
+  - Follows standard dropdown menu accessibility patterns
+
+- **Design Selector ARIA Attributes**
+  - Added `aria-controls="design-selector-menu"` to button (links button to menu)
+  - Added `aria-haspopup="true"` to button (indicates popup menu)
+  - Added `id="design-selector-menu"` to menu element for aria-controls reference
+  - Improves screen reader experience and WCAG compliance
+
+### Changed
+- **Accessibility Enhancement**
+  - Design selector menu now fully supports keyboard navigation
+  - All menu interactions work with keyboard, mouse, and touch
+  - Better focus management when closing menu with Escape key
+
+---
+
 ## [2.4.2] - 2026-01-02
 
 ### Removed
