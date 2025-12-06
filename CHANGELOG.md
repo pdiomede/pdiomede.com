@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.5] - 2026-01-02
+
+### Fixed
+- **Version Number Inconsistency**
+  - Updated version numbers in HTML header comments from v2.4.2 to v2.4.4
+  - All three HTML files now have consistent version numbers matching CHANGELOG
+  - Applied to: index.html, index-liquid-glass.html, index-material.html
+
+- **Date Range Inconsistency**
+  - Updated "Community Impact" section title from (2021-2025) to (2022-2025)
+  - Now consistent with The Graph Foundation role date range
+  - Applied to all three HTML files
+
+---
+
 ## [2.4.4] - 2026-01-02
 
 ### Changed
