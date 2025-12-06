@@ -7,6 +7,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.2] - 2026-01-02
+
+### Removed
+- **Glassmorphism Design Variant**
+  - Removed `index-glassmorphism.html` file
+  - Removed glassmorphism option from all design selectors
+  - Removed from JavaScript themeNames objects
+  - Updated README.md to reflect removal
+
+### Changed
+- **Liquid Glass Enhancement**
+  - Enhanced vibrant gradient colors for more evident visual impact
+  - Changed from subtle pastel colors to saturated vibrant colors (blue, purple, pink, orange, green, cyan)
+  - Increased shimmer overlay opacity for more pronounced effects
+  - Faster animation speed (12s vs 20s) for more dynamic feel
+  - Added fourth radial gradient layer for increased depth
+  - More eye-catching iPhone-style aesthetic
+
+---
+
 ## [2.4.1] - 2026-01-02
 
 ### Fixed
@@ -20,7 +40,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **SEO Improvements**
   - Updated `og:url` and `twitter:url` meta tags for design variant files
   - Liquid Glass variant now points to `/index-liquid-glass.html`
-  - Glassmorphism variant now points to `/index-glassmorphism.html`
   - Material Design variant now points to `/index-material.html`
   - Improves SEO by providing unique canonical URLs for each design variant
 
@@ -47,12 +66,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Material color palette (#1976d2 primary blue)
     - Roboto typography following Material guidelines
     - Card-based layout with proper depth hierarchy
-  - **Glassmorphism** - `index-glassmorphism.html`
-    - Frosted glass effect with backdrop blur
-    - Semi-transparent backgrounds with subtle borders
-    - Fixed gradient backgrounds for depth
-    - Consistent glass aesthetic across all elements
-    - Modern, minimalist visual style
   - All variants maintain the same HTML structure and functionality, differing only in CSS styling
   - Each variant supports dark mode and is fully responsive
 
