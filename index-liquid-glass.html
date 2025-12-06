@@ -1687,7 +1687,8 @@
       if (currentThemeSpan) {
         currentThemeSpan.textContent = themeNames[currentPage] || 'Elegant Frame';
       }
-      options.forEach(option => {
+      if (options && options.length > 0) {
+        options.forEach(option => {
         const themeFile = option.getAttribute('data-theme');
         const icon = option.querySelector('i');
         if (themeFile === currentPage) {
@@ -1706,12 +1707,15 @@
       // Toggle menu on button click
       button.addEventListener('click', function(e) {
         e.stopPropagation();
-        selector.classList.toggle('expanded');
-        button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
+        if (selector) {
+          selector.classList.toggle('expanded');
+          button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
+        }
       });
       
       // Handle option clicks and keyboard events
-      options.forEach(option => {
+      if (options && options.length > 0) {
+        options.forEach(option => {
         // Make option keyboard accessible (already set in HTML, but ensure it's set)
         if (!option.hasAttribute('tabindex')) {
           option.setAttribute('tabindex', '0');
@@ -1719,7 +1723,7 @@
         
         const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
-          if (themeFile !== currentPage) {
+          if (themeFile && themeFile !== currentPage) {
             window.location.href = themeFile;
           } else {
             if (selector && button) {
@@ -1742,6 +1746,7 @@
           }
         });
       });
+      }
       
       // Close menu when clicking outside
       document.addEventListener('click', function(e) {

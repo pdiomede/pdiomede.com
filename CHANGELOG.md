@@ -7,6 +7,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.8] - 2026-01-02
+
+### Fixed
+- **Button Click Handler Null Check**
+  - Added null check for `selector` before accessing `classList.toggle()` and `classList.contains()` in button click handler
+  - Prevents potential runtime errors if selector element is removed from DOM
+  - Applied to all three HTML files
+
+- **Navigation Validation in handleOptionSelect**
+  - Added validation to check if `themeFile` exists before navigating
+  - Prevents navigation to "null" if `data-theme` attribute is missing
+  - Only navigates if `themeFile` is truthy and different from current page
+  - Applied to all three HTML files
+
+- **Options Array Validation**
+  - Added checks for `options` existence and length before calling `forEach()`
+  - Prevents potential errors if querySelectorAll returns empty NodeList
+  - Better defensive programming and code robustness
+  - Applied to all three HTML files
+
+---
+
 ## [2.4.7] - 2026-01-02
 
 ### Fixed
