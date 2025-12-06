@@ -161,7 +161,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Documentation Improvements**
   - Improved license content section readability in README.md
   - Separated permissions into clear "welcome to" and "please do not" sections
-  - Added links to , Livepeer, and The Graph Foundation in About section
+  - Added links to Livepeer and The Graph Foundation in About section
   - Updated project structure to reflect current file count (1,631 lines)
 
 ### Fixed
@@ -241,7 +241,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Modern elegant frame design with corner decorations
-- Brand logos for organizations (, Livepeer, The Graph) with light/dark mode variants
+- Brand logos for organizations (Livepeer, The Graph) with light/dark mode variants
 - Comprehensive role cards with badges and enhanced visual hierarchy
 - Community Impact section with statistics and project cards
 - Innovation Lab section showcasing projects and tools
