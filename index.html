@@ -13,11 +13,11 @@
     For complete documentation, version history, and technical details,
     see CHANGELOG.md in the project root directory.
   -->
-  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | , Livepeer</title>
+  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer</title>
 
-  <meta name="description" content="Paolo Diomede – Web3 Governance & Ecosystem Builder. Governance Operations Manager at , Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
+  <meta name="description" content="Paolo Diomede – Web3 Governance & Ecosystem Builder. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
   <meta name="author" content="Paolo Diomede" />
-  <meta name="keywords" content="Paolo Diomede, Web3, Ecosystem Builder, , Livepeer, The Graph, Blockchain, Governance, DAO, DeFi, Indexerscore, Graphtools, Community Building, Web3 Governance, Decentralization, Farcaster" />
+  <meta name="keywords" content="Paolo Diomede, Web3, Ecosystem Builder, Certora, Livepeer, The Graph, Blockchain, Governance, DAO, DeFi, Indexerscore, Graphtools, Community Building, Web3 Governance, Decentralization, Farcaster, Smart Contract Security, Formal Verification" />
   <meta name="robots" content="index, follow" />
   
   <!-- Additional SEO Meta Tags -->
@@ -41,7 +41,7 @@
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Paolo Diomede - Web3 Governance & Ecosystem Builder",
-      "description": "Personal portfolio of Paolo Diomede - Governance Operations Manager at , Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
+      "description": "Personal portfolio of Paolo Diomede - Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
       "url": "https://pdiomede.com",
       "datePublished": "2026-01-02",
       "dateModified": "2026-01-02",
@@ -56,10 +56,10 @@
       "@id": "https://pdiomede.com#person",
       "name": "Paolo Diomede",
       "jobTitle": [
-        "Governance Operations Manager",
+        "Technical Account Manager",
         "Governance Advisory Board Member"
       ],
-      "description": "Web3 Governance & Ecosystem Builder. Governance Operations Manager at , Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
+      "description": "Web3 Governance & Ecosystem Builder. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
       "url": "https://pdiomede.com",
       "image": "https://pdiomede.com/images/me2024.jpg",
       "email": "pdiomede@yahoo.com",
@@ -78,9 +78,9 @@
       "worksFor": [
         {
           "@type": "Organization",
-          "name": "",
-          "url": "https://.com",
-          "description": "Leading DeFi aggregator protocol"
+          "name": "Certora",
+          "url": "https://www.certora.com",
+          "description": "Industry-leading formal verification tools and smart contract security audits"
         }
       ],
       "memberOf": [
@@ -130,10 +130,11 @@
         "Ecosystem Development",
         "The Graph Protocol",
         "Livepeer",
-        "",
+        "Certora",
         "DeFi",
         "Decentralization",
-        "Governance Operations",
+        "Smart Contract Security",
+        "Formal Verification",
         "Web3 Community Management"
       ]
     }
@@ -146,7 +147,7 @@
   <meta property="og:site_name" content="Paolo Diomede" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
-  <meta property="og:description" content="Governance Operations Manager at , Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
+  <meta property="og:description" content="Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
   <meta property="og:image" content="https://pdiomede.com/images/me2024.jpg" />
   <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
@@ -159,7 +160,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://pdiomede.com/" />
   <meta name="twitter:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
-  <meta name="twitter:description" content="Governance Operations Manager at , Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
+  <meta name="twitter:description" content="Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
   <meta name="twitter:image" content="https://pdiomede.com/images/me2024.jpg" />
   <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
   <meta name="twitter:creator" content="@pdiomede" />
@@ -253,6 +254,147 @@
       left: 20px;
     }
 
+    .design-selector {
+      position: fixed;
+      top: 24px;
+      left: 24px;
+      z-index: 1000;
+    }
+
+    .design-selector-button {
+      background: var(--surface-color);
+      color: var(--text-color);
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      padding: 0;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .design-selector-button .current-theme {
+      opacity: 0;
+      width: 0;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      margin-right: 0;
+    }
+
+    .design-selector-button i {
+      transition: transform 0.3s ease;
+      font-size: 1.2rem;
+    }
+
+    .design-selector-button .fa-palette {
+      position: absolute;
+    }
+
+    .design-selector-button .fa-chevron-down {
+      opacity: 0;
+      width: 0;
+      transition: all 0.3s ease;
+    }
+
+    .design-selector.expanded .design-selector-button {
+      border-radius: 24px;
+      width: auto;
+      min-width: 160px;
+      padding: 10px 20px;
+      justify-content: space-between;
+    }
+
+    .design-selector.expanded .design-selector-button .current-theme {
+      opacity: 1;
+      width: auto;
+      margin-right: 8px;
+      position: relative;
+    }
+
+    .design-selector.expanded .design-selector-button .fa-palette {
+      position: relative;
+    }
+
+    .design-selector.expanded .design-selector-button .fa-chevron-down {
+      opacity: 1;
+      width: auto;
+      transform: rotate(180deg);
+    }
+
+    .design-selector-button:hover {
+      background-color: var(--link-color);
+      color: white;
+      border-color: var(--link-color);
+      box-shadow: 0 4px 16px var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+
+    .design-selector-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px var(--shadow);
+      min-width: 200px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .design-selector.expanded .design-selector-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .design-selector-option {
+      padding: 12px 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .design-selector-option:last-child {
+      border-bottom: none;
+    }
+
+    .design-selector-option:hover {
+      background: var(--link-color);
+      color: white;
+    }
+
+    .design-selector-option.active {
+      background: rgba(59, 130, 246, 0.1);
+      color: var(--link-color);
+      font-weight: 600;
+    }
+
+    .design-selector-option.active:hover {
+      background: var(--link-color);
+      color: white;
+    }
+
+    .design-selector-option i {
+      width: 16px;
+      text-align: center;
+    }
+
     .theme-toggle {
       position: fixed;
       top: 24px;
@@ -262,6 +404,7 @@
       border-radius: 50%;
       width: 48px;
       height: 48px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -269,6 +412,46 @@
       transition: all 0.3s ease;
       box-shadow: 0 2px 8px var(--shadow);
       z-index: 1000;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-color);
+      overflow: hidden;
+    }
+
+    .theme-toggle .toggle-label {
+      opacity: 0;
+      width: 0;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      margin-left: 0;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .theme-toggle i {
+      font-size: 1.2rem;
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      position: absolute;
+    }
+
+    .theme-toggle.expanded {
+      border-radius: 24px;
+      width: auto;
+      min-width: 160px;
+      padding: 10px 16px;
+      gap: 8px;
+    }
+
+    .theme-toggle.expanded .toggle-label {
+      opacity: 1;
+      width: auto;
+      margin-left: 8px;
+      position: relative;
+    }
+
+    .theme-toggle.expanded i {
+      position: relative;
     }
 
     .theme-toggle:hover {
@@ -276,45 +459,16 @@
       box-shadow: 0 4px 16px var(--shadow-hover);
       transform: translateY(-2px) scale(1.05);
       border-color: var(--link-color);
+      color: white;
     }
     
     .theme-toggle:hover i {
       color: white;
       transform: rotate(15deg);
     }
-    
-    .theme-toggle::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: var(--surface-color);
-      color: var(--text-color);
-      border: 1px solid var(--border-color);
-      border-radius: 8px;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      box-shadow: 0 4px 12px var(--shadow);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-4px);
-      transition: all 0.3s ease;
-      pointer-events: none;
-      z-index: 1001;
-    }
-    
-    .theme-toggle:hover::after {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
 
-    .theme-toggle i {
-      font-size: 1.2rem;
-      color: var(--text-color);
-      transition: all 0.3s ease;
+    .theme-toggle.expanded:hover i {
+      transform: rotate(15deg);
     }
 
     .elegant-frame {
@@ -1002,11 +1156,39 @@
         padding: 40px 15px;
       }
 
+      .design-selector {
+        top: 20px;
+        left: 15px;
+      }
+
+      .design-selector-button {
+        width: 44px;
+        height: 44px;
+      }
+
+      .design-selector.expanded .design-selector-button {
+        min-width: 140px;
+        padding: 8px 14px;
+      }
+
+      .design-selector-menu {
+        min-width: 180px;
+      }
+
       .theme-toggle {
         top: 20px;
         right: 20px;
         width: 44px;
         height: 44px;
+      }
+
+      .theme-toggle.expanded {
+        min-width: 140px;
+        padding: 8px 14px;
+      }
+
+      .theme-toggle .toggle-label {
+        display: none;
       }
 
       .elegant-frame {
@@ -1206,6 +1388,15 @@
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
       const currentTheme = html.getAttribute('data-theme');
       
+      // Expand toggle to show label
+      if (themeToggleBtn) {
+        themeToggleBtn.classList.add('expanded');
+        // Collapse after 2 seconds
+        setTimeout(() => {
+          themeToggleBtn.classList.remove('expanded');
+        }, 2000);
+      }
+      
       if (currentTheme === 'dark') {
         html.setAttribute('data-theme', 'light');
         if (themeIcon) {
@@ -1227,6 +1418,64 @@
       }
     }
 
+    // Design selector functionality
+    function initDesignSelector() {
+      const selector = document.getElementById('design-selector');
+      const button = document.getElementById('design-selector-button');
+      const options = selector.querySelectorAll('.design-selector-option');
+      const currentThemeSpan = button.querySelector('.current-theme');
+      
+      // Get current page theme name
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      const themeNames = {
+        'index.html': 'Elegant Frame',
+        'index-liquid-glass.html': 'Liquid Glass',
+        'index-glassmorphism.html': 'Glassmorphism',
+        'index-material.html': 'Material Design'
+      };
+      
+      // Update button text and active state
+      currentThemeSpan.textContent = themeNames[currentPage] || 'Elegant Frame';
+      options.forEach(option => {
+        const themeFile = option.getAttribute('data-theme');
+        if (themeFile === currentPage) {
+          option.classList.add('active');
+          option.querySelector('i').className = 'fas fa-check';
+        } else {
+          option.classList.remove('active');
+          option.querySelector('i').className = '';
+        }
+      });
+      
+      // Toggle menu on button click
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        selector.classList.toggle('expanded');
+        button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
+      });
+      
+      // Handle option clicks
+      options.forEach(option => {
+        option.addEventListener('click', function() {
+          const themeFile = this.getAttribute('data-theme');
+          if (themeFile !== currentPage) {
+            window.location.href = themeFile;
+          } else {
+            selector.classList.remove('expanded');
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!selector.contains(e.target)) {
+          selector.classList.remove('expanded');
+          button.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
     // Initialize theme on page load - DEFAULT TO DARK MODE
     document.addEventListener('DOMContentLoaded', function() {
       const savedTheme = localStorage.getItem('theme');
@@ -1237,6 +1486,9 @@
       if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', toggleTheme);
       }
+      
+      // Initialize design selector
+      initDesignSelector();
       
       // Only use light mode if explicitly saved as 'light' in localStorage
       if (savedTheme === 'light') {
@@ -1264,8 +1516,36 @@
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
   
-  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle theme" aria-pressed="true" data-tooltip="Toggle theme">
+  <!-- Design Theme Selector -->
+  <div class="design-selector" id="design-selector">
+    <button class="design-selector-button" id="design-selector-button" aria-label="Select design theme" aria-expanded="false">
+      <i class="fas fa-palette"></i>
+      <span class="current-theme">Elegant Frame</span>
+      <i class="fas fa-chevron-down"></i>
+    </button>
+    <div class="design-selector-menu" role="menu">
+      <div class="design-selector-option active" data-theme="index.html" role="menuitem">
+        <i class="fas fa-check"></i>
+        <span>Elegant Frame</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-liquid-glass.html" role="menuitem">
+        <i></i>
+        <span>Liquid Glass</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-glassmorphism.html" role="menuitem">
+        <i></i>
+        <span>Glassmorphism</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-material.html" role="menuitem">
+        <i></i>
+        <span>Material Design</span>
+      </div>
+    </div>
+  </div>
+  
+  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true">
     <i class="fas fa-moon" id="theme-icon"></i>
+    <span class="toggle-label">Dark/Light Mode</span>
   </button>
 
   <main id="main-content" class="elegant-frame">
@@ -1312,7 +1592,7 @@
            - Preloaded in <head> for fastest LCP -->
       <img src="./images/me2024.jpg" alt="Paolo Diomede's Profile Picture" class="profile-img" fetchpriority="high" width="120" height="120" decoding="async" />
       <h1>Paolo Diomede</h1>
-      <p class="tagline">Leading governance and ecosystem growth across Web3</p>
+      <p class="tagline">Securing Web3 through technical excellence and ecosystem growth</p>
     </header>
 
     <!-- Current Roles Section -->
@@ -1322,20 +1602,20 @@
           <!-- Performance: Below-the-fold images use loading="lazy" for deferred loading
                and explicit width/height to prevent layout shift -->
           <div class="role-header">
-            <img class="brand-logo light" src="./images/_light_mode.png" alt=" logo" loading="lazy" width="48" height="48" />
-            <img class="brand-logo dark" src="./images/_dark_mode.png" alt=" logo" loading="lazy" width="48" height="48" />
+            <img class="brand-logo light" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" />
+            <img class="brand-logo dark" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" />
 
             <div style="display: flex; gap: 8px;">
-              <div class="role-badge badge-growth">Community</div>
-              <div class="role-badge badge-governance">Governance</div>
+              <div class="role-badge badge-growth">Technical</div>
+              <div class="role-badge badge-governance">Account Management</div>
             </div>
           </div>
-          <h3 class="role-title">Governance Operations Manager</h3>
-          <p class="role-company"></p>
+          <h3 class="role-title">Technical Account Manager</h3>
+          <p class="role-company">Certora</p>
           <p class="role-description">
-            Lead DAO governance: design processes, run proposals and grants end to end, publish docs, align delegates and core contributors, increase participation, and track KPIs transparently.
+            Support DeFi clients through technical presales and post-sales ownership. Understand client architecture and security needs, define project scopes, ensure successful delivery, manage incident response, and drive client satisfaction while identifying opportunities for service expansion.
           </p>
-          <a href="https://.com" target="_blank" rel="noopener noreferrer" class="role-button">
+          <a href="https://www.certora.com" target="_blank" rel="noopener noreferrer" class="role-button">
             <i class="fas fa-external-link-alt"></i>
             Learn More
           </a>
@@ -1468,7 +1748,7 @@
             <div class="project-icon" style="background: var(--cyan-accent);">
               <i class="fas fa-users"></i>
             </div>
-            <div class="project-status" style="background: rgba(139, 92, 246, 0.1); color: var(--purple-accent); border-color: rgba(139, 92, 246, 0.2);">Growing</div>
+            <div class="project-status">Active</div>
           </div>
           <h3 class="project-title">Live Pioneers</h3>
           <p class="project-description">
