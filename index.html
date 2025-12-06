@@ -1481,16 +1481,20 @@
       
       // Handle option clicks and keyboard events
       options.forEach(option => {
-        // Make option keyboard accessible
-        option.setAttribute('tabindex', '0');
+        // Make option keyboard accessible (already set in HTML, but ensure it's set)
+        if (!option.hasAttribute('tabindex')) {
+          option.setAttribute('tabindex', '0');
+        }
         
         const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
           if (themeFile !== currentPage) {
             window.location.href = themeFile;
           } else {
-            selector.classList.remove('expanded');
-            button.setAttribute('aria-expanded', 'false');
+            if (selector && button) {
+              selector.classList.remove('expanded');
+              button.setAttribute('aria-expanded', 'false');
+            }
           }
         };
         
@@ -1518,10 +1522,10 @@
       
       // Close menu on Escape key
       document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && selector.classList.contains('expanded')) {
+        if (e.key === 'Escape' && selector && selector.classList.contains('expanded')) {
           selector.classList.remove('expanded');
-          button.setAttribute('aria-expanded', 'false');
           if (button) {
+            button.setAttribute('aria-expanded', 'false');
             button.focus(); // Return focus to button for accessibility
           }
         }

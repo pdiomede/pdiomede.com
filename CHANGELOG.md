@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.7] - 2026-01-02
+
+### Fixed
+- **Escape Key Handler Null Check**
+  - Added null check for `selector` before accessing `classList.contains()` in Escape key handler
+  - Prevents potential runtime errors if selector element is removed from DOM
+  - Improved button focus handling with proper null checks
+  - Applied to all three HTML files
+
+- **handleOptionSelect Function Null Checks**
+  - Added null checks for `selector` and `button` in `handleOptionSelect` function
+  - Prevents errors when closing menu if elements are unavailable
+  - Better defensive programming in event handlers
+  - Applied to all three HTML files
+
+- **tabindex Attribute Check**
+  - Updated `setAttribute('tabindex', '0')` to check if attribute already exists before setting
+  - Prevents unnecessary DOM manipulation
+  - Applied to index.html (already fixed in other variants)
+  - Improves performance and code consistency
+
+---
+
 ## [2.4.6] - 2026-01-02
 
 ### Fixed

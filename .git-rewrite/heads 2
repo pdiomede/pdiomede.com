@@ -1,0 +1,8 @@
+refs/heads/backup-before-1inch-cleanup
+refs/heads/backup-before-commit-msg-cleanup
+refs/heads/main
+refs/remotes/origin/main
+refs/remotes/origin/backup-before-1inch-cleanup
+refs/remotes/origin/main
+refs/stash
+refs/tags/v2.3.1

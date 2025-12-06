@@ -1,0 +1,8 @@
+d77275f6b9e7375270ac0c0433e03cb0680b9a07 commit	refs/heads/backup-before-1inch-cleanup
+d77275f6b9e7375270ac0c0433e03cb0680b9a07 commit	refs/heads/backup-before-commit-msg-cleanup
+d77275f6b9e7375270ac0c0433e03cb0680b9a07 commit	refs/heads/main
+d77275f6b9e7375270ac0c0433e03cb0680b9a07 commit	refs/remotes/origin/HEAD
+d77275f6b9e7375270ac0c0433e03cb0680b9a07 commit	refs/remotes/origin/backup-before-1inch-cleanup
+d77275f6b9e7375270ac0c0433e03cb0680b9a07 commit	refs/remotes/origin/main
+f34759e871ca9afaeb502f13e7ac06923a68dce6 commit	refs/stash
+5d218bfef8c6bdac8f66b08088bac2ef77f94b63 tag	refs/tags/v2.3.1
