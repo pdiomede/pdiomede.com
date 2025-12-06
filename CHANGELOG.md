@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.4] - 2026-01-02
+
+### Changed
+- **Content Updates**
+  - Updated tagline capitalization: "Securing Web3" → "Securing web3"
+  - Changed all instances of "Web3" to "web3" (lowercase) throughout the site for consistency
+  - Updated The Graph Foundation role description to include date range (2022-2025)
+  - Reformatted The Graph Foundation description: moved date range inline with sentence
+
+### Fixed
+- **The Graph Foundation Role**
+  - Added date range (2022-2025) to role description
+  - Updated description format for better readability
+
+---
+
 ## [2.4.3] - 2026-01-02
 
 ### Fixed

@@ -1,6 +1,6 @@
 # Paolo Diomede - Personal Portfolio Website
 
-> Professional portfolio showcasing Web3 governance expertise, ecosystem building, and community leadership.
+> Professional portfolio showcasing web3 governance expertise, ecosystem building, and community leadership.
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://www.w3.org/html/)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
@@ -14,9 +14,9 @@
 
 This is the source code for my personal portfolio website, highlighting my work in:
 
-- **Web3 Governance** - Operations Manager at [](https://.io)
+- **web3 Governance** - Technical Account Manager at [Certora](https://www.certora.com)
 - **Ecosystem Building** - Advisory Board Member at [Livepeer](https://livepeer.org)
-- **Community Leadership** - Former Ecosystem Manager Community at [The Graph Foundation](https://thegraph.com), Founder of [Graphtronauts](https://graphtronauts.app) and [Live Pioneers](https://livepioneers.app)
+- **Community Leadership** - Former Ecosystem Manager at [The Graph Foundation](https://thegraph.com) (2022-2025), Founder of [Graphtronauts](https://graphtronauts.app) and [Live Pioneers](https://livepioneers.app)
 - **Innovation** - Creator of [IndexerScore.com](https://indexerscore.com) and [GraphTools.pro](https://graphtools.pro)
 
 ---
