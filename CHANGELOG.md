@@ -7,6 +7,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.9] - 2026-01-02
+
+### Fixed
+- **Image Layout Shift Prevention**
+  - Fixed conflicting width attributes and inline styles on The Graph extended logo images
+  - Removed redundant `width: auto;` from inline styles that was overriding `width="200"` attribute
+  - Prevents Cumulative Layout Shift (CLS) by ensuring width attributes are respected
+  - Applied to all three HTML files (index.html, index-material.html, index-liquid-glass.html)
+
+### Changed
+- **Tagline Update**
+  - Updated tagline to "Securing and growing Web3 through technical excellence and ecosystem leadership"
+  - Applied to all three HTML files
+
+- **SEO & Social Media Tags Alignment**
+  - Updated all meta descriptions to align with new tagline
+  - Updated Open Graph descriptions (`og:description`) to include tagline messaging
+  - Updated Twitter Card descriptions (`twitter:description`) to include tagline messaging
+  - Updated structured data (JSON-LD) WebPage and Person descriptions to reflect tagline
+  - Ensures consistent messaging across search engines and social media platforms
+  - Applied to all three HTML files
+
+- **Certora Role Description**
+  - Updated Certora role description to shorter, more focused version
+  - New description: "Bridging the gap between technical excellence and client success, helping some of the most advanced DeFi teams in the world design and deliver secure, verified protocols by understanding their architecture and security needs."
+  - Applied to all three HTML files
+
+### Fixed
+- **Canonical URL Consistency**
+  - Fixed canonical URLs in index-material.html and index-liquid-glass.html to match their respective file URLs
+  - Now consistent with og:url and twitter:url meta tags for better SEO
+  - Applied to: index-material.html, index-liquid-glass.html
+
+- **LinkedIn URL Format**
+  - Updated all LinkedIn URLs to use standard `www.linkedin.com` format
+  - Changed from `linkedin.com` to `www.linkedin.com` for consistency
+  - Applied to all three HTML files
+
+---
+
 ## [2.4.8] - 2026-01-02
 
 ### Fixed
