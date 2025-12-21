@@ -7,6 +7,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.10] - 2026-01-02
+
+### Fixed
+- **Theme Selector Navigation Bug in Liquid Glass Variant**
+  - Fixed theme selector not working to navigate to other themes in index-liquid-glass.html
+  - Improved `getCurrentPageName()` function to handle different path formats (file://, http://, with/without leading slashes)
+  - Made current page comparison dynamic by recalculating on each option click instead of using closure variable
+  - Ensures accurate theme navigation regardless of how the page is accessed
+
+- **Dark/Light Mode Toggle Bug in Liquid Glass Variant**
+  - Fixed theme toggle button not working in index-liquid-glass.html
+  - Added `e.stopPropagation()` to prevent event bubbling to document-level handlers
+  - Added default value for `currentTheme` to handle cases where `data-theme` attribute isn't set
+  - Improved event handling with explicit propagation control
+  - Theme toggle now properly switches between dark and light modes
+
+- **Duplicate The Graph Logo Display**
+  - Fixed duplicate The Graph logo appearing simultaneously in index-liquid-glass.html
+  - Added default CSS rules to hide light logo and show dark logo by default (matching default dark mode)
+  - Theme-specific rules now properly override defaults when `data-theme` is set
+  - Only one logo displays at a time based on current theme
+
+---
+
 ## [2.4.9] - 2026-01-02
 
 ### Fixed

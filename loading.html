@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Retro scanline effect */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15),
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        /* Flicker effect */
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.98; }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            animation: flicker 0.15s infinite;
+        }
+
+        .loading-text {
+            color: #00ff00;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+            text-shadow: 
+                0 0 5px #00ff00,
+                0 0 10px #00ff00,
+                0 0 15px #00ff00;
+            font-weight: bold;
+        }
+
+        .progress-container {
+            width: 400px;
+            height: 30px;
+            border: 3px solid #00ff00;
+            background-color: #000000;
+            position: relative;
+            box-shadow: 
+                0 0 10px #00ff00,
+                inset 0 0 10px rgba(0, 255, 0, 0.2);
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: #00ff00;
+            width: 0%;
+            transition: width 0.3s ease;
+            box-shadow: 
+                0 0 10px #00ff00,
+                inset 0 0 10px rgba(0, 255, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Animated segments inside progress bar */
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 10px,
+                rgba(0, 0, 0, 0.3) 10px,
+                rgba(0, 0, 0, 0.3) 20px
+            );
+            animation: slide 0.5s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(20px); }
+        }
+
+        .percentage {
+            color: #00ff00;
+            font-size: 18px;
+            margin-top: 15px;
+            text-align: center;
+            text-shadow: 
+                0 0 5px #00ff00,
+                0 0 10px #00ff00;
+            font-weight: bold;
+        }
+
+        .chapter-text {
+            color: #00ff00;
+            font-size: 16px;
+            margin-top: 25px;
+            text-align: center;
+            text-shadow: 
+                0 0 5px #00ff00,
+                0 0 10px #00ff00;
+            font-weight: normal;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .chapter-text.show {
+            opacity: 1;
+        }
+
+        .stay-tuned-text {
+            color: #00ff00;
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+            text-shadow: 
+                0 0 5px #00ff00,
+                0 0 10px #00ff00,
+                0 0 15px #00ff00;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .stay-tuned-text.show {
+            opacity: 1;
+        }
+
+        /* Pixelated effect */
+        @media (max-width: 600px) {
+            .progress-container {
+                width: 300px;
+            }
+            .loading-text {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loading-text">Loading</div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        <div class="percentage" id="percentage">0%</div>
+        <div class="chapter-text" id="chapterText">bridging to a new chapter</div>
+        <div class="stay-tuned-text" id="stayTunedText">STAY TUNED!</div>
+    </div>
+
+    <script>
+        const progressBar = document.getElementById('progressBar');
+        const percentage = document.getElementById('percentage');
+        const chapterText = document.getElementById('chapterText');
+        const stayTunedText = document.getElementById('stayTunedText');
+        let progress = 0;
+        let chapterShown = false;
+
+        // Simulate loading progress
+        const interval = setInterval(() => {
+            if (progress < 85) {
+                progress += Math.random() * 3;
+                
+                // Ensure we reach at least 85%
+                if (progress >= 85) {
+                    progress = 85;
+                }
+            }
+            
+            if (progress >= 85) {
+                progress = 85;
+                clearInterval(interval);
+                
+                // Show chapter text when progress reaches 85%
+                if (!chapterShown) {
+                    chapterText.classList.add('show');
+                    chapterShown = true;
+                    
+                    // Show "STAY TUNED!" after a short delay
+                    setTimeout(() => {
+                        stayTunedText.classList.add('show');
+                    }, 800);
+                }
+            }
+
+            progressBar.style.width = progress + '%';
+            percentage.textContent = Math.floor(progress) + '%';
+        }, 100);
+    </script>
+</body>
+</html>

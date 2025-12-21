@@ -1578,6 +1578,9 @@
     :root[data-theme="dark"] .project-card.has-brand .brand-logo.dark { display: block; }
 
     /* The Graph extended logo - light/dark mode switching */
+    .graph-extended-logo.light { display: none; }
+    .graph-extended-logo.dark { display: block; }
+    
     :root[data-theme="light"] .graph-extended-logo.light { display: block; }
     :root[data-theme="light"] .graph-extended-logo.dark { display: none; }
     
@@ -1613,11 +1616,16 @@
 
     // Dark mode functionality
     let expandTimeout = null;
-    function toggleTheme() {
+    function toggleTheme(e) {
+      // Prevent event bubbling if event is provided
+      if (e) {
+        e.stopPropagation();
+      }
+      
       const html = document.documentElement;
       const themeIcon = document.getElementById('theme-icon');
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      const currentTheme = html.getAttribute('data-theme');
+      const currentTheme = html.getAttribute('data-theme') || 'dark'; // Default to dark if not set
       
       // Expand toggle to show label
       if (themeToggleBtn) {
@@ -1675,8 +1683,17 @@
       const options = selector.querySelectorAll('.design-selector-option');
       const currentThemeSpan = button.querySelector('.current-theme');
       
-      // Get current page theme name
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      // Get current page theme name - normalize to handle different path formats
+      function getCurrentPageName() {
+        const pathname = window.location.pathname;
+        const hash = window.location.hash;
+        // Handle both file:// and http:// protocols
+        const filename = pathname.split('/').pop() || window.location.href.split('/').pop();
+        // Remove hash if present
+        return filename.split('#')[0].split('?')[0] || 'index.html';
+      }
+      
+      const currentPage = getCurrentPageName();
       const themeNames = {
         'index.html': 'Elegant Frame',
         'index-liquid-glass.html': 'Liquid Glass',
@@ -1723,7 +1740,9 @@
         
         const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
-          if (themeFile && themeFile !== currentPage) {
+          // Get current page name dynamically to ensure accurate comparison
+          const currentPageNow = getCurrentPageName();
+          if (themeFile && themeFile !== currentPageNow) {
             window.location.href = themeFile;
           } else {
             if (selector && button) {
@@ -1776,7 +1795,10 @@
       
       // Attach event listener to theme toggle button
       if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', toggleTheme);
+        themeToggleBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          toggleTheme(e);
+        });
       }
       
       // Initialize design selector
