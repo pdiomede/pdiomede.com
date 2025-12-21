@@ -91,15 +91,7 @@ This project includes multiple design style variants, each with unique visual ch
 - **Clean, minimalist design** with refined typography
 - **Subtle gradient overlays** for visual interest
 
-### 1. **Liquid Glass (iPhone Style)** - `index-liquid-glass.html`
-- **Vibrant animated gradient backgrounds** with flowing color transitions
-- **Backdrop blur effects** creating frosted glass appearance
-- **Smooth cubic-bezier animations** with scale and rotation effects
-- **Shimmer effects** on interactive elements and background overlays
-- **iPhone-inspired aesthetic** with translucent surfaces and vibrant colors
-- **Dynamic, eye-catching** visual style with pronounced animations
-
-### 2. **Material Design** - `index-material.html`
+### 1. **Material Design** - `index-material.html`
 - **Material Design elevation** with layered shadows
 - **Ripple effects** on cards and buttons for tactile feedback
 - **Material color palette** (#1976d2 primary blue)
@@ -115,7 +107,6 @@ All variants maintain the same HTML structure and functionality, differing only 
 ```
 myWeb/
 ├── index.html                              # Main HTML file (Elegant Frame - default)
-├── index-liquid-glass.html                 # Liquid Glass design variant (iPhone-style)
 ├── index-material.html                     # Material Design variant
 ├── README.md                               # Project overview and setup guide
 ├── CHANGELOG.md                            # Complete version history and documentation

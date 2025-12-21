@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.11] - 2026-01-02
+
+### Removed
+- **Liquid Glass Design Variant**
+  - Removed `index-liquid-glass.html` file due to functionality issues
+  - Removed Liquid Glass option from design selectors in index.html and index-material.html
+  - Removed Liquid Glass from themeNames objects in both remaining HTML files
+  - Updated README.md to remove Liquid Glass documentation
+  - Site now includes only Elegant Frame (default) and Material Design variants
+
+---
+
 ## [2.4.10] - 2026-01-02
 
 ### Fixed
