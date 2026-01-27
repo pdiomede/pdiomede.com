@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.13] - 2026-01-27
+
+### Fixed
+- **Bug Fixes - Capitalization and Code Quality**
+  - Fixed inconsistent capitalization: Changed tagline from "Web3" to "web3" to match site convention
+  - Removed unused CSS class: Removed unnecessary `<div class="section">` wrapper with no styling
+  - Fixed meta description capitalization: Updated all meta descriptions to use lowercase "web3" for consistency
+  - Applied fixes to both index.html and index-material.html
+
+### Security
+- **Security Improvements**
+  - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
+  - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
+  - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
+  - Applied security improvements to both HTML files
+
+---
+
 ## [2.4.12] - 2026-01-27
 
 ### Fixed

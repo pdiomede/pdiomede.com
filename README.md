@@ -12,8 +12,7 @@
 
 ## 📋 About
 
-This is the source code for my personal portfolio website, highlighting my work in:
-
+Personal portfolio highlighting work in:
 - **Business Development** - Technical Account Manager at [Certora](https://www.certora.com)
 - **Ecosystem Building** - Advisory Board Member at [Livepeer](https://livepeer.org)
 - **Community Leadership** - Former Ecosystem Manager at [The Graph Foundation](https://thegraph.com) (2022-2025), Founder of [Graphtronauts](https://graphtronauts.app) and [Live Pioneers](https://livepioneers.app)
@@ -23,82 +22,36 @@ This is the source code for my personal portfolio website, highlighting my work 
 
 ## ✨ Features
 
-### Performance
-- ⚡ **Fast Loading** - Optimized for speed with lazy loading, image preloading, and minimal JavaScript
-- 📱 **Responsive Design** - Mobile-first approach, works on all devices
-- 🎯 **Core Web Vitals** - Excellent LCP, CLS, and FID scores
-
-### Accessibility
-- ♿ **WCAG 2.1 AAA Compliant** - 100/100 Accessibility Score
-- ⌨️ **Keyboard Navigation** - Full keyboard support with skip links
-- 🎨 **ARIA Labels** - Comprehensive screen reader support
-
-### SEO & Security
-- 🔍 **SEO Optimized** - Complete meta tags, Schema.org structured data
-- 🔒 **Secure** - Content Security Policy, SRI, secure headers
-- 🌐 **PWA Ready** - Progressive Web App capabilities
-
-### Design
+- ⚡ **Performance** - Optimized loading, lazy images, Core Web Vitals optimized
+- ♿ **Accessibility** - WCAG 2.1 AAA compliant, keyboard navigation, ARIA labels
+- 🔍 **SEO** - Complete meta tags, Schema.org structured data, Open Graph
+- 🔒 **Security** - Content Security Policy, SRI, secure headers
 - 🌗 **Dark Mode** - System preference detection with manual toggle
-- 🎨 **Modern UI** - Clean, professional design with smooth animations
-- 🖼️ **Brand Integration** - Dynamic logos with light/dark variants
-- 🎛️ **Interactive Toggles** - Circular design selector and theme toggle that expand on click
+- 📱 **Responsive** - Mobile-first design, works on all devices
+- 🎨 **Design Variants** - Elegant Frame (default) and Material Design styles
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- A modern web browser
-- A local web server (optional, for development)
-
-### Installation
-
-1. **Clone or download** the repository:
+1. **Clone the repository**:
 ```bash
 git clone https://github.com/pdiomede/pdiomede.com.git
 cd pdiomede.com
 ```
 
-2. **Open the website**:
-   - Simply open `index.html` in your browser, or
-   - Use a local server (recommended):
-
-```bash
-# Using Python 3
-python3 -m http.server 8000
-
-# Using Node.js (with http-server)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
-```
-
-3. **Visit**: `http://localhost:8000`
+2. **Open in browser**:
+   - Open `index.html` directly, or
+   - Use a local server: `python3 -m http.server 8000` then visit `http://localhost:8000`
 
 ---
 
 ## 🎨 Design Variants
 
-This project includes multiple design style variants, each with unique visual characteristics:
+- **Elegant Frame** (`index.html`) - Default design with clean borders and subtle gradients
+- **Material Design** (`index-material.html`) - Material Design elevation, ripple effects, Roboto typography
 
-### **Elegant Frame (Classic)** - `index.html` (Default)
-- **Solid background colors** with clean, professional aesthetic
-- **Traditional borders** with elegant 4px frame styling
-- **Classic box shadows** for depth without blur effects
-- **Corner decorations** with subtle accent lines
-- **Clean, minimalist design** with refined typography
-- **Subtle gradient overlays** for visual interest
-
-### 1. **Material Design** - `index-material.html`
-- **Material Design elevation** with layered shadows
-- **Ripple effects** on cards and buttons for tactile feedback
-- **Material color palette** (#1976d2 primary blue)
-- **Roboto typography** following Material guidelines
-- **Card-based layout** with proper depth hierarchy
-
-All variants maintain the same HTML structure and functionality, differing only in CSS styling. Each supports dark mode and is fully responsive.
+Both variants support dark mode and are fully responsive.
 
 ---
 
@@ -106,120 +59,51 @@ All variants maintain the same HTML structure and functionality, differing only 
 
 ```
 myWeb/
-├── index.html                              # Main HTML file (Elegant Frame - default)
-├── index-material.html                     # Material Design variant
-├── README.md                               # Project overview and setup guide
-├── CHANGELOG.md                            # Complete version history and documentation
-├── LICENSE.md                              # MIT License with content rights notice
-├── manifest.json                           # PWA manifest
-└── images/
-    ├── me2024.jpg                              # Profile image
-    ├── Livepeer-Logo-Symbol_light_mode.svg     # Livepeer logo (light)
-    ├── Livepeer-Logo-Symbol_dark_mode.svg      # Livepeer logo (dark)
-    ├── The_Graph_Logomark_light_mode.png       # The Graph logo mark (light)
-    ├── The_Graph_Logomark_dark_mode.png        # The Graph logo mark (dark)
-    ├── TheGraph_Extended_Logo_light_mode.svg   # The Graph extended logo (light)
-    ├── TheGraph_Extended_Logo_dark_mode.svg    # The Graph extended logo (dark)
-    ├── favicon.ico                             # Browser favicon
-    ├── favicon-16x16.png                       # Favicon 16x16
-    ├── favicon-32x32.png                       # Favicon 32x32
-    ├── apple-touch-icon.png                    # Apple touch icon
-    ├── android-chrome-192x192.png              # Android icon 192x192
-    └── android-chrome-512x512.png              # Android icon 512x512
+├── index.html              # Main HTML (Elegant Frame)
+├── index-material.html     # Material Design variant
+├── README.md               # This file
+├── CHANGELOG.md            # Version history
+├── LICENSE.md              # MIT License
+├── manifest.json           # PWA manifest
+└── images/                 # Images and icons
 ```
 
 ---
 
-## 🔧 Configuration
+## 🔧 Customization
 
-### Updating Content
-
-1. **Personal Information**: Edit meta tags and Schema.org data in `<head>`
-2. **Profile Image**: Replace `./images/me2024.jpg`
-3. **Brand Logos**: Update files in `./images/` directory
-4. **Social Links**: Modify links in the header and footer sections
-
-### Theme Customization
-
-CSS custom properties are defined in `:root` and `[data-theme="dark"]`:
-
-```css
-:root {
-  --bg-color: #fafafa;
-  --text-color: #2c2c2c;
-  --link-color: #2563eb;
-  /* ... more variables ... */
-}
-```
+- **Content**: Edit meta tags and Schema.org data in `<head>`
+- **Images**: Replace files in `./images/` directory
+- **Theme**: Modify CSS custom properties in `:root` and `[data-theme="dark"]`
+- **Links**: Update social links in header and footer sections
 
 ---
 
-## 📊 Performance Metrics
+## 📊 Performance
 
-- **Lighthouse Score**: 95+ across all categories
-- **First Contentful Paint**: < 1.5s
-- **Largest Contentful Paint**: < 2.5s
-- **Cumulative Layout Shift**: < 0.1
-- **Total Blocking Time**: < 200ms
-
----
-
-## 📝 Documentation
-
-For detailed information about:
-- Version history and updates
-- Performance optimizations
-- Technical architecture
-- Future roadmap
-
-**See**: [CHANGELOG.md](./CHANGELOG.md)
+- Lighthouse Score: 95+ across all categories
+- First Contentful Paint: < 1.5s
+- Largest Contentful Paint: < 2.5s
+- Cumulative Layout Shift: < 0.1
 
 ---
 
-## 🛠️ Technologies
+## 🛠️ Tech Stack
 
-- **HTML5** - Semantic markup with ARIA support
-- **CSS3** - Modern features (Grid, Flexbox, Custom Properties)
-- **Vanilla JavaScript** - Minimal JS for theme toggle
-- **Google Fonts** - Geist and Inter typefaces
-- **Font Awesome** - Icon library
-- **Plausible Analytics** - Privacy-friendly analytics
-
----
-
-## 🌐 Browser Support
-
-Works on all modern browsers including Chrome, Firefox, Safari, Edge, and mobile browsers (iOS 12+, Android 5+).
+- HTML5 (semantic markup, ARIA)
+- CSS3 (Grid, Flexbox, Custom Properties)
+- Vanilla JavaScript (minimal, theme toggle only)
+- Google Fonts (Geist, Inter)
+- Font Awesome 6.4.0 (with SRI)
+- Plausible Analytics (privacy-friendly)
 
 ---
 
 ## 📄 License
 
-### Code
-The source code of this website is licensed under the **MIT License**.  
-See [LICENSE.md](./LICENSE.md) for details.
+**Code**: MIT License - See [LICENSE.md](./LICENSE.md)
 
-### Content
-**All personal content is protected and reserved.**
-
-This includes:
-- Personal information, biography, and descriptions
-- Profile photographs and images
-- Personal branding and design elements
-- Project descriptions and portfolio items
-
-**You are welcome to:**
-- Use the code structure as reference
-- Learn from the implementation
-- Fork and adapt the technical approach
-
-**Please do not:**
-- Copy personal content or images
-- Present this work as your own
-- Reuse branding without permission
-
-© 2026 Paolo Diomede
-
+**Content**: All personal content (biography, images, branding) is protected and reserved. You may use the code structure as reference, but please do not copy personal content or present this work as your own.
 
 ---
 
@@ -233,13 +117,6 @@ This includes:
 
 ---
 
-## 🙏 Acknowledgments
-
-- Icons by [Font Awesome](https://fontawesome.com/)
-- Fonts from [Google Fonts](https://fonts.google.com/)
-- Analytics by [Plausible](https://plausible.io/)
-
----
-
 **Built with ❤️ by Paolo Diomede**
 
+For detailed version history and technical documentation, see [CHANGELOG.md](./CHANGELOG.md).
