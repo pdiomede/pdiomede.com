@@ -81,10 +81,16 @@ myWeb/
 
 ## 📊 Performance
 
-- Lighthouse Score: 95+ across all categories
-- First Contentful Paint: < 1.5s
-- Largest Contentful Paint: < 2.5s
-- Cumulative Layout Shift: < 0.1
+**GTmetrix Grade: A**
+- Performance: 94%
+- Structure: 98%
+
+**Core Web Vitals:**
+- LCP (Largest Contentful Paint): 1.4s
+- TBT (Total Blocking Time): 2ms
+- CLS (Cumulative Layout Shift): 0
+
+**Lighthouse Score:** 95+ across all categories
 
 ---
 
