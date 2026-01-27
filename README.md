@@ -112,7 +112,7 @@ myWeb/
 - **Email**: pdiomede@yahoo.com
 - **LinkedIn**: [linkedin.com/in/pdiomede](https://linkedin.com/in/pdiomede/)
 - **Twitter/X**: [@pdiomede](https://x.com/pdiomede)
-- **Farcaster**: [warpcast.com/pdiomede](https://warpcast.com/pdiomede)
+- **Farcaster**: [farcaster.xyz/pdiomede](https://farcaster.xyz/pdiomede)
 - **GitHub**: [github.com/pdiomede](https://github.com/pdiomede)
 
 ---
