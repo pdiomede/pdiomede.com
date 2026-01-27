@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.5.1] - 2026-01-27
 
 ### Security
+- **Security Header Fixes (5 improvements addressing security report)**
+  - Added `X-Frame-Options: SAMEORIGIN` meta tag to prevent clickjacking attacks (complements CSP frame-ancestors)
+  - Added `X-Content-Type-Options: nosniff` meta tag to prevent MIME-type sniffing attacks
+  - Added `Referrer-Policy: strict-origin-when-cross-origin` meta tag (http-equiv) for consistent referrer policy
+  - Note: `Strict-Transport-Security` (HSTS) and `Permissions-Policy` must be configured on web server (see CHANGELOG server configuration section)
+  - Applied security header improvements to both index.html and index-material.html
+  - These meta tags provide client-side security, but HTTP headers configured on server are preferred for optimal security
+
 - **CSP Security Enhancements (5 improvements)**
   - Added `worker-src 'none'` to CSP to prevent service workers from untrusted sources
   - Added `child-src 'self'` to CSP to prevent iframes and workers from untrusted sources
@@ -18,6 +26,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added `form-action 'self'` to CSP for defense in depth (prevents form hijacking attacks)
   - Applied all CSP improvements to both index.html and index-material.html
   - These additions strengthen the Content Security Policy and prevent various attack vectors
+
+- **Additional Security Improvements**
+  - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
+  - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
+  - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
 
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
@@ -52,18 +65,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Improved readability with better organization and compact format
   - Removed redundant sections while keeping all essential information
   - Updated README.md to reflect Business Development role at Certora
-
-### Security
-- **Security Improvements**
-  - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
-  - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
-  - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
-  - Added `worker-src 'none'` to CSP to prevent service workers from untrusted sources
-  - Added `child-src 'self'` to CSP to prevent iframes and workers from untrusted sources
-  - Added `media-src 'self'` to CSP to restrict media sources to same origin only
-  - Added `manifest-src 'self'` to CSP to restrict manifest.json loading to same origin
-  - Added `form-action 'self'` to CSP for defense in depth (prevents form hijacking attacks)
-  - Applied all security improvements to both HTML files
 
 ---
 
@@ -529,11 +530,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### HTTP Headers (to be configured on web server)
 ```
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
+Referrer-Policy: strict-origin-when-cross-origin
 Permissions-Policy: camera=(), microphone=(), geolocation=()
-Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-ancestors 'self'
+Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; worker-src 'none'; child-src 'self'; media-src 'self'; manifest-src 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-ancestors 'self'
 ```
+
+**Note**: Meta tags for X-Frame-Options, X-Content-Type-Options, and Referrer-Policy have been added to HTML files, but HTTP headers are preferred and should be configured on the web server for optimal security. Strict-Transport-Security (HSTS) and Permissions-Policy MUST be configured on the web server as they cannot be set via meta tags.
 
 ### Caching Strategy
 ```
