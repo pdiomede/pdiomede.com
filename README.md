@@ -134,12 +134,17 @@ The project includes a `.htaccess` file for Apache servers (e.g., Hostinger) tha
 ![Security Headers Grade A](./images/security-headers-grade-a.png)
 
 **Security Headers Status:**
-- ✅ Content-Security-Policy
+- ✅ Content-Security-Policy (CSP with SHA256 script hashes - no unsafe-inline)
 - ✅ Strict-Transport-Security (HSTS)
 - ✅ X-Frame-Options
 - ✅ X-Content-Type-Options
 - ✅ Referrer-Policy
 - ✅ Permissions-Policy
+
+**CSP Security Features:**
+- **No `unsafe-inline` in script-src**: Uses SHA256 hashes for inline scripts instead
+- Stronger XSS protection by only allowing specific whitelisted inline scripts
+- Subresource Integrity (SRI) on external resources
 
 **Test Results:** [View full report](https://securityheaders.com/?q=https://pdiomede.com)
 
