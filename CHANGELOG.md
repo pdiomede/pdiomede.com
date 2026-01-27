@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.4.12] - 2026-01-27
+
+### Fixed
+- **Mobile Responsiveness - Ecosystem Communities Callout**
+  - Fixed horizontal scrolling issue on mobile devices in "Ecosystem Communities" callout within Community Impact section
+  - Changed 3-column grid layout (`grid-template-columns: 1fr auto 1fr`) to single column on mobile devices
+  - Added responsive CSS rules in `@media (max-width: 768px)` and `@media (max-width: 480px)` breakpoints
+  - Cards now stack vertically on mobile instead of requiring horizontal scrolling
+  - Removed width constraints on mobile to ensure full-width cards
+  - Improved mobile user experience by eliminating need for horizontal scrolling on small screens
+
+---
+
 ## [2.4.11] - 2026-01-02
 
 ### Removed
