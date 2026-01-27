@@ -101,7 +101,7 @@ myWeb/
 ![Security Headers Grade A](./images/security-headers-grade-a.png)
 
 **Security Headers Status:**
-- ✅ Content-Security-Policy (CSP with SHA256 script hashes - no unsafe-inline)
+- ✅ Content-Security-Policy (CSP)
 - ✅ Strict-Transport-Security (HSTS)
 - ✅ X-Frame-Options
 - ✅ X-Content-Type-Options
@@ -109,9 +109,10 @@ myWeb/
 - ✅ Permissions-Policy
 
 **CSP Security Features:**
-- **No `unsafe-inline` in script-src**: Uses SHA256 hashes for inline scripts instead
-- Stronger XSS protection by only allowing specific whitelisted inline scripts
-- Subresource Integrity (SRI) on external resources
+- Restricts script sources to `'self'` and trusted CDNs (cdnjs.cloudflare.com)
+- Restricts style sources to `'self'` and trusted sources (Google Fonts, cdnjs)
+- Blocks embedded objects, frames from external sources
+- Subresource Integrity (SRI) on external Font Awesome resources
 
 **Test Results:** [View full report](https://securityheaders.com/?q=https://pdiomede.com)
 
