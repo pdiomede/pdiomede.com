@@ -14,7 +14,7 @@
   # Hash 1: loadCSS polyfill script (sha256-vqcXBAM+0VLlWgIAUfeV5MD8OgSDPV9fyQy7MbAubRM=)
   # Hash 2: Theme toggle script for index.html (sha256-FvMqLZ+xGer+Itccrdsxl2a8h231RKwJ1geBDCN9R/k=)
   # Hash 3: Theme toggle script for index-material.html (sha256-pvMjeXLBv6teSsCXdidiK2nNweOBvzM21xnPzz/Ft4Y=)
-  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; worker-src 'none'; child-src 'self'; media-src 'self'; manifest-src 'self'; form-action 'self'; script-src 'self' 'sha256-vqcXBAM+0VLlWgIAUfeV5MD8OgSDPV9fyQy7MbAubRM=' 'sha256-FvMqLZ+xGer+Itccrdsxl2a8h231RKwJ1geBDCN9R/k=' 'sha256-pvMjeXLBv6teSsCXdidiK2nNweOBvzM21xnPzz/Ft4Y=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; worker-src 'none'; child-src 'self'; media-src 'self'; manifest-src 'self'; form-action 'self'; script-src 'self' 'sha256-vqcXBAM+0VLlWgIAUfeV5MD8OgSDPV9fyQy7MbAubRM=' 'sha256-FvMqLZ+xGer+Itccrdsxl2a8h231RKwJ1geBDCN9R/k=' 'sha256-pvMjeXLBv6teSsCXdidiK2nNweOBvzM21xnPzz/Ft4Y=' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'"
   
   # Strict Transport Security (HSTS) - Only enable if you have SSL/TLS configured
   # Uncomment the line below once you confirm your site has valid SSL certificate
