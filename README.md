@@ -61,6 +61,7 @@ Both variants support dark mode and are fully responsive.
 myWeb/
 ├── index.html              # Main HTML (Elegant Frame)
 ├── index-material.html     # Material Design variant
+├── .htaccess               # Apache server configuration (security headers, performance)
 ├── README.md               # This file
 ├── CHANGELOG.md            # Version history
 ├── LICENSE.md              # MIT License
@@ -76,6 +77,38 @@ myWeb/
 - **Images**: Replace files in `./images/` directory
 - **Theme**: Modify CSS custom properties in `:root` and `[data-theme="dark"]`
 - **Links**: Update social links in header and footer sections
+
+---
+
+## 🚀 Deployment
+
+### Server Configuration
+
+The project includes a `.htaccess` file for Apache servers (e.g., Hostinger) that configures:
+
+**Security Headers:**
+- Content Security Policy (CSP)
+- Strict-Transport-Security (HSTS) - uncomment after SSL verification
+- X-Frame-Options (clickjacking protection)
+- X-Content-Type-Options (MIME-type sniffing protection)
+- Referrer-Policy
+- Permissions-Policy
+
+**Performance Optimizations:**
+- Gzip compression for text files
+- Browser caching (1 year for images/fonts, 1 month for CSS/JS)
+
+**Security Settings:**
+- Disabled directory browsing
+- Protected sensitive files
+
+### Upload Instructions
+
+1. **Upload `.htaccess`** to your server's `public_html` directory (same location as `index.html`)
+2. **Verify** `mod_headers` is enabled on your Apache server (contact hosting support if needed)
+3. **Test** security headers at [SecurityHeaders.com](https://securityheaders.com/?q=https://pdiomede.com)
+
+**Note**: The `.htaccess` file is safe to commit to GitHub as it contains no sensitive credentials.
 
 ---
 
@@ -101,7 +134,7 @@ myWeb/
 - Vanilla JavaScript (minimal, theme toggle only)
 - Google Fonts (Geist, Inter)
 - Font Awesome 6.4.0 (with SRI)
-- Plausible Analytics (privacy-friendly)
+- Apache `.htaccess` (security headers, compression, caching)
 
 ---
 
