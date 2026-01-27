@@ -7,25 +7,26 @@
 </IfModule>
 
 # Security Headers - Required for security scanners
+# Note: Requires mod_headers module to be enabled on Apache server
 <IfModule mod_headers.c>
   # Content Security Policy
-  Header set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; worker-src 'none'; child-src 'self'; media-src 'self'; manifest-src 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-ancestors 'self'"
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; worker-src 'none'; child-src 'self'; media-src 'self'; manifest-src 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-ancestors 'self'"
   
   # Strict Transport Security (HSTS) - Only enable if you have SSL/TLS configured
   # Uncomment the line below once you confirm your site has valid SSL certificate
-  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
   
   # X-Frame-Options - Prevent clickjacking
-  Header set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Frame-Options "SAMEORIGIN"
   
-  # X-Content-Type-Options - Prevent MIME-type sniffing
-  Header set X-Content-Type-Options "nosniff"
+  # X-Content-Type-Options - Prevent MIME-type sniffing (REQUIRED: Set to "nosniff")
+  Header always set X-Content-Type-Options "nosniff"
   
   # Referrer Policy
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
   
   # Permissions Policy (formerly Feature-Policy)
-  Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
 
 # Performance: Enable Compression
