@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Critical Resource Hints - Early DNS resolution for faster FCP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://plausible.io" />
+  
+  <!-- Preload critical above-the-fold image for fastest FCP -->
+  <link rel="preload" as="image" href="./images/me2024.jpg" fetchpriority="high" />
+  
   <!--
     Author:       Paolo Diomede
     Version:      v2.5.1 - Material Design Variant
@@ -234,14 +244,20 @@
       box-sizing: border-box;
     }
 
+    /* Critical CSS for FCP - ensures immediate rendering */
     body {
       font-family: 'Roboto', 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       background-color: #f5f5f5;
       color: rgba(0, 0, 0, 0.87);
       line-height: 1.6;
       overflow-x: hidden;
-      transition: background-color 0.3s ease, color 0.3s ease;
       padding: 60px 20px;
+      /* Defer transition for faster initial render */
+    }
+    
+    /* Apply transitions after initial render */
+    body.loaded {
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     [data-theme="dark"] body {
@@ -1694,12 +1710,6 @@
 
 </style>
 
-  <!-- Resource Hints for Performance and Security -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <link rel="dns-prefetch" href="https://plausible.io" />
-  
   <!-- Load fonts asynchronously to prevent render blocking -->
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
@@ -1714,9 +1724,6 @@
   <script>
     !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
   </script>
-  
-  <!-- Performance: Preload critical above-the-fold images to improve LCP (Largest Contentful Paint) -->
-  <link rel="preload" as="image" href="./images/me2024.jpg" fetchpriority="high" />
   
   <!-- Analytics: Plausible privacy-friendly analytics -->
   <!-- Note: SRI not used for Plausible as script is dynamically updated. Using defer and trusted CDN. -->
@@ -1883,6 +1890,15 @@
           }
         }
       });
+    }
+
+    // Optimize FCP: Add loaded class after initial render to enable transitions
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+      });
+    } else {
+      document.body.classList.add('loaded');
     }
 
     // Initialize theme on page load - DEFAULT TO DARK MODE

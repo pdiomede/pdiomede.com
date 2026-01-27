@@ -63,6 +63,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Noted future optimization opportunity: consider using Font Awesome subset or custom icon font
   - Applied to both index.html and index-material.html
 
+- **First Contentful Paint (FCP) Optimization**
+  - Moved critical resource hints (preconnect, dns-prefetch) to the very top of `<head>` for earliest DNS resolution
+  - Moved critical image preload to the top of `<head>` for fastest image loading
+  - Deferred CSS transitions by applying them only after initial render (via `body.loaded` class)
+  - Removed duplicate resource hints to reduce HTML size
+  - Optimized critical rendering path by ensuring browser can start rendering immediately
+  - Applied to both index.html and index-material.html
+  - These optimizations reduce FCP time by starting resource resolution earlier and minimizing render-blocking work
+
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
   - Fixed horizontal scrolling issue on mobile devices in "Ecosystem Communities" callout within Community Impact section
