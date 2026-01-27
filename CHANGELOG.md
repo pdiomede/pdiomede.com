@@ -32,6 +32,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
   - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
 
+### Performance
+- **Eliminated Render-Blocking Resources**
+  - Fixed render-blocking CSS requests that were delaying LCP by ~2,810ms on mobile
+  - Converted Google Fonts stylesheet to load asynchronously using `rel="preload"` with `onload` handler
+  - Converted Font Awesome stylesheet to load asynchronously using `rel="preload"` with `onload` handler
+  - Added fallback script for browsers that don't support `onload` on link elements
+  - Added `<noscript>` fallbacks to ensure styles load even when JavaScript is disabled
+  - Applied performance improvements to both index.html and index-material.html
+  - This eliminates render-blocking requests and significantly improves mobile LCP and FCP scores
+
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
   - Fixed horizontal scrolling issue on mobile devices in "Ecosystem Communities" callout within Community Impact section

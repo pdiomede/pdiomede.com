@@ -1391,8 +1391,18 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="dns-prefetch" href="https://plausible.io" />
   
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Load fonts asynchronously to prevent render blocking -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  
+  <!-- Load Font Awesome asynchronously to prevent render blocking -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+  
+  <!-- Fallback script for browsers that don't support onload on link elements -->
+  <script>
+    !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+  </script>
   
   <!-- Performance: Preload critical above-the-fold images to improve LCP (Largest Contentful Paint) -->
   <link rel="preload" as="image" href="./images/me2024.jpg" fetchpriority="high" />
