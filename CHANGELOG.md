@@ -66,6 +66,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Removed redundant sections while keeping all essential information
   - Updated README.md to reflect Business Development role at Certora
 
+- **Link Updates**
+  - Updated Farcaster links from `warpcast.com/pdiomede` to `farcaster.xyz/pdiomede` across all files
+  - Updated README.md, index.html, index-material.html, and structured data (sameAs)
+  - All Farcaster links now consistently point to the official Farcaster domain
+
 ---
 
 ---
