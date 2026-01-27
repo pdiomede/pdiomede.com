@@ -1705,6 +1705,8 @@
   <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
   
   <!-- Load Font Awesome asynchronously to prevent render blocking -->
+  <!-- Note: Font Awesome contains many unused icons, but loading async minimizes impact -->
+  <!-- Consider using a subset or icon font in future for better performance -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
   
@@ -1989,7 +1991,8 @@
            - width/height: Explicit dimensions prevent layout shift (improves CLS)
            - decoding="async": Non-blocking image decode for faster rendering
            - Preloaded in <head> for fastest LCP -->
-      <img src="./images/me2024.jpg" alt="Paolo Diomede's Profile Picture" class="profile-img" fetchpriority="high" width="120" height="120" decoding="async" />
+      <!-- Performance: Critical above-the-fold image optimized with fetchpriority, explicit dimensions, and async decoding -->
+      <img src="./images/me2024.jpg" alt="Paolo Diomede's Profile Picture" class="profile-img" fetchpriority="high" width="120" height="120" decoding="async" loading="eager" />
       <h1>Paolo Diomede</h1>
       <p class="tagline">Securing and growing web3 through technical excellence and ecosystem leadership</p>
     </header>
@@ -2001,8 +2004,10 @@
           <!-- Performance: Below-the-fold images use loading="lazy" for deferred loading
                and explicit width/height to prevent layout shift -->
           <div class="role-header">
-            <img class="brand-logo light" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" />
-            <img class="brand-logo dark" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" />
+            <!-- Performance: Below-the-fold images optimized with lazy loading and async decoding -->
+            <!-- Note: Consider optimizing certora.jpg to WebP format for better compression (~43KB savings) -->
+            <img class="brand-logo light" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
+            <img class="brand-logo dark" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
 
             <div style="display: flex; gap: 8px;">
               <div class="role-badge badge-growth">Technical</div>
@@ -2022,8 +2027,8 @@
 
         <div class="role-card has-brand">
           <div class="role-header">
-            <img class="brand-logo light" src="./images/Livepeer-Logo-Symbol_light_mode.svg" alt="Livepeer logo" loading="lazy" width="48" height="48" />
-            <img class="brand-logo dark" src="./images/Livepeer-Logo-Symbol_dark_mode.svg" alt="Livepeer logo" loading="lazy" width="48" height="48" />
+            <img class="brand-logo light" src="./images/Livepeer-Logo-Symbol_light_mode.svg" alt="Livepeer logo" loading="lazy" width="48" height="48" decoding="async" />
+            <img class="brand-logo dark" src="./images/Livepeer-Logo-Symbol_dark_mode.svg" alt="Livepeer logo" loading="lazy" width="48" height="48" decoding="async" />
 
             <div style="display: flex; gap: 8px;">
               <div class="role-badge badge-advisor">Advisor</div>
@@ -2057,8 +2062,8 @@
 
       <div class="ecosystem-highlight">
           <div style="margin: 0 auto 20px auto; display: flex; justify-content: center;">
-            <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" />
-            <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" />
+            <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
+            <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
           </div>
           <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color);">Ecosystem Communities</h3>
 
@@ -2095,8 +2100,10 @@
       <div class="community-projects">
         <div class="project-card has-brand">
           <div class="project-header">
-            <img class="brand-logo light" src="./images/The_Graph_Logomark_light_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" />
-            <img class="brand-logo dark" src="./images/The_Graph_Logomark_dark_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" />
+            <!-- Performance: PNG images optimized with lazy loading and async decoding -->
+            <!-- Note: Consider converting PNG logos to WebP or optimizing PNG compression for better delivery -->
+            <img class="brand-logo light" src="./images/The_Graph_Logomark_light_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
+            <img class="brand-logo dark" src="./images/The_Graph_Logomark_dark_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
 
             <!-- Commented out: project icon with blue background -->
             <div class="project-status" style="background: rgba(185, 28, 28, 0.1); color: #dc2626; border-color: rgba(185, 28, 28, 0.2);">Past Role</div>

@@ -49,6 +49,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Estimated savings: ~20ms on font rendering
   - Applied to both index.html and index-material.html
 
+- **Image Delivery Optimization**
+  - Added `decoding="async"` to all images for non-blocking image decode
+  - Added `loading="eager"` to critical above-the-fold profile image
+  - Added optimization comments for image format improvements (WebP conversion suggestions)
+  - All below-the-fold images use `loading="lazy"` for deferred loading
+  - Estimated savings: ~43KB on image delivery (when images are optimized to WebP)
+  - Applied to both index.html and index-material.html
+
+- **Unused CSS Optimization**
+  - Added comments documenting Font Awesome unused CSS impact
+  - Font Awesome loads asynchronously to minimize render-blocking impact
+  - Noted future optimization opportunity: consider using Font Awesome subset or custom icon font
+  - Applied to both index.html and index-material.html
+
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
   - Fixed horizontal scrolling issue on mobile devices in "Ecosystem Communities" callout within Community Impact section
