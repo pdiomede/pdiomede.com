@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!--
     Author:       Paolo Diomede
-    Version:      v2.4.9 - Material Design Variant
+    Version:      v2.4.12 - Material Design Variant
     Date:         January 2026
     Description:  Personal portfolio website showcasing web3 ecosystem building,
                   governance expertise, and community leadership
@@ -1542,6 +1542,16 @@
         gap: 32px;
       }
 
+      /* Fix Ecosystem Communities callout for mobile */
+      .ecosystem-highlight .community-stats {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+      }
+
+      .ecosystem-highlight .community-stats .stat-card {
+        max-width: 100% !important;
+      }
+
       .project-stats {
         justify-content: space-around;
       }
@@ -1588,6 +1598,17 @@
       .community-stats {
         grid-template-columns: 1fr;
         gap: 24px;
+      }
+
+      /* Ensure Ecosystem Communities callout stacks on small mobile */
+      .ecosystem-highlight .community-stats {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+      }
+
+      .ecosystem-highlight .community-stats .stat-card {
+        max-width: 100% !important;
+        align-self: stretch !important;
       }
 
       .stat-number {
