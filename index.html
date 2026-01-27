@@ -173,8 +173,9 @@
 
   <style>
     /* Performance: Font display optimization
-       Fonts are loaded via Google Fonts link tag with display=swap parameter
-       This ensures text is visible immediately with fallback fonts while custom fonts load */
+       Fonts are loaded via Google Fonts with display=swap parameter in URL
+       This ensures text is visible immediately with fallback fonts while custom fonts load
+       font-display: swap prevents FOIT (Flash of Invisible Text) and ensures consistent text visibility */
 
     :root {
       --bg-color: #fafafa;

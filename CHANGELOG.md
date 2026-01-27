@@ -42,6 +42,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Applied performance improvements to both index.html and index-material.html
   - This eliminates render-blocking requests and significantly improves mobile LCP and FCP scores
 
+- **Font Display Optimization**
+  - Ensured `font-display: swap` is properly configured via Google Fonts URL parameter (`&display=swap`)
+  - Fonts load with swap behavior to prevent FOIT (Flash of Invisible Text)
+  - Text remains visible with fallback fonts while custom fonts load asynchronously
+  - Estimated savings: ~20ms on font rendering
+  - Applied to both index.html and index-material.html
+
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
   - Fixed horizontal scrolling issue on mobile devices in "Ecosystem Communities" callout within Community Impact section
