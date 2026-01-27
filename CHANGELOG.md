@@ -72,6 +72,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Applied to both index.html and index-material.html
   - These optimizations reduce FCP time by starting resource resolution earlier and minimizing render-blocking work
 
+- **Server-Side Security Headers Configuration**
+  - Created `.htaccess` file with all required HTTP security headers for Apache/Hostinger servers
+  - Configured `X-Frame-Options: SAMEORIGIN` as HTTP header (complements existing meta tag)
+  - Configured `X-Content-Type-Options: nosniff` as HTTP header (complements existing meta tag)
+  - Configured `Referrer-Policy: strict-origin-when-cross-origin` as HTTP header (complements existing meta tag)
+  - Configured `Permissions-Policy` HTTP header (cannot be set via meta tags)
+  - Configured `Strict-Transport-Security` (HSTS) HTTP header (commented out - uncomment after SSL verification)
+  - Added performance optimizations: gzip compression and browser caching rules
+  - Added security settings: disabled directory browsing and protected sensitive files
+  - **Action Required**: Upload `.htaccess` file to Hostinger `public_html` directory to enable HTTP headers
+  - After upload, security scanners (SecurityHeaders.com, Mozilla Observatory) will detect all headers
+
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
   - Fixed horizontal scrolling issue on mobile devices in "Ecosystem Communities" callout within Community Impact section
