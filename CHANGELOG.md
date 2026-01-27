@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.5.1] - 2026-01-27
 
+### Fixed
+- **Restored Site Functionality - CSP Simplification**
+  - Simplified Content Security Policy to restore broken theme toggle and design selector
+  - Added `'unsafe-inline'` back to `script-src` for inline scripts to work
+  - Removed complex SHA256 hashing that was causing scripts to be blocked
+  - Simplified CSP directives (removed worker-src, child-src, media-src, manifest-src, form-action)
+  - Changed `frame-ancestors` from `'self'` to `'none'` for better security
+  - Restored functionality for dark/light mode toggle and design selector
+  - Font Awesome icons now display correctly
+  - Applied to both index.html and index-material.html
+
 ### Security
 - **Security Header Fixes (5 improvements addressing security report)**
   - Added `X-Frame-Options: SAMEORIGIN` meta tag to prevent clickjacking attacks (complements CSP frame-ancestors)
