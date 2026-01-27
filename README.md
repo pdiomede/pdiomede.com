@@ -127,6 +127,26 @@ The project includes a `.htaccess` file for Apache servers (e.g., Hostinger) tha
 
 ---
 
+## 🔒 Security
+
+**SecurityHeaders.com Grade: A**
+
+![Security Headers Grade A](./images/security-headers-grade-a.png)
+
+**Security Headers Status:**
+- ✅ Content-Security-Policy
+- ✅ Strict-Transport-Security (HSTS)
+- ✅ X-Frame-Options
+- ✅ X-Content-Type-Options
+- ✅ Referrer-Policy
+- ✅ Permissions-Policy
+
+**Test Results:** [View full report](https://securityheaders.com/?q=https://pdiomede.com)
+
+All critical HTTP security headers are properly configured via `.htaccess` file, ensuring protection against common web vulnerabilities including clickjacking, MIME-type sniffing, and XSS attacks.
+
+---
+
 ## 🛠️ Tech Stack
 
 - HTML5 (semantic markup, ARIA)
