@@ -29,26 +29,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Applied security header improvements to both index.html and index-material.html
   - These meta tags provide client-side security, but HTTP headers configured on server are preferred for optimal security
 
-- **CSP Security Enhancements (5 improvements)**
-  - Added `worker-src 'none'` to CSP to prevent service workers from untrusted sources
-  - Added `child-src 'self'` to CSP to prevent iframes and workers from untrusted sources
-  - Added `media-src 'self'` to CSP to restrict media sources to same origin only
-  - Added `manifest-src 'self'` to CSP to restrict manifest.json loading to same origin
-  - Added `form-action 'self'` to CSP for defense in depth (prevents form hijacking attacks)
-  - Applied all CSP improvements to both index.html and index-material.html
-  - These additions strengthen the Content Security Policy and prevent various attack vectors
-
 - **Additional Security Improvements**
   - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
   - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
   - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
-  - **Removed 'unsafe-inline' from script-src**: Replaced with SHA256 hashes for inline scripts
-    - Added `sha256-vqcXBAM+0VLlWgIAUfeV5MD8OgSDPV9fyQy7MbAubRM=` for loadCSS polyfill script
-    - Added `sha256-FvMqLZ+xGer+Itccrdsxl2a8h231RKwJ1geBDCN9R/k=` for theme toggle script
-    - This eliminates the security warning about 'unsafe-inline' in script-src directive
-    - Applied to both HTML files
-    - Note: If inline scripts are modified, hashes must be recalculated
-    - Fixed: Corrected theme toggle script hash to match actual script content (includes comments)
+  - Changed `frame-ancestors` from `'self'` to `'none'` to block all framing attempts
+  - Note: Complex CSP directives (worker-src, child-src, etc.) and SHA256 script hashing were attempted but later simplified for better compatibility
 
 ### Removed
 - **Analytics: Removed Plausible Analytics**
