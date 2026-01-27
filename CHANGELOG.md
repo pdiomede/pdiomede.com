@@ -7,25 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [2.4.13] - 2026-01-27
-
-### Fixed
-- **Bug Fixes - Capitalization and Code Quality**
-  - Fixed inconsistent capitalization: Changed tagline from "Web3" to "web3" to match site convention
-  - Removed unused CSS class: Removed unnecessary `<div class="section">` wrapper with no styling
-  - Fixed meta description capitalization: Updated all meta descriptions to use lowercase "web3" for consistency
-  - Applied fixes to both index.html and index-material.html
-
-### Security
-- **Security Improvements**
-  - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
-  - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
-  - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
-  - Applied security improvements to both HTML files
-
----
-
-## [2.4.12] - 2026-01-27
+## [2.5.1] - 2026-01-27
 
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
@@ -36,6 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Removed width constraints on mobile to ensure full-width cards
   - Improved mobile user experience by eliminating need for horizontal scrolling on small screens
   - Applied fix to both index.html (Elegant Frame) and index-material.html (Material Design) variants
+
+- **Bug Fixes - Capitalization and Code Quality**
+  - Fixed inconsistent capitalization: Changed tagline from "Web3" to "web3" to match site convention
+  - Removed unused CSS class: Removed unnecessary `<div class="section">` wrapper with no styling
+  - Fixed meta description capitalization: Updated all meta descriptions to use lowercase "web3" for consistency
+  - Applied fixes to both index.html and index-material.html
 
 ### Changed
 - **GitHub Repository Link Text**
@@ -48,6 +36,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Updated `og:updated_time` meta tag to 2026-01-27
   - Ensures search engines are aware of recent page updates
   - Applied to both index.html and index-material.html
+
+- **Documentation Improvements**
+  - Streamlined README.md: Reduced from 246 to ~120 lines (51% reduction)
+  - Improved readability with better organization and compact format
+  - Removed redundant sections while keeping all essential information
+  - Updated README.md to reflect Business Development role at Certora
+
+### Security
+- **Security Improvements**
+  - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
+  - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
+  - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
+  - Applied security improvements to both HTML files
+
+---
 
 ---
 
