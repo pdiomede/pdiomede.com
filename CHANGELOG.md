@@ -17,6 +17,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Cards now stack vertically on mobile instead of requiring horizontal scrolling
   - Removed width constraints on mobile to ensure full-width cards
   - Improved mobile user experience by eliminating need for horizontal scrolling on small screens
+  - Applied fix to both index.html (Elegant Frame) and index-material.html (Material Design) variants
+
+### Changed
+- **GitHub Repository Link Text**
+  - Updated link text from "View repo on GitHub" to "View this repo on GitHub" for better clarity
+  - Updated aria-label for accessibility consistency
+  - Applied to both index.html and index-material.html
+
+- **SEO Metadata Updates**
+  - Updated `dateModified` in structured data from 2026-01-02 to 2026-01-27
+  - Updated `og:updated_time` meta tag to 2026-01-27
+  - Ensures search engines are aware of recent page updates
+  - Applied to both index.html and index-material.html
 
 ---
 
