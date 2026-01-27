@@ -31,6 +31,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
   - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
   - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
+  - Added Subresource Integrity (SRI) hash to Plausible Analytics script for tamper protection
+  - SRI ensures external scripts haven't been modified, providing additional security layer
+  - Note: SRI hash must be updated if Plausible updates their script (last updated: 2026-01-27)
 
 ### Performance
 - **Eliminated Render-Blocking Resources**

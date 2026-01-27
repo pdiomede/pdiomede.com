@@ -1726,8 +1726,8 @@
   </script>
   
   <!-- Analytics: Plausible privacy-friendly analytics -->
-  <!-- Note: SRI not used for Plausible as script is dynamically updated. Using defer and trusted CDN. -->
-  <script defer data-domain="pdiomede.com" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js" crossorigin="anonymous"></script>
+  <!-- Note: SRI hash must be updated if Plausible updates their script. Last updated: 2026-01-27 -->
+  <script defer data-domain="pdiomede.com" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js" integrity="sha384-PAaMKSMNYL2VhmGPsio6NzKGjoWgNWbGdzax2bP9yvfQMG8X4qI9EV+HlwNQ/7cm" crossorigin="anonymous"></script>
   <script>
     /* Performance: Minimal inline JavaScript - removed ~95 lines of unused code (generateSocialPreview)
        Only essential theme toggle functionality remains for optimal load time */
