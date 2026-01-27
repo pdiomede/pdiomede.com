@@ -31,6 +31,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
   - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
   - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
+  - **Removed 'unsafe-inline' from script-src**: Replaced with SHA256 hashes for inline scripts
+    - Added `sha256-vqcXBAM+0VLlWgIAUfeV5MD8OgSDPV9fyQy7MbAubRM=` for loadCSS polyfill script
+    - Added `sha256-qv4uw+izZ+M3iseSg5W9HxcaFWHf2ozdmBg/xdYKEw8=` for theme toggle script
+    - This eliminates the security warning about 'unsafe-inline' in script-src directive
+    - Applied to both HTML files and `.htaccess` CSP header
+    - Note: If inline scripts are modified, hashes must be recalculated
 
 ### Removed
 - **Analytics: Removed Plausible Analytics**
