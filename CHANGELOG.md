@@ -9,6 +9,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.5.1] - 2026-01-27
 
+### Security
+- **CSP Security Enhancements (5 improvements)**
+  - Added `worker-src 'none'` to CSP to prevent service workers from untrusted sources
+  - Added `child-src 'self'` to CSP to prevent iframes and workers from untrusted sources
+  - Added `media-src 'self'` to CSP to restrict media sources to same origin only
+  - Added `manifest-src 'self'` to CSP to restrict manifest.json loading to same origin
+  - Added `form-action 'self'` to CSP for defense in depth (prevents form hijacking attacks)
+  - Applied all CSP improvements to both index.html and index-material.html
+  - These additions strengthen the Content Security Policy and prevent various attack vectors
+
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
   - Fixed horizontal scrolling issue on mobile devices in "Ecosystem Communities" callout within Community Impact section
@@ -48,7 +58,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Added `referrerpolicy="no-referrer"` and `crossorigin="anonymous"` to Google Fonts stylesheet link for enhanced privacy
   - Improved CSP by adding `base-uri 'self'` directive to prevent base tag injection attacks
   - Added `object-src 'none'` to CSP to prevent loading of plugins and embedded objects
-  - Applied security improvements to both HTML files
+  - Added `worker-src 'none'` to CSP to prevent service workers from untrusted sources
+  - Added `child-src 'self'` to CSP to prevent iframes and workers from untrusted sources
+  - Added `media-src 'self'` to CSP to restrict media sources to same origin only
+  - Added `manifest-src 'self'` to CSP to restrict manifest.json loading to same origin
+  - Added `form-action 'self'` to CSP for defense in depth (prevents form hijacking attacks)
+  - Applied all security improvements to both HTML files
 
 ---
 
