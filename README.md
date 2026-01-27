@@ -14,7 +14,7 @@
 
 This is the source code for my personal portfolio website, highlighting my work in:
 
-- **web3 Governance** - Technical Account Manager at [Certora](https://www.certora.com)
+- **Business Development** - Technical Account Manager at [Certora](https://www.certora.com)
 - **Ecosystem Building** - Advisory Board Member at [Livepeer](https://livepeer.org)
 - **Community Leadership** - Former Ecosystem Manager at [The Graph Foundation](https://thegraph.com) (2022-2025), Founder of [Graphtronauts](https://graphtronauts.app) and [Live Pioneers](https://livepioneers.app)
 - **Innovation** - Creator of [IndexerScore.com](https://indexerscore.com) and [GraphTools.pro](https://graphtools.pro)
