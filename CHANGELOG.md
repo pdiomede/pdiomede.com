@@ -128,6 +128,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Improved readability with better organization and compact format
   - Removed redundant sections while keeping all essential information
   - Updated README.md to reflect Business Development role at Certora
+  - Added comprehensive `.htaccess` documentation to README.md:
+    - Added `.htaccess` to project structure
+    - Added new "Deployment" section with server configuration details
+    - Documented security headers, performance optimizations, and upload instructions
+    - Updated Tech Stack to include Apache `.htaccess` configuration
+    - Removed Plausible Analytics from Tech Stack (no longer used)
 
 - **Link Updates**
   - Updated Farcaster links from `warpcast.com/pdiomede` to `farcaster.xyz/pdiomede` across all files
