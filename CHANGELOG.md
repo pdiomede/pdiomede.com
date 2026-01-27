@@ -88,6 +88,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Configured `Referrer-Policy: strict-origin-when-cross-origin` as HTTP header (complements existing meta tag)
   - Configured `Permissions-Policy` HTTP header (cannot be set via meta tags)
   - Configured `Strict-Transport-Security` (HSTS) HTTP header (commented out - uncomment after SSL verification)
+  - Improved header configuration: Changed from `Header set` to `Header always set` to ensure headers are sent for all HTTP responses (including error pages)
+  - This ensures security scanners properly detect headers like `X-Content-Type-Options: nosniff`
   - Added performance optimizations: gzip compression and browser caching rules
   - Added security settings: disabled directory browsing and protected sensitive files
   - **Action Required**: Upload `.htaccess` file to Hostinger `public_html` directory to enable HTTP headers
