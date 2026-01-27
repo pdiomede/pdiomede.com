@@ -35,7 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Added `sha256-vqcXBAM+0VLlWgIAUfeV5MD8OgSDPV9fyQy7MbAubRM=` for loadCSS polyfill script
     - Added `sha256-FvMqLZ+xGer+Itccrdsxl2a8h231RKwJ1geBDCN9R/k=` for theme toggle script
     - This eliminates the security warning about 'unsafe-inline' in script-src directive
-    - Applied to both HTML files and `.htaccess` CSP header
+    - Applied to both HTML files
     - Note: If inline scripts are modified, hashes must be recalculated
     - Fixed: Corrected theme toggle script hash to match actual script content (includes comments)
 
@@ -45,7 +45,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Removed Plausible DNS prefetch hint
   - Removed Plausible from Content Security Policy (CSP) directives
   - Removed `window.plausible` initialization code
-  - Updated `.htaccess` CSP header to remove Plausible references
   - Applied cleanup to both index.html and index-material.html
 
 ### Performance
@@ -88,19 +87,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Applied to both index.html and index-material.html
   - These optimizations reduce FCP time by starting resource resolution earlier and minimizing render-blocking work
 
-- **Server-Side Security Headers Configuration**
-  - Created `.htaccess` file with all required HTTP security headers for Apache/Hostinger servers
-  - Configured `X-Frame-Options: SAMEORIGIN` as HTTP header (complements existing meta tag)
-  - Configured `X-Content-Type-Options: nosniff` as HTTP header (complements existing meta tag)
-  - Configured `Referrer-Policy: strict-origin-when-cross-origin` as HTTP header (complements existing meta tag)
-  - Configured `Permissions-Policy` HTTP header (cannot be set via meta tags)
-  - Configured `Strict-Transport-Security` (HSTS) HTTP header (commented out - uncomment after SSL verification)
-  - Improved header configuration: Changed from `Header set` to `Header always set` to ensure headers are sent for all HTTP responses (including error pages)
-  - This ensures security scanners properly detect headers like `X-Content-Type-Options: nosniff`
-  - Added performance optimizations: gzip compression and browser caching rules
-  - Added security settings: disabled directory browsing and protected sensitive files
-  - **Action Required**: Upload `.htaccess` file to Hostinger `public_html` directory to enable HTTP headers
-  - After upload, security scanners (SecurityHeaders.com, Mozilla Observatory) will detect all headers
 
 ### Fixed
 - **Mobile Responsiveness - Ecosystem Communities Callout**
@@ -135,11 +121,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Improved readability with better organization and compact format
   - Removed redundant sections while keeping all essential information
   - Updated README.md to reflect Business Development role at Certora
-  - Added comprehensive `.htaccess` documentation to README.md:
-    - Added `.htaccess` to project structure
-    - Added new "Deployment" section with server configuration details
-    - Documented security headers, performance optimizations, and upload instructions
-    - Updated Tech Stack to include Apache `.htaccess` configuration
+  - Updated README.md documentation
     - Removed Plausible Analytics from Tech Stack (no longer used)
 
 - **Link Updates**
