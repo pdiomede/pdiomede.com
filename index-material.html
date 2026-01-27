@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  <link rel="dns-prefetch" href="https://plausible.io" />
   
   <!-- Preload critical above-the-fold image for fastest FCP -->
   <link rel="preload" as="image" href="./images/me2024.jpg" fetchpriority="high" />
@@ -39,7 +38,7 @@
   <link rel="canonical" href="https://pdiomede.com/index-material.html" />
   
   <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; worker-src 'none'; child-src 'self'; media-src 'self'; manifest-src 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://plausible.io https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io; frame-ancestors 'self'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; worker-src 'none'; child-src 'self'; media-src 'self'; manifest-src 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
@@ -1725,16 +1724,10 @@
     !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
   </script>
   
-  <!-- Analytics: Plausible privacy-friendly analytics -->
-  <!-- Note: SRI hash must be updated if Plausible updates their script. Last updated: 2026-01-27 -->
-  <script defer data-domain="pdiomede.com" src="https://plausible.io/js/script.file-downloads.hash.outbound-links.js" integrity="sha384-PAaMKSMNYL2VhmGPsio6NzKGjoWgNWbGdzax2bP9yvfQMG8X4qI9EV+HlwNQ/7cm" crossorigin="anonymous"></script>
   <script>
     /* Performance: Minimal inline JavaScript - removed ~95 lines of unused code (generateSocialPreview)
        Only essential theme toggle functionality remains for optimal load time */
-    window.plausible = window.plausible || function () {
-      (window.plausible.q = window.plausible.q || []).push(arguments)
-    }
-
+    
     // Dark mode functionality
     let expandTimeout = null;
     function toggleTheme() {
