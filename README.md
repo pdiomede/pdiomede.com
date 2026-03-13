@@ -52,7 +52,7 @@ Switch between themes using the palette selector in the top-left corner of any p
 
 - **Elegant Frame** (`index.html`) - Default design with clean borders and subtle gradients
 - **Cyberpunk Neon** (`index-cyberpunk.html`) - Futuristic neon aesthetic with Orbitron/Share Tech Mono fonts, neon pink and cyan glow effects, scanlines, and glitch animations (dark mode only)
-- **Material Design** (`index-material.html`) - Google's Material Design with elevation shadows, ripple effects, flat chips, solid-color typography, and Roboto font hierarchy (300/400/500 weights)
+- **Material Design** (`index-material.html`) - Google's Material 3 (Material You) with tonal color system, surface containers, rounded shapes, ripple effects, and Roboto font hierarchy
 - **Pop Art** (`index-popart.html`) - Bold comic-book aesthetic with Bangers/Comic Neue fonts, thick borders, hard drop shadows, Ben-Day dots pattern, and primary color palette
 - **Terminal** (`index-terminal.html`) - Hacker terminal aesthetic with Source Code Pro/Fira Code monospace fonts, classic green-on-black palette, CRT scanline effects, and blinking cursor animations (dark mode only)
 
