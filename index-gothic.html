@@ -3,54 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Critical Resource Hints - Early DNS resolution for faster FCP -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  
+
   <!-- Preload critical above-the-fold image for fastest FCP -->
   <link rel="preload" as="image" href="./images/me2024.jpg" fetchpriority="high" />
-  
+
   <!--
     Author:       Paolo Diomede
-    Version:      v2.5.1 - Material Design Variant
-    Date:         January 2026
+    Version:      v2.5.1
     Description:  Personal portfolio website showcasing web3 ecosystem building,
                   governance expertise, and community leadership
-                  Design Style: Material Design with elevation shadows, ripple effects,
-                  and Material Design principles
-    
+    Theme:        Gothic Cathedral / Medieval
+
     For complete documentation, version history, and technical details,
     see CHANGELOG.md in the project root directory.
   -->
-  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | Material Design</title>
+  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer</title>
 
   <meta name="description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
   <meta name="author" content="Paolo Diomede" />
   <meta name="keywords" content="Paolo Diomede, web3, Ecosystem Builder, Certora, Livepeer, The Graph, Blockchain, Governance, DAO, DeFi, Indexerscore, Graphtools, Community Building, web3 Governance, Decentralization, Farcaster, Smart Contract Security, Formal Verification" />
   <meta name="robots" content="index, follow" />
-  
+
   <!-- Additional SEO Meta Tags -->
-  <meta name="theme-color" content="#3b82f6" />
+  <meta name="theme-color" content="#2d1b69" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="canonical" href="https://pdiomede.com/index-material.html" />
-  
+  <link rel="canonical" href="https://pdiomede.com/" />
+
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   <!-- Note: Strict-Transport-Security and Permissions-Policy must be configured on web server -->
-  
+
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
   <link rel="manifest" href="./manifest.json" />
-  
+  <link rel="llms-txt" href="./llms.txt" />
+
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
   [
@@ -78,7 +77,7 @@
       ],
       "description": "Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
       "url": "https://pdiomede.com",
-      "image": "https://pdiomede.com/images/me2024.jpg",
+      "image": "https://pdiomede.com/images/social-card.png",
       "email": "pdiomede@yahoo.com",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -160,91 +159,84 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pdiomede.com/index-material.html" />
+  <meta property="og:url" content="https://pdiomede.com/" />
   <meta property="og:site_name" content="Paolo Diomede" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta property="og:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta property="og:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta property="og:updated_time" content="2026-01-27T00:00:00+00:00" />
   <meta property="article:author" content="Paolo Diomede" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://pdiomede.com/index-material.html" />
+  <meta name="twitter:url" content="https://pdiomede.com/" />
   <meta name="twitter:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta name="twitter:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta name="twitter:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta name="twitter:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta name="twitter:creator" content="@pdiomede" />
   <meta name="twitter:site" content="@pdiomede" />
 
   <style>
-    /* Performance: Font display optimization
-       Fonts are loaded via Google Fonts with display=swap parameter in URL
-       This ensures text is visible immediately with fallback fonts while custom fonts load
-       font-display: swap prevents FOIT (Flash of Invisible Text) and ensures consistent text visibility */
+    /* Gothic Cathedral Theme
+       Fonts: Cinzel / Cinzel Decorative for headings, EB Garamond for body
+       Inspired by medieval architecture, stained glass, and stone cathedrals */
 
     :root {
-      --bg-color: #fafafa;
-      --text-color: rgba(0, 0, 0, 0.87);
-      --text-secondary: rgba(0, 0, 0, 0.6);
-      --text-muted: rgba(0, 0, 0, 0.38);
-      --surface-color: #ffffff;
-      --border-color: rgba(0, 0, 0, 0.12);
-      --border-hover: rgba(0, 0, 0, 0.2);
-      --link-color: #1976d2;
-      --link-hover: #1565c0;
-      --shadow: rgba(0, 0, 0, 0.14);
-      --shadow-hover: rgba(0, 0, 0, 0.22);
-      --button-bg: #1976d2;
-      --button-hover: #1565c0;
-      --button-text: #fff;
-      --highlight-bg: #1976d2;
-      --frame-border: rgba(0, 0, 0, 0.12);
-      --frame-shadow: rgba(0, 0, 0, 0.14);
-      --primary: #1976d2;
-      --primary-light: #42a5f5;
-      --secondary: #00897b;
-      --secondary-light: #26a69a;
-      --purple-accent: #7b1fa2;
-      --blue-accent: #1976d2;
-      --cyan-accent: #00897b;
+      --bg-color: #f0ece4;
+      --text-color: #1a1a2e;
+      --text-secondary: #4a4a5a;
+      --text-muted: #6b6b7b;
+      --surface-color: #faf5ef;
+      --border-color: #c8c0b4;
+      --border-hover: #a89e90;
+      --link-color: #2d1b69;
+      --link-hover: #4a2d8e;
+      --shadow: rgba(45, 27, 105, 0.12);
+      --shadow-hover: rgba(45, 27, 105, 0.22);
+      --button-bg: #2d1b69;
+      --button-hover: #1a0f40;
+      --button-text: #faf5ef;
+      --highlight-bg: #2d1b69;
+      --frame-border: #8b7355;
+      --frame-shadow: rgba(45, 27, 105, 0.2);
+      --purple-accent: #2d1b69;
+      --blue-accent: #4a2d8e;
+      --cyan-accent: #8b0000;
       --green-accent: #2e7d32;
-      --orange-accent: #e65100;
+      --gold-accent: #b8860b;
+      --crimson-accent: #8b0000;
     }
 
     [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: rgba(255, 255, 255, 0.87);
-      --text-secondary: rgba(255, 255, 255, 0.6);
-      --text-muted: rgba(255, 255, 255, 0.38);
-      --surface-color: #1e1e1e;
-      --border-color: rgba(255, 255, 255, 0.12);
-      --border-hover: rgba(255, 255, 255, 0.2);
-      --link-color: #90caf9;
-      --link-hover: #bbdefb;
-      --shadow: rgba(0, 0, 0, 0.3);
-      --shadow-hover: rgba(0, 0, 0, 0.4);
-      --button-bg: #90caf9;
-      --button-hover: #bbdefb;
-      --button-text: rgba(0, 0, 0, 0.87);
-      --highlight-bg: #90caf9;
-      --frame-border: rgba(255, 255, 255, 0.12);
-      --frame-shadow: rgba(0, 0, 0, 0.4);
-      --primary: #90caf9;
-      --primary-light: #bbdefb;
-      --secondary: #80cbc4;
-      --secondary-light: #b2dfdb;
-      --purple-accent: #ce93d8;
-      --blue-accent: #90caf9;
-      --cyan-accent: #80cbc4;
-      --green-accent: #81c784;
-      --orange-accent: #ffab91;
+      --bg-color: #0d0d14;
+      --text-color: #c0c0c0;
+      --text-secondary: #8a8a9a;
+      --text-muted: #6a6a7a;
+      --surface-color: #161620;
+      --border-color: #2a2a3a;
+      --border-hover: #3a3a4e;
+      --link-color: #d4a537;
+      --link-hover: #e8c04a;
+      --shadow: rgba(0, 0, 0, 0.4);
+      --shadow-hover: rgba(0, 0, 0, 0.55);
+      --button-bg: #d4a537;
+      --button-hover: #e8c04a;
+      --button-text: #0d0d14;
+      --highlight-bg: #d4a537;
+      --frame-border: #3a3048;
+      --frame-shadow: rgba(0, 0, 0, 0.5);
+      --purple-accent: #9b7fd4;
+      --blue-accent: #7a5dc7;
+      --cyan-accent: #c0392b;
+      --green-accent: #4caf50;
+      --gold-accent: #d4a537;
+      --crimson-accent: #c0392b;
     }
 
     * {
@@ -255,23 +247,51 @@
 
     /* Critical CSS for FCP - ensures immediate rendering */
     body {
-      font-family: 'Roboto', 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: rgba(0, 0, 0, 0.87);
-      line-height: 1.6;
+      font-family: 'EB Garamond', 'Georgia', 'Times New Roman', serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
       overflow-x: hidden;
       padding: 60px 20px;
-      /* Defer transition for faster initial render */
-    }
-    
-    /* Apply transitions after initial render */
-    body.loaded {
-      transition: background-color 0.3s ease, color 0.3s ease;
+      /* Subtle stone texture pattern */
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 40px,
+          rgba(139, 115, 85, 0.03) 40px,
+          rgba(139, 115, 85, 0.03) 41px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 40px,
+          rgba(139, 115, 85, 0.03) 40px,
+          rgba(139, 115, 85, 0.03) 41px
+        );
     }
 
     [data-theme="dark"] body {
-      background-color: #121212;
-      color: rgba(255, 255, 255, 0.87);
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 40px,
+          rgba(212, 165, 55, 0.02) 40px,
+          rgba(212, 165, 55, 0.02) 41px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 40px,
+          rgba(212, 165, 55, 0.02) 40px,
+          rgba(212, 165, 55, 0.02) 41px
+        );
+    }
+
+    /* Apply transitions after initial render */
+    body.loaded {
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     /* Skip to main content link for accessibility */
@@ -284,7 +304,8 @@
       background: var(--button-bg);
       color: var(--button-text);
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
       font-weight: 600;
       box-shadow: 0 4px 12px var(--shadow);
     }
@@ -301,30 +322,24 @@
     }
 
     .design-selector-button {
-      background: #ffffff;
-      color: #212121;
-      border: none;
-      border-radius: 50%;
+      background: var(--surface-color);
+      color: var(--text-color);
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
       width: 48px;
       height: 48px;
       padding: 0;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      font-weight: 600;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px var(--shadow);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
       position: relative;
-    }
-
-    [data-theme="dark"] .design-selector-button {
-      background: #2d2d2d;
-      color: #ffffff;
     }
 
     .design-selector-button .current-theme {
@@ -351,10 +366,10 @@
     }
 
     .design-selector.expanded .design-selector-button {
-      border-radius: 4px;
+      border-radius: 2px;
       width: auto;
-      min-width: 160px;
-      padding: 10px 16px;
+      min-width: 180px;
+      padding: 10px 20px;
       justify-content: space-between;
     }
 
@@ -376,11 +391,10 @@
     }
 
     .design-selector-button:hover {
-      background-color: #1976d2;
-      color: white;
-      box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.2);
+      background-color: var(--link-color);
+      color: var(--button-text);
+      border-color: var(--link-color);
+      box-shadow: 0 4px 16px var(--shadow-hover);
       transform: translateY(-2px);
     }
 
@@ -388,23 +402,16 @@
       position: absolute;
       top: calc(100% + 8px);
       left: 0;
-      background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      background: var(--surface-color);
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
+      box-shadow: 0 8px 24px var(--shadow);
       min-width: 200px;
       opacity: 0;
       visibility: hidden;
       transform: translateY(-10px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       overflow: hidden;
-    }
-
-    [data-theme="dark"] .design-selector-menu {
-      background: #2d2d2d;
-      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .design-selector.expanded .design-selector-menu {
@@ -420,13 +427,10 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #212121;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    }
-
-    [data-theme="dark"] .design-selector-option {
-      color: #ffffff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-color);
+      border-bottom: 1px solid var(--border-color);
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
     }
 
     .design-selector-option:last-child {
@@ -434,24 +438,23 @@
     }
 
     .design-selector-option:hover {
-      background: #1976d2;
-      color: white;
+      background: var(--link-color);
+      color: var(--button-text);
     }
 
     .design-selector-option.active {
-      background: rgba(25, 118, 210, 0.1);
-      color: #1976d2;
-      font-weight: 600;
+      background: rgba(45, 27, 105, 0.1);
+      color: var(--link-color);
+      font-weight: 700;
     }
 
     [data-theme="dark"] .design-selector-option.active {
-      background: rgba(25, 118, 210, 0.2);
-      color: #64b5f6;
+      background: rgba(212, 165, 55, 0.1);
     }
 
     .design-selector-option.active:hover {
-      background: #1976d2;
-      color: white;
+      background: var(--link-color);
+      color: var(--button-text);
     }
 
     .design-selector-option i {
@@ -463,61 +466,34 @@
       position: fixed;
       top: 24px;
       right: 24px;
-      background: #ffffff;
-      border: none;
-      border-radius: 50%;
+      background: var(--surface-color);
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
       width: 48px;
       height: 48px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px var(--shadow);
       z-index: 1000;
+      font-family: 'Cinzel', serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-color);
       overflow: hidden;
     }
 
-    [data-theme="dark"] .theme-toggle {
-      background: #2d2d2d;
-    }
-
-    .theme-toggle::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .theme-toggle:hover {
-      background: #1976d2;
-      box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .theme-toggle:active::after {
-      width: 100px;
-      height: 100px;
-    }
-    
     .theme-toggle .toggle-label {
       opacity: 0;
       width: 0;
       white-space: nowrap;
       transition: all 0.3s ease;
       margin-left: 0;
-      font-size: 0.9rem;
-      font-weight: 500;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
 
     .theme-toggle i {
@@ -528,7 +504,7 @@
     }
 
     .theme-toggle.expanded {
-      border-radius: 4px;
+      border-radius: 2px;
       width: auto;
       min-width: 160px;
       padding: 10px 16px;
@@ -546,94 +522,129 @@
       position: relative;
     }
 
+    .theme-toggle:hover {
+      background: var(--link-color);
+      box-shadow: 0 4px 16px var(--shadow-hover);
+      transform: translateY(-2px) scale(1.05);
+      border-color: var(--link-color);
+      color: var(--button-text);
+    }
+
     .theme-toggle:hover i {
-      color: white;
+      color: var(--button-text);
       transform: rotate(15deg);
     }
 
     .theme-toggle.expanded:hover i {
       transform: rotate(15deg);
     }
-    
-    .theme-toggle::before {
-      content: attr(data-tooltip);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-4px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      pointer-events: none;
-      z-index: 1001;
-    }
-
-    [data-theme="dark"] .theme-toggle::before {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-    
-    .theme-toggle:hover::before {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .theme-toggle i {
-      font-size: 1.2rem;
-      color: var(--text-color);
-      transition: all 0.3s ease;
-    }
 
     .elegant-frame {
       max-width: 1200px;
       margin: 0 auto;
-      background: #ffffff;
-      border: none;
+      background: var(--surface-color);
+      border: 5px solid var(--frame-border);
       border-radius: 4px;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.1),
-        0 4px 8px rgba(0, 0, 0, 0.1),
-        0 8px 16px rgba(0, 0, 0, 0.1),
-        0 16px 32px rgba(0, 0, 0, 0.1);
+      box-shadow:
+        0 0 0 2px var(--frame-border),
+        0 0 0 6px var(--surface-color),
+        0 0 0 8px var(--frame-border),
+        0 20px 60px var(--frame-shadow);
       position: relative;
       overflow: hidden;
       padding: 60px 50px;
-      transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    [data-theme="dark"] .elegant-frame {
-      background: #1e1e1e;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.3),
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 8px 16px rgba(0, 0, 0, 0.3),
-        0 16px 32px rgba(0, 0, 0, 0.3);
-    }
-
+    /* Diamond cross-hatch pattern overlay */
     .elegant-frame::before {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 30px,
+          rgba(139, 115, 85, 0.02) 30px,
+          rgba(139, 115, 85, 0.02) 31px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 30px,
+          rgba(139, 115, 85, 0.02) 30px,
+          rgba(139, 115, 85, 0.02) 31px
+        );
+      pointer-events: none;
+      z-index: 0;
     }
 
-    /* Corner decorations hidden - not part of Material Design */
+    [data-theme="dark"] .elegant-frame::before {
+      background-image:
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 30px,
+          rgba(212, 165, 55, 0.015) 30px,
+          rgba(212, 165, 55, 0.015) 31px
+        ),
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 30px,
+          rgba(212, 165, 55, 0.015) 30px,
+          rgba(212, 165, 55, 0.015) 31px
+        );
+    }
+
+    /* Gothic architectural corner - top left (via ::after) */
     .elegant-frame::after {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 50px;
+      height: 50px;
+      border-top: 3px solid var(--gold-accent);
+      border-left: 3px solid var(--gold-accent);
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 1;
     }
 
     .corner-decoration {
-      display: none;
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .corner-decoration.top-right {
+      top: 16px;
+      right: 16px;
+      border-top: 3px solid var(--gold-accent);
+      border-right: 3px solid var(--gold-accent);
+      opacity: 0.4;
+    }
+
+    .corner-decoration.bottom-left {
+      bottom: 16px;
+      left: 16px;
+      border-bottom: 3px solid var(--gold-accent);
+      border-left: 3px solid var(--gold-accent);
+      opacity: 0.4;
+    }
+
+    .corner-decoration.bottom-right {
+      bottom: 16px;
+      right: 16px;
+      border-bottom: 3px solid var(--gold-accent);
+      border-right: 3px solid var(--gold-accent);
+      opacity: 0.4;
     }
 
     .header {
@@ -643,47 +654,62 @@
       z-index: 1;
     }
 
+    /* Octagonal profile image */
     .profile-img {
       width: 120px;
       height: 120px;
-      border-radius: 50%;
+      clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
       object-fit: cover;
       margin-bottom: 32px;
-      border: 4px solid var(--surface-color);
+      border: none;
       box-shadow: 0 8px 32px var(--shadow);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .profile-img:hover {
-      transform: translateY(-4px);
+      transform: translateY(-4px) scale(1.05);
       box-shadow: 0 12px 40px var(--shadow-hover);
     }
 
     h1 {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
       font-size: 2.5rem;
-      font-weight: 300;
+      font-weight: 700;
       color: var(--text-color);
       margin-bottom: 4px;
-      letter-spacing: 0;
+      letter-spacing: 0.05em;
     }
 
     .tagline {
+      font-family: 'EB Garamond', serif;
       font-size: 1.2rem;
-      color: #4a4a4a;
+      color: #4a4a5a;
       font-weight: 400;
       font-style: italic;
       margin-bottom: 8px;
     }
 
     [data-theme="dark"] .tagline {
-      color: #d0d0d0;
+      color: #a0a0b0;
     }
 
-    /* New Section Styles */
+    /* Section Styles */
     .major-section {
       margin: 80px 0;
       position: relative;
       z-index: 1;
+    }
+
+    /* Ornate divider between sections */
+    .major-section::before {
+      content: '\2726  \2726  \2726';
+      display: block;
+      text-align: center;
+      color: var(--gold-accent);
+      font-size: 1.2rem;
+      letter-spacing: 0.5em;
+      margin-bottom: 40px;
+      opacity: 0.6;
     }
 
     .section-header {
@@ -692,13 +718,29 @@
     }
 
     .section-title {
+      font-family: 'Cinzel Decorative', 'Cinzel', serif;
       font-size: 2.5rem;
-      font-weight: 300;
+      font-weight: 700;
       margin-bottom: 8px;
-      color: var(--text-color);
+      color: var(--purple-accent);
+      text-shadow:
+        1px 1px 2px rgba(184, 134, 11, 0.3),
+        0 0 20px rgba(45, 27, 105, 0.1);
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: unset;
+      background-clip: unset;
+      background: none;
+    }
+
+    [data-theme="dark"] .section-title {
+      color: var(--gold-accent);
+      text-shadow:
+        1px 1px 2px rgba(212, 165, 55, 0.3),
+        0 0 20px rgba(212, 165, 55, 0.1);
     }
 
     .section-subtitle {
+      font-family: 'EB Garamond', serif;
       font-size: 1.1rem;
       color: var(--text-secondary);
       font-weight: 400;
@@ -715,67 +757,33 @@
     }
 
     .role-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
       padding: 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      cursor: pointer;
-    }
-
-    [data-theme="dark"] .role-card {
-      background: #2d2d2d;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.5),
-        0 1px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .role-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .role-card:active::after {
-      width: 300px;
-      height: 300px;
     }
 
     .role-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px var(--shadow-hover);
+      border-color: var(--gold-accent);
     }
 
-    [data-theme="dark"] .role-card:hover {
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.7),
-        0 3px 6px rgba(0, 0, 0, 0.7);
-    }
-
+    /* Pointed arch shape on card top */
     .role-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: var(--primary);
+      height: 6px;
+      background: var(--gold-accent);
+      clip-path: polygon(0 0, 50% 100%, 100% 0);
     }
 
     .role-header {
@@ -786,59 +794,56 @@
     }
 
     .role-badge {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      height: 32px;
-      line-height: 32px;
-      border: none;
     }
 
     .badge-governance {
-      background: var(--purple-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-governance {
-      background: rgba(206, 147, 216, 0.2);
+      background: rgba(45, 27, 105, 0.1);
       color: var(--purple-accent);
+      border: 1px solid rgba(45, 27, 105, 0.25);
     }
 
     .badge-growth {
-      background: var(--cyan-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-growth {
-      background: rgba(128, 203, 196, 0.2);
-      color: var(--cyan-accent);
+      background: rgba(139, 0, 0, 0.08);
+      color: var(--crimson-accent);
+      border: 1px solid rgba(139, 0, 0, 0.2);
     }
 
     .badge-leadership {
-      background: var(--green-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-leadership {
-      background: rgba(129, 199, 132, 0.2);
+      background: rgba(46, 125, 50, 0.1);
       color: var(--green-accent);
+      border: 1px solid rgba(46, 125, 50, 0.2);
     }
 
     .badge-advisor {
-      background: var(--orange-accent);
-      color: #fff;
+      background: rgba(184, 134, 11, 0.1);
+      color: var(--gold-accent);
+      border: 1px solid rgba(184, 134, 11, 0.25);
     }
 
     [data-theme="dark"] .badge-advisor {
-      background: rgba(255, 171, 145, 0.2);
-      color: var(--orange-accent);
+      color: var(--gold-accent);
+    }
+
+    [data-theme="dark"] .badge-governance {
+      background: rgba(155, 127, 212, 0.1);
+      border-color: rgba(155, 127, 212, 0.25);
+    }
+
+    [data-theme="dark"] .badge-growth {
+      background: rgba(192, 57, 43, 0.1);
+      border-color: rgba(192, 57, 43, 0.2);
     }
 
     .role-title {
-      font-size: 1.2rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 6px;
       color: var(--text-color);
@@ -846,17 +851,22 @@
     }
 
     .role-company {
+      font-family: 'Cinzel', serif;
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 12px;
-      color: var(--primary);
+      color: var(--purple-accent);
+    }
+
+    [data-theme="dark"] .role-company {
+      color: var(--gold-accent);
     }
 
     .role-description {
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 20px;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       flex-grow: 1;
     }
 
@@ -864,56 +874,27 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 24px;
+      padding: 10px 20px;
       background: transparent;
-      color: #1976d2;
+      color: var(--link-color);
       text-decoration: none;
-      border: none;
-      border-radius: 4px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: 0.875rem;
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
       margin-top: auto;
-      position: relative;
-      overflow: hidden;
-      box-shadow: none;
-    }
-
-    [data-theme="dark"] .role-button {
-      color: #90caf9;
-    }
-
-    .role-button::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      letter-spacing: 0.02em;
+      /* Subtle pointed ends via clip-path */
+      clip-path: polygon(4px 0%, calc(100% - 4px) 0%, 100% 50%, calc(100% - 4px) 100%, 4px 100%, 0% 50%);
+      padding: 10px 24px;
     }
 
     .role-button:hover {
-      background: rgba(25, 118, 210, 0.08);
-      color: #1565c0;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
-    }
-
-    .role-button:active::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    [data-theme="dark"] .role-button:hover {
-      background: rgba(144, 202, 249, 0.16);
-      color: #90caf9;
+      background: var(--link-color);
+      color: var(--button-text);
+      border-color: var(--link-color);
     }
 
     /* Community Impact Section */
@@ -929,25 +910,16 @@
     }
 
     .stat-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
       padding: 24px;
       text-align: center;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .stat-card {
-      background: #2d2d2d;
     }
 
     .stat-card.with-button {
@@ -962,7 +934,7 @@
     .stat-card:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 16px var(--shadow-hover);
-      border-color: var(--border-hover);
+      border-color: var(--gold-accent);
     }
 
     .stat-card .role-button {
@@ -970,6 +942,7 @@
     }
 
     .stat-title {
+      font-family: 'Cinzel', serif;
       font-size: 1rem;
       font-weight: 700;
       color: var(--text-color);
@@ -978,21 +951,27 @@
     }
 
     .stat-description {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 16px;
     }
 
     .stat-number {
+      font-family: 'Cinzel', serif;
       font-size: 2.5rem;
-      font-weight: 300;
-      color: var(--primary);
+      font-weight: 900;
+      color: var(--purple-accent);
       margin-bottom: 6px;
     }
 
+    [data-theme="dark"] .stat-number {
+      color: var(--gold-accent);
+    }
+
     .stat-label {
-      font-size: 1rem;
+      font-family: 'Cinzel', serif;
+      font-size: 0.95rem;
       color: var(--text-secondary);
       font-weight: 700;
     }
@@ -1005,49 +984,21 @@
     }
 
     .project-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
       padding: 32px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       text-align: left;
       display: flex;
       flex-direction: column;
       height: 100%;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .project-card {
-      background: #2d2d2d;
-    }
-
-    .project-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .project-card:active::after {
-      width: 300px;
-      height: 300px;
     }
 
     .project-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px var(--shadow-hover);
+      border-color: var(--gold-accent);
     }
 
     .project-card .role-button {
@@ -1064,34 +1015,34 @@
     .project-icon {
       width: 48px;
       height: 48px;
-      border-radius: 12px;
+      border-radius: 2px;
       background: var(--purple-accent);
-      color: white;
+      color: var(--button-text);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
     }
 
-    .project-status {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background: var(--green-accent);
-      color: #fff;
-      border: none;
-      height: 32px;
-      line-height: 32px;
+    [data-theme="dark"] .project-icon {
+      background: var(--gold-accent);
+      color: #0d0d14;
     }
 
-    [data-theme="dark"] .project-status {
-      background: rgba(129, 199, 132, 0.2);
+    .project-status {
+      padding: 6px 12px;
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      background: rgba(46, 125, 50, 0.1);
       color: var(--green-accent);
+      border: 1px solid rgba(46, 125, 50, 0.2);
     }
 
     .project-title {
-      font-size: 1.4rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 16px;
       color: var(--text-color);
@@ -1099,7 +1050,7 @@
 
     .project-description {
       color: var(--text-secondary);
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 24px;
     }
 
@@ -1116,10 +1067,15 @@
     }
 
     .project-stat-number {
+      font-family: 'Cinzel', serif;
       font-size: 1.5rem;
       font-weight: 700;
       color: var(--purple-accent);
       margin-bottom: 4px;
+    }
+
+    [data-theme="dark"] .project-stat-number {
+      color: var(--gold-accent);
     }
 
     .project-stat-label {
@@ -1129,29 +1085,60 @@
 
     /* Innovation Lab Section */
     .ecosystem-highlight {
-      background: #ffffff;
-      border: none;
-      border-left: 4px solid var(--primary);
-      border-radius: 4px;
+      background: linear-gradient(135deg, rgba(45, 27, 105, 0.06), rgba(184, 134, 11, 0.04));
+      border: 2px solid rgba(184, 134, 11, 0.2);
+      border-radius: 2px;
       padding: 32px 24px;
       margin: 0 auto;
       max-width: 800px;
       position: relative;
       overflow: hidden;
-      box-shadow:
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
     }
 
     [data-theme="dark"] .ecosystem-highlight {
-      background: #2d2d2d;
-      border-left-color: var(--primary);
+      background: linear-gradient(135deg, rgba(212, 165, 55, 0.04), rgba(74, 45, 142, 0.04));
+      border-color: rgba(212, 165, 55, 0.15);
     }
 
-    /* Clean Material surface - no decorative pseudo-elements */
-    .ecosystem-highlight::before,
+    .ecosystem-highlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(184, 134, 11, 0.08) 1px, transparent 1px),
+        radial-gradient(circle at 80% 30%, rgba(184, 134, 11, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 40% 70%, rgba(45, 27, 105, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 90% 80%, rgba(184, 134, 11, 0.07) 1px, transparent 1px),
+        radial-gradient(circle at 15% 60%, rgba(45, 27, 105, 0.04) 1px, transparent 1px),
+        radial-gradient(circle at 70% 15%, rgba(184, 134, 11, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 25% 90%, rgba(45, 27, 105, 0.05) 1px, transparent 1px),
+        radial-gradient(circle at 60% 50%, rgba(184, 134, 11, 0.03) 1px, transparent 1px),
+        radial-gradient(circle at 85% 60%, rgba(45, 27, 105, 0.06) 2px, transparent 2px),
+        radial-gradient(circle at 30% 40%, rgba(184, 134, 11, 0.04) 1.5px, transparent 1.5px);
+      background-size:
+        150px 150px, 200px 200px, 180px 180px, 160px 160px, 140px 140px,
+        170px 170px, 190px 190px, 220px 220px, 250px 250px, 180px 180px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
     .ecosystem-highlight::after {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(184, 134, 11, 0.01) 50%,
+        transparent 100%
+      );
+      pointer-events: none;
     }
 
     .innovation-tools {
@@ -1161,47 +1148,19 @@
     }
 
     .tool-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 2px solid var(--border-color);
+      border-radius: 2px;
       padding: 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .tool-card {
-      background: #2d2d2d;
-    }
-
-    .tool-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .tool-card:active::after {
-      width: 300px;
-      height: 300px;
     }
 
     .tool-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px var(--shadow-hover);
+      border-color: var(--gold-accent);
     }
 
     .tool-header {
@@ -1214,7 +1173,7 @@
     .tool-icon {
       width: 40px;
       height: 40px;
-      border-radius: 10px;
+      border-radius: 2px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1223,31 +1182,31 @@
     }
 
     .tool-icon.analytics {
-      background: var(--blue-accent);
+      background: linear-gradient(135deg, var(--purple-accent), var(--gold-accent));
     }
 
     .tool-icon.development {
-      background: var(--cyan-accent);
+      background: linear-gradient(135deg, var(--crimson-accent), var(--purple-accent));
     }
 
     .tool-badge {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      height: 32px;
-      line-height: 32px;
-      border: none;
+      padding: 4px 10px;
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.65rem;
+      font-weight: 700;
     }
 
     .badge-featured {
-      background: var(--purple-accent);
-      color: #fff;
+      background: rgba(45, 27, 105, 0.1);
+      color: var(--purple-accent);
+      border: 1px solid rgba(45, 27, 105, 0.2);
     }
 
     [data-theme="dark"] .badge-featured {
-      background: rgba(206, 147, 216, 0.2);
-      color: var(--purple-accent);
+      background: rgba(212, 165, 55, 0.1);
+      color: var(--gold-accent);
+      border-color: rgba(212, 165, 55, 0.2);
     }
 
     @keyframes livePulse {
@@ -1256,18 +1215,19 @@
     }
 
     .badge-live-data {
-      background: var(--green-accent);
-      color: #fff;
+      background: rgba(46, 125, 50, 0.1);
+      color: #2e7d32;
+      border: 1px solid rgba(46, 125, 50, 0.3);
       animation: livePulse 2.5s ease-in-out infinite;
     }
 
     [data-theme="dark"] .badge-live-data {
-      background: rgba(129, 199, 132, 0.2);
-      color: var(--green-accent);
+      color: #4caf50;
     }
 
     .tool-title {
-      font-size: 1.2rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 12px;
       color: var(--text-color);
@@ -1276,10 +1236,10 @@
 
     .tool-description {
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 20px;
       flex-grow: 1;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
     }
 
     .tool-tags {
@@ -1290,19 +1250,13 @@
     }
 
     .tool-tag {
-      padding: 0 12px;
-      background: rgba(0, 0, 0, 0.08);
-      border: none;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
+      padding: 3px 10px;
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      font-size: 0.7rem;
       color: var(--text-secondary);
-      height: 32px;
-      line-height: 32px;
-    }
-
-    [data-theme="dark"] .tool-tag {
-      background: rgba(255, 255, 255, 0.08);
     }
 
     /* Links section */
@@ -1325,64 +1279,38 @@
       align-items: center;
       gap: 8px;
       padding: 12px 24px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
+      background: var(--surface-color);
+      color: var(--text-color);
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      border: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .links a {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-    }
-
-    .links a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px var(--shadow);
+      border: 2px solid var(--border-color);
+      letter-spacing: 0.02em;
     }
 
     .links a:hover {
-      background: #1976d2;
-      color: white;
+      background: var(--link-color);
+      color: var(--button-text);
       transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      box-shadow: 0 4px 16px var(--shadow-hover);
+      border-color: var(--link-color);
     }
 
-    .links a:active::before {
-      width: 300px;
-      height: 300px;
-    }
-    
     .links a:hover i,
     .links a:hover svg {
-      color: white;
-      fill: white;
+      color: var(--button-text);
+      fill: var(--button-text);
     }
 
     /* GitHub repository link - centered below frame */
     .github-repo-link {
       display: flex;
       justify-content: center;
+      gap: 16px;
       margin-top: 12px;
       margin-bottom: 20px;
     }
@@ -1392,61 +1320,34 @@
       align-items: center;
       gap: 8px;
       padding: 12px 24px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
+      background: var(--surface-color);
+      color: var(--text-color);
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      border: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .github-repo-link a {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-    }
-
-    .github-repo-link a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      border-radius: 2px;
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px var(--shadow);
+      border: 2px solid var(--border-color);
     }
 
     .github-repo-link a:hover {
-      background: #1976d2;
-      color: white;
+      background: var(--link-color);
+      color: var(--button-text);
       transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-
-    .github-repo-link a:active::before {
-      width: 300px;
-      height: 300px;
+      box-shadow: 0 4px 16px var(--shadow-hover);
+      border-color: var(--link-color);
     }
 
     .github-repo-link a:hover i {
-      color: white;
+      color: var(--button-text);
     }
 
     /* Copyright text - centered above GitHub link */
     .copyright {
       text-align: center;
+      font-family: 'EB Garamond', serif;
       font-size: 0.9rem;
       color: var(--text-muted);
       margin-top: 20px;
@@ -1656,7 +1557,7 @@
     /* Theme-based logo switching */
     :root[data-theme="light"] .role-card.has-brand .brand-logo.dark { display: none; }
     :root[data-theme="light"] .role-card.has-brand .brand-logo.light { display: block; }
-    
+
     :root[data-theme="dark"] .role-card.has-brand .brand-logo.light { display: none; }
     :root[data-theme="dark"] .role-card.has-brand .brand-logo.dark { display: block; }
 
@@ -1667,14 +1568,14 @@
 
     :root[data-theme="light"] .project-card.has-brand .brand-logo.dark { display: none; }
     :root[data-theme="light"] .project-card.has-brand .brand-logo.light { display: block; }
-    
+
     :root[data-theme="dark"] .project-card.has-brand .brand-logo.light { display: none; }
     :root[data-theme="dark"] .project-card.has-brand .brand-logo.dark { display: block; }
 
     /* The Graph extended logo - light/dark mode switching */
     :root[data-theme="light"] .graph-extended-logo.light { display: block; }
     :root[data-theme="light"] .graph-extended-logo.dark { display: none; }
-    
+
     :root[data-theme="dark"] .graph-extended-logo.light { display: none; }
     :root[data-theme="dark"] .graph-extended-logo.dark { display: block; }
 
@@ -1684,46 +1585,40 @@
 </style>
 
   <!-- Load fonts asynchronously to prevent render blocking -->
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet" /></noscript>
+
   <!-- Load Font Awesome asynchronously to prevent render blocking -->
-  <!-- Note: Font Awesome contains many unused icons, but loading async minimizes impact -->
-  <!-- Consider using a subset or icon font in future for better performance -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
-  
+
   <!-- Fallback script for browsers that don't support onload on link elements -->
   <script>
     !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
   </script>
-  
+
   <script>
-    /* Performance: Minimal inline JavaScript - removed ~95 lines of unused code (generateSocialPreview)
-       Only essential theme toggle functionality remains for optimal load time */
-    
-    // Dark mode functionality
+    /* Dark mode functionality */
+
     let expandTimeout = null;
     function toggleTheme() {
       const html = document.documentElement;
       const themeIcon = document.getElementById('theme-icon');
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
       const currentTheme = html.getAttribute('data-theme');
-      
+
       // Expand toggle to show label
       if (themeToggleBtn) {
-        // Clear any existing timeout to prevent memory leaks
         if (expandTimeout) {
           clearTimeout(expandTimeout);
         }
         themeToggleBtn.classList.add('expanded');
-        // Collapse after 2 seconds
         expandTimeout = setTimeout(() => {
           themeToggleBtn.classList.remove('expanded');
           expandTimeout = null;
         }, 2000);
       }
-      
+
       if (currentTheme === 'dark') {
         html.setAttribute('data-theme', 'light');
         if (themeIcon) {
@@ -1748,25 +1643,22 @@
     // Design selector functionality
     let designSelectorInitialized = false;
     function initDesignSelector() {
-      // Prevent multiple initializations
       if (designSelectorInitialized) {
         return;
       }
-      
+
       const selector = document.getElementById('design-selector');
       const button = document.getElementById('design-selector-button');
-      
-      // Early return if elements don't exist
+
       if (!selector || !button) {
         return;
       }
-      
+
       designSelectorInitialized = true;
-      
+
       const options = selector.querySelectorAll('.design-selector-option');
       const currentThemeSpan = button.querySelector('.current-theme');
-      
-      // Get current page theme name
+
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
       const themeNames = {
         'index.html': 'Elegant Frame',
@@ -1778,29 +1670,27 @@
         'index-manga.html': 'Manga'
       };
 
-      // Update button text and active state
       if (currentThemeSpan) {
-        currentThemeSpan.textContent = themeNames[currentPage] || 'Material Design';
+        currentThemeSpan.textContent = themeNames[currentPage] || 'Gothic Cathedral';
       }
       if (options && options.length > 0) {
         options.forEach(option => {
-        const themeFile = option.getAttribute('data-theme');
-        const icon = option.querySelector('i');
-        if (themeFile === currentPage) {
-          option.classList.add('active');
-          if (icon) {
-            icon.className = 'fas fa-check';
+          const themeFile = option.getAttribute('data-theme');
+          const icon = option.querySelector('i');
+          if (themeFile === currentPage) {
+            option.classList.add('active');
+            if (icon) {
+              icon.className = 'fas fa-check';
+            }
+          } else {
+            option.classList.remove('active');
+            if (icon) {
+              icon.className = '';
+            }
           }
-        } else {
-          option.classList.remove('active');
-          if (icon) {
-            icon.className = '';
-          }
-        }
-      });
+        });
       }
-      
-      // Toggle menu on button click
+
       button.addEventListener('click', function(e) {
         e.stopPropagation();
         if (selector) {
@@ -1808,15 +1698,13 @@
           button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
         }
       });
-      
-      // Handle option clicks and keyboard events
+
       if (options && options.length > 0) {
         options.forEach(option => {
-        // Make option keyboard accessible (already set in HTML, but ensure it's set)
         if (!option.hasAttribute('tabindex')) {
           option.setAttribute('tabindex', '0');
         }
-        
+
         const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
           if (themeFile && themeFile !== currentPage) {
@@ -1828,12 +1716,12 @@
             }
           }
         };
-        
+
         option.addEventListener('click', function(e) {
           e.stopPropagation();
           handleOptionSelect.call(this);
         });
-        
+
         option.addEventListener('keydown', function(e) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -1843,22 +1731,20 @@
         });
       });
       }
-      
-      // Close menu when clicking outside
+
       document.addEventListener('click', function(e) {
         if (selector && button && !selector.contains(e.target)) {
           selector.classList.remove('expanded');
           button.setAttribute('aria-expanded', 'false');
         }
       });
-      
-      // Close menu on Escape key
+
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && selector && selector.classList.contains('expanded')) {
           selector.classList.remove('expanded');
           if (button) {
             button.setAttribute('aria-expanded', 'false');
-            button.focus(); // Return focus to button for accessibility
+            button.focus();
           }
         }
       });
@@ -1878,16 +1764,13 @@
       const savedTheme = localStorage.getItem('theme');
       const themeIcon = document.getElementById('theme-icon');
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      
-      // Attach event listener to theme toggle button
+
       if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', toggleTheme);
       }
-      
-      // Initialize design selector
+
       initDesignSelector();
-      
-      // Only use light mode if explicitly saved as 'light' in localStorage
+
       if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
         if (themeIcon) {
@@ -1897,7 +1780,6 @@
           themeToggleBtn.setAttribute('aria-pressed', 'false');
         }
       } else {
-        // Default to dark mode
         document.documentElement.setAttribute('data-theme', 'dark');
         if (themeIcon) {
           themeIcon.className = 'fas fa-moon';
@@ -1912,47 +1794,26 @@
 <body>
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
-  
+
   <!-- Design Theme Selector -->
   <div class="design-selector" id="design-selector">
     <button class="design-selector-button" id="design-selector-button" aria-label="Select design theme" aria-expanded="false" aria-controls="design-selector-menu" aria-haspopup="true">
       <i class="fas fa-palette"></i>
-      <span class="current-theme">Material Design</span>
+      <span class="current-theme">Gothic Cathedral</span>
       <i class="fas fa-chevron-down"></i>
     </button>
     <div class="design-selector-menu" id="design-selector-menu" role="menu">
-      <div class="design-selector-option" data-theme="index.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Elegant Frame</span>
-      </div>
-      <div class="design-selector-option active" data-theme="index-material.html" role="menuitem" tabindex="0">
-        <i class="fas fa-check"></i>
-        <span>Material Design</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Pop Art</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-renaissance.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Renaissance</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-gothic.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Gothic Cathedral</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Cyberpunk Neon</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-manga.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Manga</span>
-      </div>
+      <div class="design-selector-option" data-theme="index.html" role="menuitem" tabindex="0"><i></i><span>Elegant Frame</span></div>
+      <div class="design-selector-option" data-theme="index-material.html" role="menuitem" tabindex="0"><i></i><span>Material Design</span></div>
+      <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0"><i></i><span>Pop Art</span></div>
+      <div class="design-selector-option" data-theme="index-renaissance.html" role="menuitem" tabindex="0"><i></i><span>Renaissance</span></div>
+      <div class="design-selector-option active" data-theme="index-gothic.html" role="menuitem" tabindex="0"><i class="fas fa-check"></i><span>Gothic Cathedral</span></div>
+      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0"><i></i><span>Cyberpunk Neon</span></div>
+      <div class="design-selector-option" data-theme="index-manga.html" role="menuitem" tabindex="0"><i></i><span>Manga</span></div>
     </div>
   </div>
 
-  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true" data-tooltip="Toggle theme">
+  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true">
     <i class="fas fa-moon" id="theme-icon"></i>
     <span class="toggle-label">Dark/Light Mode</span>
   </button>
@@ -1962,7 +1823,7 @@
     <div class="corner-decoration top-right"></div>
     <div class="corner-decoration bottom-left"></div>
     <div class="corner-decoration bottom-right"></div>
-    
+
     <!-- Header Links -->
     <div class="links links-header">
       <a href="mailto:pdiomede@yahoo.com" aria-label="Email Paolo Diomede">
@@ -1992,13 +1853,8 @@
         GitHub
       </a>
     </div>
-    
+
     <header class="header">
-      <!-- Performance: Critical image optimizations:
-           - fetchpriority="high": Prioritize loading this above-the-fold image
-           - width/height: Explicit dimensions prevent layout shift (improves CLS)
-           - decoding="async": Non-blocking image decode for faster rendering
-           - Preloaded in <head> for fastest LCP -->
       <!-- Performance: Critical above-the-fold image optimized with fetchpriority, explicit dimensions, and async decoding -->
       <img src="./images/me2024.jpg" alt="Paolo Diomede's Profile Picture" class="profile-img" fetchpriority="high" width="120" height="120" decoding="async" loading="eager" />
       <h1>Paolo Diomede</h1>
@@ -2009,11 +1865,7 @@
     <section class="major-section" aria-label="Current Roles">
       <div class="roles-grid">
         <div class="role-card has-brand">
-          <!-- Performance: Below-the-fold images use loading="lazy" for deferred loading
-               and explicit width/height to prevent layout shift -->
           <div class="role-header">
-            <!-- Performance: Below-the-fold images optimized with lazy loading and async decoding -->
-            <!-- Note: Consider optimizing certora.jpg to WebP format for better compression (~43KB savings) -->
             <img class="brand-logo light" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
 
@@ -2144,7 +1996,7 @@
             <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
             <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color);">Ecosystem Communities</h3>
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color); font-family: 'Cinzel', serif;">Ecosystem Communities</h3>
 
           <div class="community-stats" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center;">
             <div class="stat-card with-button">
@@ -2163,7 +2015,7 @@
             </div>
 
             <div class="stat-card with-button">
-              <div class="stat-icon" style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue-accent), var(--purple-accent)); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto;">
+              <div class="stat-icon" style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue-accent), var(--purple-accent)); color: white; border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto;">
                 <i class="fas fa-users-cog"></i>
               </div>
               <div class="stat-title">Graph AdvocatesDAO</div>
@@ -2179,8 +2031,6 @@
       <div class="community-projects">
         <div class="project-card has-brand">
           <div class="project-header">
-            <!-- Performance: PNG images optimized with lazy loading and async decoding -->
-            <!-- Note: Consider converting PNG logos to WebP or optimizing PNG compression for better delivery -->
             <img class="brand-logo light" src="./images/The_Graph_Logomark_light_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/The_Graph_Logomark_dark_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
 
@@ -2280,12 +2130,12 @@
       </a>
     </div>
   </main>
-  
+
   <!-- Copyright -->
   <div class="copyright">
     &copy; 2026 Paolo Diomede. All rights reserved.
   </div>
-  
+
   <!-- GitHub Repository Link -->
   <div class="github-repo-link">
     <a href="https://github.com/pdiomede/pdiomede.com" target="_blank" rel="noopener noreferrer" aria-label="View this repo on GitHub">

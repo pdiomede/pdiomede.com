@@ -3,54 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Critical Resource Hints - Early DNS resolution for faster FCP -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  
+
   <!-- Preload critical above-the-fold image for fastest FCP -->
   <link rel="preload" as="image" href="./images/me2024.jpg" fetchpriority="high" />
-  
+
   <!--
     Author:       Paolo Diomede
-    Version:      v2.5.1 - Material Design Variant
-    Date:         January 2026
+    Version:      v2.5.1
     Description:  Personal portfolio website showcasing web3 ecosystem building,
                   governance expertise, and community leadership
-                  Design Style: Material Design with elevation shadows, ripple effects,
-                  and Material Design principles
-    
+    Theme:        Manga / Anime
+
     For complete documentation, version history, and technical details,
     see CHANGELOG.md in the project root directory.
   -->
-  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | Material Design</title>
+  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer</title>
 
   <meta name="description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
   <meta name="author" content="Paolo Diomede" />
   <meta name="keywords" content="Paolo Diomede, web3, Ecosystem Builder, Certora, Livepeer, The Graph, Blockchain, Governance, DAO, DeFi, Indexerscore, Graphtools, Community Building, web3 Governance, Decentralization, Farcaster, Smart Contract Security, Formal Verification" />
   <meta name="robots" content="index, follow" />
-  
+
   <!-- Additional SEO Meta Tags -->
-  <meta name="theme-color" content="#3b82f6" />
+  <meta name="theme-color" content="#e60012" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="canonical" href="https://pdiomede.com/index-material.html" />
-  
+  <link rel="canonical" href="https://pdiomede.com/" />
+
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   <!-- Note: Strict-Transport-Security and Permissions-Policy must be configured on web server -->
-  
+
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
   <link rel="manifest" href="./manifest.json" />
-  
+  <link rel="llms-txt" href="./llms.txt" />
+
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
   [
@@ -78,7 +77,7 @@
       ],
       "description": "Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
       "url": "https://pdiomede.com",
-      "image": "https://pdiomede.com/images/me2024.jpg",
+      "image": "https://pdiomede.com/images/social-card.png",
       "email": "pdiomede@yahoo.com",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -160,91 +159,80 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pdiomede.com/index-material.html" />
+  <meta property="og:url" content="https://pdiomede.com/" />
   <meta property="og:site_name" content="Paolo Diomede" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta property="og:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta property="og:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta property="og:updated_time" content="2026-01-27T00:00:00+00:00" />
   <meta property="article:author" content="Paolo Diomede" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://pdiomede.com/index-material.html" />
+  <meta name="twitter:url" content="https://pdiomede.com/" />
   <meta name="twitter:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta name="twitter:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta name="twitter:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta name="twitter:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta name="twitter:creator" content="@pdiomede" />
   <meta name="twitter:site" content="@pdiomede" />
 
   <style>
-    /* Performance: Font display optimization
-       Fonts are loaded via Google Fonts with display=swap parameter in URL
-       This ensures text is visible immediately with fallback fonts while custom fonts load
-       font-display: swap prevents FOIT (Flash of Invisible Text) and ensures consistent text visibility */
+    /* Manga / Anime Theme
+       Fonts: Noto Sans JP for headings, Kosugi Maru for body
+       Inspired by manga panels, speed lines, screentone patterns, and speech bubbles */
 
     :root {
-      --bg-color: #fafafa;
-      --text-color: rgba(0, 0, 0, 0.87);
-      --text-secondary: rgba(0, 0, 0, 0.6);
-      --text-muted: rgba(0, 0, 0, 0.38);
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --text-secondary: #555555;
+      --text-muted: #777777;
       --surface-color: #ffffff;
-      --border-color: rgba(0, 0, 0, 0.12);
-      --border-hover: rgba(0, 0, 0, 0.2);
-      --link-color: #1976d2;
-      --link-hover: #1565c0;
-      --shadow: rgba(0, 0, 0, 0.14);
-      --shadow-hover: rgba(0, 0, 0, 0.22);
-      --button-bg: #1976d2;
-      --button-hover: #1565c0;
-      --button-text: #fff;
-      --highlight-bg: #1976d2;
-      --frame-border: rgba(0, 0, 0, 0.12);
-      --frame-shadow: rgba(0, 0, 0, 0.14);
-      --primary: #1976d2;
-      --primary-light: #42a5f5;
-      --secondary: #00897b;
-      --secondary-light: #26a69a;
-      --purple-accent: #7b1fa2;
-      --blue-accent: #1976d2;
-      --cyan-accent: #00897b;
-      --green-accent: #2e7d32;
-      --orange-accent: #e65100;
+      --border-color: #333333;
+      --border-hover: #000000;
+      --link-color: #e60012;
+      --link-hover: #cc0010;
+      --shadow: rgba(0, 0, 0, 0.15);
+      --shadow-hover: rgba(0, 0, 0, 0.25);
+      --button-bg: #000000;
+      --button-hover: #e60012;
+      --button-text: #ffffff;
+      --highlight-bg: #e60012;
+      --frame-border: #000000;
+      --frame-shadow: rgba(0, 0, 0, 1);
+      --accent: #e60012;
+      --surface-alt: #f5f5f5;
+      --card-shadow: 3px 3px 0px #000000;
+      --card-shadow-hover: 5px 5px 0px #000000;
     }
 
     [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: rgba(255, 255, 255, 0.87);
-      --text-secondary: rgba(255, 255, 255, 0.6);
-      --text-muted: rgba(255, 255, 255, 0.38);
-      --surface-color: #1e1e1e;
-      --border-color: rgba(255, 255, 255, 0.12);
-      --border-hover: rgba(255, 255, 255, 0.2);
-      --link-color: #90caf9;
-      --link-hover: #bbdefb;
-      --shadow: rgba(0, 0, 0, 0.3);
-      --shadow-hover: rgba(0, 0, 0, 0.4);
-      --button-bg: #90caf9;
-      --button-hover: #bbdefb;
-      --button-text: rgba(0, 0, 0, 0.87);
-      --highlight-bg: #90caf9;
-      --frame-border: rgba(255, 255, 255, 0.12);
-      --frame-shadow: rgba(0, 0, 0, 0.4);
-      --primary: #90caf9;
-      --primary-light: #bbdefb;
-      --secondary: #80cbc4;
-      --secondary-light: #b2dfdb;
-      --purple-accent: #ce93d8;
-      --blue-accent: #90caf9;
-      --cyan-accent: #80cbc4;
-      --green-accent: #81c784;
-      --orange-accent: #ffab91;
+      --bg-color: #0d0d0d;
+      --text-color: #f0f0f0;
+      --text-secondary: #b0b0b0;
+      --text-muted: #888888;
+      --surface-color: #1a1a1a;
+      --border-color: #444444;
+      --border-hover: #ff1a1a;
+      --link-color: #ff1a1a;
+      --link-hover: #ff4d4d;
+      --shadow: rgba(0, 0, 0, 0.4);
+      --shadow-hover: rgba(0, 0, 0, 0.6);
+      --button-bg: #f0f0f0;
+      --button-hover: #ff1a1a;
+      --button-text: #0d0d0d;
+      --highlight-bg: #ff1a1a;
+      --frame-border: #444444;
+      --frame-shadow: rgba(0, 0, 0, 0.8);
+      --accent: #ff1a1a;
+      --surface-alt: #1a1a1a;
+      --card-shadow: 3px 3px 0px rgba(255, 26, 26, 0.3);
+      --card-shadow-hover: 5px 5px 0px rgba(255, 26, 26, 0.5);
     }
 
     * {
@@ -253,25 +241,36 @@
       box-sizing: border-box;
     }
 
-    /* Critical CSS for FCP - ensures immediate rendering */
+    /* Critical CSS for FCP */
     body {
-      font-family: 'Roboto', 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: rgba(0, 0, 0, 0.87);
-      line-height: 1.6;
+      font-family: 'Kosugi Maru', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
       overflow-x: hidden;
       padding: 60px 20px;
-      /* Defer transition for faster initial render */
-    }
-    
-    /* Apply transitions after initial render */
-    body.loaded {
-      transition: background-color 0.3s ease, color 0.3s ease;
+      /* Diagonal hatching pattern */
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(0, 0, 0, 0.02) 10px,
+        rgba(0, 0, 0, 0.02) 11px
+      );
     }
 
     [data-theme="dark"] body {
-      background-color: #121212;
-      color: rgba(255, 255, 255, 0.87);
+      background-image: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 255, 255, 0.015) 10px,
+        rgba(255, 255, 255, 0.015) 11px
+      );
+    }
+
+    body.loaded {
+      transition: background-color 0.15s ease, color 0.15s ease;
     }
 
     /* Skip to main content link for accessibility */
@@ -284,15 +283,17 @@
       background: var(--button-bg);
       color: var(--button-text);
       text-decoration: none;
-      border-radius: 8px;
-      font-weight: 600;
-      box-shadow: 0 4px 12px var(--shadow);
+      border-radius: 0;
+      font-weight: 700;
+      border: 3px solid var(--frame-border);
+      box-shadow: var(--card-shadow);
     }
 
     .skip-to-main:focus {
       left: 20px;
     }
 
+    /* Design Selector - Manga style */
     .design-selector {
       position: fixed;
       top: 24px;
@@ -301,42 +302,36 @@
     }
 
     .design-selector-button {
-      background: #ffffff;
-      color: #212121;
-      border: none;
-      border-radius: 50%;
+      background: var(--surface-color);
+      color: var(--text-color);
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
       width: 48px;
       height: 48px;
       padding: 0;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 700;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.15s ease;
+      box-shadow: var(--card-shadow);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
       position: relative;
-    }
-
-    [data-theme="dark"] .design-selector-button {
-      background: #2d2d2d;
-      color: #ffffff;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .design-selector-button .current-theme {
       opacity: 0;
       width: 0;
       white-space: nowrap;
-      transition: all 0.3s ease;
+      transition: all 0.15s ease;
       margin-right: 0;
     }
 
     .design-selector-button i {
-      transition: transform 0.3s ease;
+      transition: transform 0.15s ease;
       font-size: 1.2rem;
     }
 
@@ -347,14 +342,14 @@
     .design-selector-button .fa-chevron-down {
       opacity: 0;
       width: 0;
-      transition: all 0.3s ease;
+      transition: all 0.15s ease;
     }
 
     .design-selector.expanded .design-selector-button {
-      border-radius: 4px;
+      border-radius: 0;
       width: auto;
       min-width: 160px;
-      padding: 10px 16px;
+      padding: 10px 20px;
       justify-content: space-between;
     }
 
@@ -376,35 +371,27 @@
     }
 
     .design-selector-button:hover {
-      background-color: #1976d2;
+      background-color: var(--accent);
       color: white;
-      box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.2);
-      transform: translateY(-2px);
+      border-color: var(--frame-border);
+      box-shadow: var(--card-shadow-hover);
+      transform: translate(-2px, -2px);
     }
 
     .design-selector-menu {
       position: absolute;
       top: calc(100% + 8px);
       left: 0;
-      background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
-      min-width: 200px;
+      background: var(--surface-color);
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
+      box-shadow: var(--card-shadow);
+      min-width: 220px;
       opacity: 0;
       visibility: hidden;
       transform: translateY(-10px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.15s ease;
       overflow: hidden;
-    }
-
-    [data-theme="dark"] .design-selector-menu {
-      background: #2d2d2d;
-      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .design-selector.expanded .design-selector-menu {
@@ -416,17 +403,14 @@
     .design-selector-option {
       padding: 12px 20px;
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.15s ease;
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #212121;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    }
-
-    [data-theme="dark"] .design-selector-option {
-      color: #ffffff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-color);
+      border-bottom: 2px solid var(--border-color);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
     }
 
     .design-selector-option:last-child {
@@ -434,23 +418,22 @@
     }
 
     .design-selector-option:hover {
-      background: #1976d2;
+      background: var(--accent);
       color: white;
     }
 
     .design-selector-option.active {
-      background: rgba(25, 118, 210, 0.1);
-      color: #1976d2;
-      font-weight: 600;
+      background: rgba(230, 0, 18, 0.1);
+      color: var(--accent);
+      font-weight: 700;
     }
 
     [data-theme="dark"] .design-selector-option.active {
-      background: rgba(25, 118, 210, 0.2);
-      color: #64b5f6;
+      background: rgba(255, 26, 26, 0.15);
     }
 
     .design-selector-option.active:hover {
-      background: #1976d2;
+      background: var(--accent);
       color: white;
     }
 
@@ -459,76 +442,50 @@
       text-align: center;
     }
 
+    /* Theme toggle - Manga style */
     .theme-toggle {
       position: fixed;
       top: 24px;
       right: 24px;
-      background: #ffffff;
-      border: none;
-      border-radius: 50%;
+      background: var(--surface-color);
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
       width: 48px;
       height: 48px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.15s ease;
+      box-shadow: var(--card-shadow);
       z-index: 1000;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-color);
       overflow: hidden;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
-    [data-theme="dark"] .theme-toggle {
-      background: #2d2d2d;
-    }
-
-    .theme-toggle::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .theme-toggle:hover {
-      background: #1976d2;
-      box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .theme-toggle:active::after {
-      width: 100px;
-      height: 100px;
-    }
-    
     .theme-toggle .toggle-label {
       opacity: 0;
       width: 0;
       white-space: nowrap;
-      transition: all 0.3s ease;
+      transition: all 0.15s ease;
       margin-left: 0;
       font-size: 0.9rem;
-      font-weight: 500;
+      font-weight: 700;
     }
 
     .theme-toggle i {
       font-size: 1.2rem;
       color: var(--text-color);
-      transition: all 0.3s ease;
+      transition: all 0.15s ease;
       position: absolute;
     }
 
     .theme-toggle.expanded {
-      border-radius: 4px;
+      border-radius: 0;
       width: auto;
       min-width: 160px;
       padding: 10px 16px;
@@ -546,6 +503,14 @@
       position: relative;
     }
 
+    .theme-toggle:hover {
+      background: var(--accent);
+      box-shadow: var(--card-shadow-hover);
+      transform: translate(-2px, -2px);
+      border-color: var(--frame-border);
+      color: white;
+    }
+
     .theme-toggle:hover i {
       color: white;
       transform: rotate(15deg);
@@ -554,88 +519,84 @@
     .theme-toggle.expanded:hover i {
       transform: rotate(15deg);
     }
-    
-    .theme-toggle::before {
-      content: attr(data-tooltip);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-4px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      pointer-events: none;
-      z-index: 1001;
-    }
 
-    [data-theme="dark"] .theme-toggle::before {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-    
-    .theme-toggle:hover::before {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .theme-toggle i {
-      font-size: 1.2rem;
-      color: var(--text-color);
-      transition: all 0.3s ease;
-    }
-
+    /* Main frame - Manga panel style */
     .elegant-frame {
       max-width: 1200px;
       margin: 0 auto;
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.1),
-        0 4px 8px rgba(0, 0, 0, 0.1),
-        0 8px 16px rgba(0, 0, 0, 0.1),
-        0 16px 32px rgba(0, 0, 0, 0.1);
+      background: var(--surface-color);
+      border: 5px solid var(--frame-border);
+      border-radius: 0;
+      box-shadow: 4px 4px 0px #000;
       position: relative;
       overflow: hidden;
       padding: 60px 50px;
-      transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     [data-theme="dark"] .elegant-frame {
-      background: #1e1e1e;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.3),
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 8px 16px rgba(0, 0, 0, 0.3),
-        0 16px 32px rgba(0, 0, 0, 0.3);
+      box-shadow: 4px 4px 0px rgba(255, 26, 26, 0.3);
     }
 
     .elegant-frame::before {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      /* Screentone pattern overlay */
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 8px 8px;
+      pointer-events: none;
     }
 
-    /* Corner decorations hidden - not part of Material Design */
+    [data-theme="dark"] .elegant-frame::before {
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    }
+
     .elegant-frame::after {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      width: 30px;
+      height: 30px;
+      border-top: 3px solid var(--accent);
+      border-left: 3px solid var(--accent);
+      pointer-events: none;
+      z-index: 0;
     }
 
     .corner-decoration {
-      display: none;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      pointer-events: none;
+      z-index: 0;
     }
 
+    .corner-decoration.top-right {
+      top: 12px;
+      right: 12px;
+      border-top: 3px solid var(--accent);
+      border-right: 3px solid var(--accent);
+    }
+
+    .corner-decoration.bottom-left {
+      bottom: 12px;
+      left: 12px;
+      border-bottom: 3px solid var(--accent);
+      border-left: 3px solid var(--accent);
+    }
+
+    .corner-decoration.bottom-right {
+      bottom: 12px;
+      right: 12px;
+      border-bottom: 3px solid var(--accent);
+      border-right: 3px solid var(--accent);
+    }
+
+    /* Header */
     .header {
       text-align: center;
       margin-bottom: 64px;
@@ -643,43 +604,42 @@
       z-index: 1;
     }
 
+    /* Profile image - manga-style double border frame */
     .profile-img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 32px;
-      border: 4px solid var(--surface-color);
-      box-shadow: 0 8px 32px var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 5px solid var(--frame-border);
+      box-shadow: 0 0 0 4px var(--surface-color), 0 0 0 7px var(--frame-border), 3px 3px 0px 7px rgba(0, 0, 0, 0.2);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
     .profile-img:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px var(--shadow-hover);
+      transform: scale(1.05);
+      box-shadow: 0 0 0 4px var(--surface-color), 0 0 0 7px var(--accent), 5px 5px 0px 7px rgba(0, 0, 0, 0.3);
     }
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
       color: var(--text-color);
       margin-bottom: 4px;
-      letter-spacing: 0;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
     }
 
     .tagline {
-      font-size: 1.2rem;
-      color: #4a4a4a;
+      font-size: 1.1rem;
+      color: var(--text-secondary);
       font-weight: 400;
       font-style: italic;
       margin-bottom: 8px;
     }
 
-    [data-theme="dark"] .tagline {
-      color: #d0d0d0;
-    }
-
-    /* New Section Styles */
+    /* Section styles */
     .major-section {
       margin: 80px 0;
       position: relative;
@@ -689,13 +649,60 @@
     .section-header {
       text-align: center;
       margin-bottom: 32px;
+      position: relative;
     }
 
+    /* Section title with speed lines */
     .section-title {
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 2.5rem;
-      font-weight: 300;
+      font-weight: 900;
       margin-bottom: 8px;
       color: var(--text-color);
+      display: inline-block;
+      position: relative;
+      transform: rotate(-1deg);
+      -webkit-text-fill-color: var(--text-color);
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--accent);
+    }
+
+    /* Speed lines behind section headers */
+    .section-header::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 60px;
+      transform: translateY(-50%);
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 4px,
+        rgba(0, 0, 0, 0.03) 4px,
+        rgba(0, 0, 0, 0.03) 5px
+      );
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    [data-theme="dark"] .section-header::before {
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 4px,
+        rgba(255, 255, 255, 0.02) 4px,
+        rgba(255, 255, 255, 0.02) 5px
+      );
     }
 
     .section-subtitle {
@@ -704,6 +711,7 @@
       font-weight: 400;
     }
 
+    /* Roles grid */
     .roles-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -714,58 +722,31 @@
       margin-right: auto;
     }
 
+    /* Cards - manga panel style with thick borders */
     .role-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
       padding: 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.15s ease;
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      cursor: pointer;
+      box-shadow: var(--card-shadow);
+      /* Screentone pattern on cards */
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+      background-size: 6px 6px;
     }
 
     [data-theme="dark"] .role-card {
-      background: #2d2d2d;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.5),
-        0 1px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .role-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .role-card:active::after {
-      width: 300px;
-      height: 300px;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .role-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-
-    [data-theme="dark"] .role-card:hover {
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.7),
-        0 3px 6px rgba(0, 0, 0, 0.7);
+      transform: translate(-2px, -2px) scale(1.02);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent);
     }
 
     .role-card::before {
@@ -775,7 +756,7 @@
       left: 0;
       right: 0;
       height: 4px;
-      background: var(--primary);
+      background: var(--accent);
     }
 
     .role-header {
@@ -785,59 +766,54 @@
       margin-bottom: 20px;
     }
 
+    /* Badges - bold manga style */
     .role-badge {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 0;
+      font-size: 0.7rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      height: 32px;
-      line-height: 32px;
-      border: none;
+      border: 2px solid var(--frame-border);
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .badge-governance {
-      background: var(--purple-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-governance {
-      background: rgba(206, 147, 216, 0.2);
-      color: var(--purple-accent);
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--frame-border);
     }
 
     .badge-growth {
-      background: var(--cyan-accent);
-      color: #fff;
+      background: #000000;
+      color: #ffffff;
+      border-color: var(--frame-border);
     }
 
     [data-theme="dark"] .badge-growth {
-      background: rgba(128, 203, 196, 0.2);
-      color: var(--cyan-accent);
+      background: #f0f0f0;
+      color: #0d0d0d;
     }
 
     .badge-leadership {
-      background: var(--green-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-leadership {
-      background: rgba(129, 199, 132, 0.2);
-      color: var(--green-accent);
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--frame-border);
     }
 
     .badge-advisor {
-      background: var(--orange-accent);
-      color: #fff;
+      background: #000000;
+      color: #ffffff;
+      border-color: var(--frame-border);
     }
 
     [data-theme="dark"] .badge-advisor {
-      background: rgba(255, 171, 145, 0.2);
-      color: var(--orange-accent);
+      background: #f0f0f0;
+      color: #0d0d0d;
     }
 
     .role-title {
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 6px;
@@ -847,73 +823,44 @@
 
     .role-company {
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 700;
       margin-bottom: 12px;
-      color: var(--primary);
+      color: var(--accent);
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .role-description {
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 20px;
       font-size: 0.9rem;
       flex-grow: 1;
     }
 
+    /* Buttons - thick bordered manga style */
     .role-button {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 24px;
+      padding: 10px 20px;
       background: transparent;
-      color: #1976d2;
+      color: var(--text-color);
       text-decoration: none;
-      border: none;
-      border-radius: 4px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: 0.875rem;
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
+      font-weight: 700;
+      transition: all 0.15s ease;
+      font-size: 0.9rem;
       margin-top: auto;
-      position: relative;
-      overflow: hidden;
-      box-shadow: none;
-    }
-
-    [data-theme="dark"] .role-button {
-      color: #90caf9;
-    }
-
-    .role-button::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .role-button:hover {
-      background: rgba(25, 118, 210, 0.08);
-      color: #1565c0;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
-    }
-
-    .role-button:active::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    [data-theme="dark"] .role-button:hover {
-      background: rgba(144, 202, 249, 0.16);
-      color: #90caf9;
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+      transform: translate(-1px, -1px);
+      box-shadow: 2px 2px 0px var(--frame-border);
     }
 
     /* Community Impact Section */
@@ -929,25 +876,23 @@
     }
 
     .stat-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
       padding: 24px;
       text-align: center;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.15s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      position: relative;
-      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+      background-size: 6px 6px;
     }
 
     [data-theme="dark"] .stat-card {
-      background: #2d2d2d;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .stat-card.with-button {
@@ -960,9 +905,9 @@
     }
 
     .stat-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 16px var(--shadow-hover);
-      border-color: var(--border-hover);
+      transform: translate(-2px, -2px) scale(1.02);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent);
     }
 
     .stat-card .role-button {
@@ -970,6 +915,7 @@
     }
 
     .stat-title {
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1rem;
       font-weight: 700;
       color: var(--text-color);
@@ -984,17 +930,21 @@
       margin-bottom: 16px;
     }
 
+    /* Stat numbers - large bold red */
     .stat-number {
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: var(--primary);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: var(--accent);
       margin-bottom: 6px;
+      -webkit-text-fill-color: var(--accent);
     }
 
     .stat-label {
       font-size: 1rem;
       color: var(--text-secondary);
       font-weight: 700;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .community-projects {
@@ -1005,49 +955,28 @@
     }
 
     .project-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
       padding: 32px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.15s ease;
       text-align: left;
       display: flex;
       flex-direction: column;
       height: 100%;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      position: relative;
-      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+      background-size: 6px 6px;
     }
 
     [data-theme="dark"] .project-card {
-      background: #2d2d2d;
-    }
-
-    .project-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .project-card:active::after {
-      width: 300px;
-      height: 300px;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .project-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translate(-2px, -2px) scale(1.02);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent);
     }
 
     .project-card .role-button {
@@ -1064,33 +993,29 @@
     .project-icon {
       width: 48px;
       height: 48px;
-      border-radius: 12px;
-      background: var(--purple-accent);
+      border-radius: 0;
+      background: var(--accent);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
+      border: 2px solid var(--frame-border);
     }
 
     .project-status {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background: var(--green-accent);
-      color: #fff;
-      border: none;
-      height: 32px;
-      line-height: 32px;
-    }
-
-    [data-theme="dark"] .project-status {
-      background: rgba(129, 199, 132, 0.2);
-      color: var(--green-accent);
+      padding: 6px 12px;
+      border-radius: 0;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: rgba(0, 0, 0, 0.05);
+      color: var(--text-color);
+      border: 2px solid var(--frame-border);
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .project-title {
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1.4rem;
       font-weight: 700;
       margin-bottom: 16px;
@@ -1116,9 +1041,10 @@
     }
 
     .project-stat-number {
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--purple-accent);
+      font-weight: 900;
+      color: var(--accent);
       margin-bottom: 4px;
     }
 
@@ -1127,33 +1053,46 @@
       color: var(--text-secondary);
     }
 
-    /* Innovation Lab Section */
+    /* Ecosystem highlight - Speech bubble style */
     .ecosystem-highlight {
-      background: #ffffff;
-      border: none;
-      border-left: 4px solid var(--primary);
-      border-radius: 4px;
+      background: var(--surface-alt);
+      border: 3px solid var(--frame-border);
+      border-radius: 16px;
       padding: 32px 24px;
       margin: 0 auto;
       max-width: 800px;
       position: relative;
-      overflow: hidden;
-      box-shadow:
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      overflow: visible;
+      box-shadow: var(--card-shadow);
     }
 
-    [data-theme="dark"] .ecosystem-highlight {
-      background: #2d2d2d;
-      border-left-color: var(--primary);
-    }
-
-    /* Clean Material surface - no decorative pseudo-elements */
-    .ecosystem-highlight::before,
+    /* Speech bubble triangle pointer */
     .ecosystem-highlight::after {
-      display: none;
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 60px;
+      width: 0;
+      height: 0;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 20px solid var(--frame-border);
     }
 
+    .ecosystem-highlight::before {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 63px;
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 17px solid var(--surface-alt);
+      z-index: 1;
+    }
+
+    /* Innovation Lab tools */
     .innovation-tools {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1161,47 +1100,26 @@
     }
 
     .tool-card {
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
+      background: var(--surface-color);
+      border: 3px solid var(--frame-border);
+      border-radius: 0;
       padding: 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.15s ease;
       display: flex;
       flex-direction: column;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      position: relative;
-      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
+      background-size: 6px 6px;
     }
 
     [data-theme="dark"] .tool-card {
-      background: #2d2d2d;
-    }
-
-    .tool-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .tool-card:active::after {
-      width: 300px;
-      height: 300px;
+      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .tool-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translate(-2px, -2px) scale(1.02);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent);
     }
 
     .tool-header {
@@ -1214,40 +1132,40 @@
     .tool-icon {
       width: 40px;
       height: 40px;
-      border-radius: 10px;
+      border-radius: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
       color: white;
+      border: 2px solid var(--frame-border);
     }
 
     .tool-icon.analytics {
-      background: var(--blue-accent);
+      background: var(--accent);
     }
 
     .tool-icon.development {
-      background: var(--cyan-accent);
+      background: #000000;
+    }
+
+    [data-theme="dark"] .tool-icon.development {
+      background: var(--accent);
     }
 
     .tool-badge {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      height: 32px;
-      line-height: 32px;
-      border: none;
+      padding: 4px 10px;
+      border-radius: 0;
+      font-size: 0.7rem;
+      font-weight: 700;
+      border: 2px solid var(--frame-border);
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .badge-featured {
-      background: var(--purple-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-featured {
-      background: rgba(206, 147, 216, 0.2);
-      color: var(--purple-accent);
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--frame-border);
     }
 
     @keyframes livePulse {
@@ -1256,17 +1174,19 @@
     }
 
     .badge-live-data {
-      background: var(--green-accent);
-      color: #fff;
+      background: #000000;
+      color: #ffffff;
+      border-color: var(--frame-border);
       animation: livePulse 2.5s ease-in-out infinite;
     }
 
     [data-theme="dark"] .badge-live-data {
-      background: rgba(129, 199, 132, 0.2);
-      color: var(--green-accent);
+      background: #f0f0f0;
+      color: #0d0d0d;
     }
 
     .tool-title {
+      font-family: 'Noto Sans JP', sans-serif;
       font-size: 1.2rem;
       font-weight: 700;
       margin-bottom: 12px;
@@ -1276,7 +1196,7 @@
 
     .tool-description {
       color: var(--text-secondary);
-      line-height: 1.5;
+      line-height: 1.6;
       margin-bottom: 20px;
       flex-grow: 1;
       font-size: 0.9rem;
@@ -1290,22 +1210,16 @@
     }
 
     .tool-tag {
-      padding: 0 12px;
-      background: rgba(0, 0, 0, 0.08);
-      border: none;
-      border-radius: 16px;
+      padding: 3px 10px;
+      background: var(--surface-alt);
+      border: 2px solid var(--border-color);
+      border-radius: 0;
       font-size: 0.75rem;
-      font-weight: 500;
       color: var(--text-secondary);
-      height: 32px;
-      line-height: 32px;
+      font-weight: 500;
     }
 
-    [data-theme="dark"] .tool-tag {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    /* Links section */
+    /* Links section - thick-bordered manga-style pills */
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -1325,64 +1239,36 @@
       align-items: center;
       gap: 8px;
       padding: 12px 24px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
+      background: var(--surface-color);
+      color: var(--text-color);
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      border: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .links a {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-    }
-
-    .links a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      border-radius: 0;
+      font-weight: 700;
+      transition: all 0.15s ease;
+      box-shadow: var(--card-shadow);
+      border: 3px solid var(--frame-border);
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .links a:hover {
-      background: #1976d2;
+      background: var(--accent);
       color: white;
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translate(-1px, -1px);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent);
     }
 
-    .links a:active::before {
-      width: 300px;
-      height: 300px;
-    }
-    
     .links a:hover i,
     .links a:hover svg {
       color: white;
       fill: white;
     }
 
-    /* GitHub repository link - centered below frame */
+    /* GitHub repository link */
     .github-repo-link {
       display: flex;
       justify-content: center;
+      gap: 16px;
       margin-top: 12px;
       margin-bottom: 20px;
     }
@@ -1392,68 +1278,40 @@
       align-items: center;
       gap: 8px;
       padding: 12px 24px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
+      background: var(--surface-color);
+      color: var(--text-color);
       text-decoration: none;
-      border-radius: 4px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      border: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .github-repo-link a {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-    }
-
-    .github-repo-link a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      border-radius: 0;
+      font-weight: 700;
+      transition: all 0.15s ease;
+      box-shadow: var(--card-shadow);
+      border: 3px solid var(--frame-border);
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
     .github-repo-link a:hover {
-      background: #1976d2;
+      background: var(--accent);
       color: white;
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-
-    .github-repo-link a:active::before {
-      width: 300px;
-      height: 300px;
+      transform: translate(-1px, -1px);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--accent);
     }
 
     .github-repo-link a:hover i {
       color: white;
     }
 
-    /* Copyright text - centered above GitHub link */
+    /* Copyright */
     .copyright {
       text-align: center;
       font-size: 0.9rem;
       color: var(--text-muted);
       margin-top: 20px;
       margin-bottom: 16px;
+      font-family: 'Noto Sans JP', sans-serif;
     }
 
-
+    /* Responsive - 768px */
     @media (max-width: 768px) {
       body {
         padding: 40px 15px;
@@ -1564,6 +1422,7 @@
       }
     }
 
+    /* Responsive - 480px */
     @media (max-width: 480px) {
       body {
         padding: 20px 10px;
@@ -1571,7 +1430,7 @@
 
       .elegant-frame {
         padding: 30px 20px;
-        border-width: 3px;
+        border-width: 4px;
       }
 
       h1 {
@@ -1634,19 +1493,19 @@
     }
 
     .elegant-frame {
-      animation: fadeInUp 0.8s ease-out;
+      animation: fadeInUp 0.5s ease-out;
     }
 
     .header, .major-section, .links {
-      animation: fadeInUp 0.6s ease-out;
+      animation: fadeInUp 0.4s ease-out;
     }
 
-    .major-section:nth-child(3) { animation-delay: 0.1s; }
-    .major-section:nth-child(4) { animation-delay: 0.2s; }
-    .major-section:nth-child(5) { animation-delay: 0.3s; }
-    .links { animation-delay: 0.4s; }
+    .major-section:nth-child(3) { animation-delay: 0.05s; }
+    .major-section:nth-child(4) { animation-delay: 0.1s; }
+    .major-section:nth-child(5) { animation-delay: 0.15s; }
+    .links { animation-delay: 0.2s; }
 
-    /* Brand logos in role cards - header-aligned */
+    /* Brand logos in role cards */
     .role-card { position: relative; }
     .role-card.has-brand { padding-left: 24px; }
     .role-card.has-brand .brand-logo { position: static; width: 48px; height: 48px; margin-right: 8px; }
@@ -1656,7 +1515,7 @@
     /* Theme-based logo switching */
     :root[data-theme="light"] .role-card.has-brand .brand-logo.dark { display: none; }
     :root[data-theme="light"] .role-card.has-brand .brand-logo.light { display: block; }
-    
+
     :root[data-theme="dark"] .role-card.has-brand .brand-logo.light { display: none; }
     :root[data-theme="dark"] .role-card.has-brand .brand-logo.dark { display: block; }
 
@@ -1667,14 +1526,14 @@
 
     :root[data-theme="light"] .project-card.has-brand .brand-logo.dark { display: none; }
     :root[data-theme="light"] .project-card.has-brand .brand-logo.light { display: block; }
-    
+
     :root[data-theme="dark"] .project-card.has-brand .brand-logo.light { display: none; }
     :root[data-theme="dark"] .project-card.has-brand .brand-logo.dark { display: block; }
 
     /* The Graph extended logo - light/dark mode switching */
     :root[data-theme="light"] .graph-extended-logo.light { display: block; }
     :root[data-theme="light"] .graph-extended-logo.dark { display: none; }
-    
+
     :root[data-theme="dark"] .graph-extended-logo.light { display: none; }
     :root[data-theme="dark"] .graph-extended-logo.dark { display: block; }
 
@@ -1684,24 +1543,19 @@
 </style>
 
   <!-- Load fonts asynchronously to prevent render blocking -->
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Kosugi+Maru&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Kosugi+Maru&display=swap" rel="stylesheet" /></noscript>
+
   <!-- Load Font Awesome asynchronously to prevent render blocking -->
-  <!-- Note: Font Awesome contains many unused icons, but loading async minimizes impact -->
-  <!-- Consider using a subset or icon font in future for better performance -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
-  
+
   <!-- Fallback script for browsers that don't support onload on link elements -->
   <script>
-    !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+    !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
   </script>
-  
+
   <script>
-    /* Performance: Minimal inline JavaScript - removed ~95 lines of unused code (generateSocialPreview)
-       Only essential theme toggle functionality remains for optimal load time */
-    
     // Dark mode functionality
     let expandTimeout = null;
     function toggleTheme() {
@@ -1709,21 +1563,18 @@
       const themeIcon = document.getElementById('theme-icon');
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
       const currentTheme = html.getAttribute('data-theme');
-      
-      // Expand toggle to show label
+
       if (themeToggleBtn) {
-        // Clear any existing timeout to prevent memory leaks
         if (expandTimeout) {
           clearTimeout(expandTimeout);
         }
         themeToggleBtn.classList.add('expanded');
-        // Collapse after 2 seconds
         expandTimeout = setTimeout(() => {
           themeToggleBtn.classList.remove('expanded');
           expandTimeout = null;
         }, 2000);
       }
-      
+
       if (currentTheme === 'dark') {
         html.setAttribute('data-theme', 'light');
         if (themeIcon) {
@@ -1748,25 +1599,22 @@
     // Design selector functionality
     let designSelectorInitialized = false;
     function initDesignSelector() {
-      // Prevent multiple initializations
       if (designSelectorInitialized) {
         return;
       }
-      
+
       const selector = document.getElementById('design-selector');
       const button = document.getElementById('design-selector-button');
-      
-      // Early return if elements don't exist
+
       if (!selector || !button) {
         return;
       }
-      
+
       designSelectorInitialized = true;
-      
+
       const options = selector.querySelectorAll('.design-selector-option');
       const currentThemeSpan = button.querySelector('.current-theme');
-      
-      // Get current page theme name
+
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
       const themeNames = {
         'index.html': 'Elegant Frame',
@@ -1778,29 +1626,27 @@
         'index-manga.html': 'Manga'
       };
 
-      // Update button text and active state
       if (currentThemeSpan) {
-        currentThemeSpan.textContent = themeNames[currentPage] || 'Material Design';
+        currentThemeSpan.textContent = themeNames[currentPage] || 'Manga';
       }
       if (options && options.length > 0) {
         options.forEach(option => {
-        const themeFile = option.getAttribute('data-theme');
-        const icon = option.querySelector('i');
-        if (themeFile === currentPage) {
-          option.classList.add('active');
-          if (icon) {
-            icon.className = 'fas fa-check';
+          const themeFile = option.getAttribute('data-theme');
+          const icon = option.querySelector('i');
+          if (themeFile === currentPage) {
+            option.classList.add('active');
+            if (icon) {
+              icon.className = 'fas fa-check';
+            }
+          } else {
+            option.classList.remove('active');
+            if (icon) {
+              icon.className = '';
+            }
           }
-        } else {
-          option.classList.remove('active');
-          if (icon) {
-            icon.className = '';
-          }
-        }
-      });
+        });
       }
-      
-      // Toggle menu on button click
+
       button.addEventListener('click', function(e) {
         e.stopPropagation();
         if (selector) {
@@ -1808,15 +1654,13 @@
           button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
         }
       });
-      
-      // Handle option clicks and keyboard events
+
       if (options && options.length > 0) {
         options.forEach(option => {
-        // Make option keyboard accessible (already set in HTML, but ensure it's set)
         if (!option.hasAttribute('tabindex')) {
           option.setAttribute('tabindex', '0');
         }
-        
+
         const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
           if (themeFile && themeFile !== currentPage) {
@@ -1828,12 +1672,12 @@
             }
           }
         };
-        
+
         option.addEventListener('click', function(e) {
           e.stopPropagation();
           handleOptionSelect.call(this);
         });
-        
+
         option.addEventListener('keydown', function(e) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -1843,28 +1687,26 @@
         });
       });
       }
-      
-      // Close menu when clicking outside
+
       document.addEventListener('click', function(e) {
         if (selector && button && !selector.contains(e.target)) {
           selector.classList.remove('expanded');
           button.setAttribute('aria-expanded', 'false');
         }
       });
-      
-      // Close menu on Escape key
+
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && selector && selector.classList.contains('expanded')) {
           selector.classList.remove('expanded');
           if (button) {
             button.setAttribute('aria-expanded', 'false');
-            button.focus(); // Return focus to button for accessibility
+            button.focus();
           }
         }
       });
     }
 
-    // Optimize FCP: Add loaded class after initial render to enable transitions
+    // Optimize FCP
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loaded');
@@ -1878,16 +1720,13 @@
       const savedTheme = localStorage.getItem('theme');
       const themeIcon = document.getElementById('theme-icon');
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      
-      // Attach event listener to theme toggle button
+
       if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', toggleTheme);
       }
-      
-      // Initialize design selector
+
       initDesignSelector();
-      
-      // Only use light mode if explicitly saved as 'light' in localStorage
+
       if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
         if (themeIcon) {
@@ -1897,7 +1736,6 @@
           themeToggleBtn.setAttribute('aria-pressed', 'false');
         }
       } else {
-        // Default to dark mode
         document.documentElement.setAttribute('data-theme', 'dark');
         if (themeIcon) {
           themeIcon.className = 'fas fa-moon';
@@ -1912,47 +1750,26 @@
 <body>
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
-  
+
   <!-- Design Theme Selector -->
   <div class="design-selector" id="design-selector">
     <button class="design-selector-button" id="design-selector-button" aria-label="Select design theme" aria-expanded="false" aria-controls="design-selector-menu" aria-haspopup="true">
       <i class="fas fa-palette"></i>
-      <span class="current-theme">Material Design</span>
+      <span class="current-theme">Manga</span>
       <i class="fas fa-chevron-down"></i>
     </button>
     <div class="design-selector-menu" id="design-selector-menu" role="menu">
-      <div class="design-selector-option" data-theme="index.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Elegant Frame</span>
-      </div>
-      <div class="design-selector-option active" data-theme="index-material.html" role="menuitem" tabindex="0">
-        <i class="fas fa-check"></i>
-        <span>Material Design</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Pop Art</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-renaissance.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Renaissance</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-gothic.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Gothic Cathedral</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Cyberpunk Neon</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-manga.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Manga</span>
-      </div>
+      <div class="design-selector-option" data-theme="index.html" role="menuitem" tabindex="0"><i></i><span>Elegant Frame</span></div>
+      <div class="design-selector-option" data-theme="index-material.html" role="menuitem" tabindex="0"><i></i><span>Material Design</span></div>
+      <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0"><i></i><span>Pop Art</span></div>
+      <div class="design-selector-option" data-theme="index-renaissance.html" role="menuitem" tabindex="0"><i></i><span>Renaissance</span></div>
+      <div class="design-selector-option" data-theme="index-gothic.html" role="menuitem" tabindex="0"><i></i><span>Gothic Cathedral</span></div>
+      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0"><i></i><span>Cyberpunk Neon</span></div>
+      <div class="design-selector-option active" data-theme="index-manga.html" role="menuitem" tabindex="0"><i class="fas fa-check"></i><span>Manga</span></div>
     </div>
   </div>
 
-  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true" data-tooltip="Toggle theme">
+  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true">
     <i class="fas fa-moon" id="theme-icon"></i>
     <span class="toggle-label">Dark/Light Mode</span>
   </button>
@@ -1962,7 +1779,7 @@
     <div class="corner-decoration top-right"></div>
     <div class="corner-decoration bottom-left"></div>
     <div class="corner-decoration bottom-right"></div>
-    
+
     <!-- Header Links -->
     <div class="links links-header">
       <a href="mailto:pdiomede@yahoo.com" aria-label="Email Paolo Diomede">
@@ -1992,14 +1809,8 @@
         GitHub
       </a>
     </div>
-    
+
     <header class="header">
-      <!-- Performance: Critical image optimizations:
-           - fetchpriority="high": Prioritize loading this above-the-fold image
-           - width/height: Explicit dimensions prevent layout shift (improves CLS)
-           - decoding="async": Non-blocking image decode for faster rendering
-           - Preloaded in <head> for fastest LCP -->
-      <!-- Performance: Critical above-the-fold image optimized with fetchpriority, explicit dimensions, and async decoding -->
       <img src="./images/me2024.jpg" alt="Paolo Diomede's Profile Picture" class="profile-img" fetchpriority="high" width="120" height="120" decoding="async" loading="eager" />
       <h1>Paolo Diomede</h1>
       <p class="tagline">Securing and growing web3 through technical excellence and ecosystem leadership</p>
@@ -2009,11 +1820,7 @@
     <section class="major-section" aria-label="Current Roles">
       <div class="roles-grid">
         <div class="role-card has-brand">
-          <!-- Performance: Below-the-fold images use loading="lazy" for deferred loading
-               and explicit width/height to prevent layout shift -->
           <div class="role-header">
-            <!-- Performance: Below-the-fold images optimized with lazy loading and async decoding -->
-            <!-- Note: Consider optimizing certora.jpg to WebP format for better compression (~43KB savings) -->
             <img class="brand-logo light" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
 
@@ -2115,7 +1922,7 @@
 
         <div class="tool-card">
           <div class="tool-header">
-            <div class="tool-icon" style="background: var(--blue-accent); color: white;">
+            <div class="tool-icon" style="background: var(--accent); color: white; border: 2px solid var(--frame-border);">
               <i class="fas fa-chart-line"></i>
             </div>
             <div class="tool-badge badge-featured">Industry Recognition</div>
@@ -2144,7 +1951,7 @@
             <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
             <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color);">Ecosystem Communities</h3>
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color); font-family: 'Noto Sans JP', sans-serif; font-weight: 700;">Ecosystem Communities</h3>
 
           <div class="community-stats" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center;">
             <div class="stat-card with-button">
@@ -2163,7 +1970,7 @@
             </div>
 
             <div class="stat-card with-button">
-              <div class="stat-icon" style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue-accent), var(--purple-accent)); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto;">
+              <div class="stat-icon" style="width: 48px; height: 48px; background: var(--accent); color: white; border-radius: 0; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto; border: 2px solid var(--frame-border);">
                 <i class="fas fa-users-cog"></i>
               </div>
               <div class="stat-title">Graph AdvocatesDAO</div>
@@ -2179,12 +1986,9 @@
       <div class="community-projects">
         <div class="project-card has-brand">
           <div class="project-header">
-            <!-- Performance: PNG images optimized with lazy loading and async decoding -->
-            <!-- Note: Consider converting PNG logos to WebP or optimizing PNG compression for better delivery -->
             <img class="brand-logo light" src="./images/The_Graph_Logomark_light_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/The_Graph_Logomark_dark_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
 
-            <!-- Commented out: project icon with blue background -->
             <div class="project-status" style="background: rgba(185, 28, 28, 0.1); color: #dc2626; border-color: rgba(185, 28, 28, 0.2);">Past Role</div>
           </div>
           <h3 class="project-title">Ecosystem Manager</h3>
@@ -2228,7 +2032,7 @@
 
         <div class="project-card">
           <div class="project-header">
-            <div class="project-icon" style="background: var(--cyan-accent);">
+            <div class="project-icon" style="background: var(--accent);">
               <i class="fas fa-users"></i>
             </div>
             <div class="project-status" style="background: rgba(185, 28, 28, 0.1); color: #dc2626; border-color: rgba(185, 28, 28, 0.2);">Not Active</div>
@@ -2280,12 +2084,12 @@
       </a>
     </div>
   </main>
-  
+
   <!-- Copyright -->
   <div class="copyright">
     &copy; 2026 Paolo Diomede. All rights reserved.
   </div>
-  
+
   <!-- GitHub Repository Link -->
   <div class="github-repo-link">
     <a href="https://github.com/pdiomede/pdiomede.com" target="_blank" rel="noopener noreferrer" aria-label="View this repo on GitHub">

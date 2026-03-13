@@ -3,54 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
+
   <!-- Critical Resource Hints - Early DNS resolution for faster FCP -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
-  
+
   <!-- Preload critical above-the-fold image for fastest FCP -->
   <link rel="preload" as="image" href="./images/me2024.jpg" fetchpriority="high" />
-  
+
   <!--
     Author:       Paolo Diomede
-    Version:      v2.5.1 - Material Design Variant
-    Date:         January 2026
+    Version:      v2.5.1
     Description:  Personal portfolio website showcasing web3 ecosystem building,
                   governance expertise, and community leadership
-                  Design Style: Material Design with elevation shadows, ripple effects,
-                  and Material Design principles
-    
+    Theme:        Cyberpunk Neon
+
     For complete documentation, version history, and technical details,
     see CHANGELOG.md in the project root directory.
   -->
-  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | Material Design</title>
+  <title>Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer</title>
 
   <meta name="description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
   <meta name="author" content="Paolo Diomede" />
   <meta name="keywords" content="Paolo Diomede, web3, Ecosystem Builder, Certora, Livepeer, The Graph, Blockchain, Governance, DAO, DeFi, Indexerscore, Graphtools, Community Building, web3 Governance, Decentralization, Farcaster, Smart Contract Security, Formal Verification" />
   <meta name="robots" content="index, follow" />
-  
+
   <!-- Additional SEO Meta Tags -->
-  <meta name="theme-color" content="#3b82f6" />
+  <meta name="theme-color" content="#ff2d95" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <link rel="canonical" href="https://pdiomede.com/index-material.html" />
-  
+  <link rel="canonical" href="https://pdiomede.com/" />
+
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
   <!-- Note: Strict-Transport-Security and Permissions-Policy must be configured on web server -->
-  
+
   <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
   <link rel="manifest" href="./manifest.json" />
-  
+  <link rel="llms-txt" href="./llms.txt" />
+
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
   [
@@ -78,7 +77,7 @@
       ],
       "description": "Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
       "url": "https://pdiomede.com",
-      "image": "https://pdiomede.com/images/me2024.jpg",
+      "image": "https://pdiomede.com/images/social-card.png",
       "email": "pdiomede@yahoo.com",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -160,91 +159,84 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://pdiomede.com/index-material.html" />
+  <meta property="og:url" content="https://pdiomede.com/" />
   <meta property="og:site_name" content="Paolo Diomede" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta property="og:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta property="og:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta property="og:updated_time" content="2026-01-27T00:00:00+00:00" />
   <meta property="article:author" content="Paolo Diomede" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:url" content="https://pdiomede.com/index-material.html" />
+  <meta name="twitter:url" content="https://pdiomede.com/" />
   <meta name="twitter:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta name="twitter:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta name="twitter:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta name="twitter:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta name="twitter:creator" content="@pdiomede" />
   <meta name="twitter:site" content="@pdiomede" />
 
   <style>
-    /* Performance: Font display optimization
-       Fonts are loaded via Google Fonts with display=swap parameter in URL
-       This ensures text is visible immediately with fallback fonts while custom fonts load
-       font-display: swap prevents FOIT (Flash of Invisible Text) and ensures consistent text visibility */
+    /* Cyberpunk Neon Theme */
 
     :root {
-      --bg-color: #fafafa;
-      --text-color: rgba(0, 0, 0, 0.87);
-      --text-secondary: rgba(0, 0, 0, 0.6);
-      --text-muted: rgba(0, 0, 0, 0.38);
-      --surface-color: #ffffff;
-      --border-color: rgba(0, 0, 0, 0.12);
-      --border-hover: rgba(0, 0, 0, 0.2);
-      --link-color: #1976d2;
-      --link-hover: #1565c0;
-      --shadow: rgba(0, 0, 0, 0.14);
-      --shadow-hover: rgba(0, 0, 0, 0.22);
-      --button-bg: #1976d2;
-      --button-hover: #1565c0;
-      --button-text: #fff;
-      --highlight-bg: #1976d2;
-      --frame-border: rgba(0, 0, 0, 0.12);
-      --frame-shadow: rgba(0, 0, 0, 0.14);
-      --primary: #1976d2;
-      --primary-light: #42a5f5;
-      --secondary: #00897b;
-      --secondary-light: #26a69a;
-      --purple-accent: #7b1fa2;
-      --blue-accent: #1976d2;
-      --cyan-accent: #00897b;
-      --green-accent: #2e7d32;
-      --orange-accent: #e65100;
+      --bg-color: #1a1a2e;
+      --text-color: #ffffff;
+      --text-secondary: #b0b0cc;
+      --text-muted: #7a7a99;
+      --surface-color: #12121f;
+      --border-color: #2a2a44;
+      --border-hover: #ff2d95;
+      --link-color: #00f0ff;
+      --link-hover: #ff2d95;
+      --shadow: rgba(0, 240, 255, 0.1);
+      --shadow-hover: rgba(255, 45, 149, 0.2);
+      --button-bg: transparent;
+      --button-hover: #ff2d95;
+      --button-text: #00f0ff;
+      --highlight-bg: linear-gradient(90deg, #ff2d95, #00f0ff);
+      --frame-border: #2a2a44;
+      --frame-shadow: rgba(255, 45, 149, 0.15);
+      --purple-accent: #b026ff;
+      --blue-accent: #0066ff;
+      --cyan-accent: #00f0ff;
+      --green-accent: #00ff88;
+      --neon-pink: #ff2d95;
+      --neon-cyan: #00f0ff;
+      --neon-purple: #b026ff;
     }
 
     [data-theme="dark"] {
-      --bg-color: #121212;
-      --text-color: rgba(255, 255, 255, 0.87);
-      --text-secondary: rgba(255, 255, 255, 0.6);
-      --text-muted: rgba(255, 255, 255, 0.38);
-      --surface-color: #1e1e1e;
-      --border-color: rgba(255, 255, 255, 0.12);
-      --border-hover: rgba(255, 255, 255, 0.2);
-      --link-color: #90caf9;
-      --link-hover: #bbdefb;
-      --shadow: rgba(0, 0, 0, 0.3);
-      --shadow-hover: rgba(0, 0, 0, 0.4);
-      --button-bg: #90caf9;
-      --button-hover: #bbdefb;
-      --button-text: rgba(0, 0, 0, 0.87);
-      --highlight-bg: #90caf9;
-      --frame-border: rgba(255, 255, 255, 0.12);
-      --frame-shadow: rgba(0, 0, 0, 0.4);
-      --primary: #90caf9;
-      --primary-light: #bbdefb;
-      --secondary: #80cbc4;
-      --secondary-light: #b2dfdb;
-      --purple-accent: #ce93d8;
-      --blue-accent: #90caf9;
-      --cyan-accent: #80cbc4;
-      --green-accent: #81c784;
-      --orange-accent: #ffab91;
+      --bg-color: #0a0a14;
+      --text-color: #e0e0ff;
+      --text-secondary: #9999bb;
+      --text-muted: #666688;
+      --surface-color: #08080f;
+      --border-color: #1a1a33;
+      --border-hover: #ff2d95;
+      --link-color: #00f0ff;
+      --link-hover: #ff2d95;
+      --shadow: rgba(0, 240, 255, 0.08);
+      --shadow-hover: rgba(255, 45, 149, 0.25);
+      --button-bg: transparent;
+      --button-hover: #ff2d95;
+      --button-text: #00f0ff;
+      --highlight-bg: linear-gradient(90deg, #ff2d95, #00f0ff);
+      --frame-border: #1a1a33;
+      --frame-shadow: rgba(255, 45, 149, 0.2);
+      --purple-accent: #b026ff;
+      --blue-accent: #0066ff;
+      --cyan-accent: #00f0ff;
+      --green-accent: #00ff88;
+      --neon-pink: #ff2d95;
+      --neon-cyan: #00f0ff;
+      --neon-purple: #b026ff;
     }
 
     * {
@@ -253,25 +245,23 @@
       box-sizing: border-box;
     }
 
-    /* Critical CSS for FCP - ensures immediate rendering */
+    /* Critical CSS for FCP */
     body {
-      font-family: 'Roboto', 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      background-color: #f5f5f5;
-      color: rgba(0, 0, 0, 0.87);
+      font-family: 'Share Tech Mono', 'Courier New', monospace;
+      background-color: var(--bg-color);
+      color: var(--text-color);
       line-height: 1.6;
       overflow-x: hidden;
       padding: 60px 20px;
-      /* Defer transition for faster initial render */
-    }
-    
-    /* Apply transitions after initial render */
-    body.loaded {
-      transition: background-color 0.3s ease, color 0.3s ease;
+      /* Matrix grid background */
+      background-image:
+        linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
     }
 
-    [data-theme="dark"] body {
-      background-color: #121212;
-      color: rgba(255, 255, 255, 0.87);
+    body.loaded {
+      transition: background-color 0.2s ease, color 0.2s ease;
     }
 
     /* Skip to main content link for accessibility */
@@ -281,16 +271,47 @@
       top: 20px;
       z-index: 9999;
       padding: 12px 20px;
-      background: var(--button-bg);
-      color: var(--button-text);
+      background: var(--neon-pink);
+      color: #ffffff;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 4px;
       font-weight: 600;
-      box-shadow: 0 4px 12px var(--shadow);
+      box-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink);
+      font-family: 'Orbitron', sans-serif;
     }
 
     .skip-to-main:focus {
       left: 20px;
+    }
+
+    /* Glitch animation for h1 */
+    @keyframes glitch {
+      0%, 100% { text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink); }
+      20% { text-shadow: -2px 0 var(--neon-cyan), 2px 0 var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink); }
+      40% { text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-cyan), 0 0 10px var(--neon-pink), 0 0 40px var(--neon-pink); }
+      60% { text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink); }
+      80% { text-shadow: -1px 0 var(--neon-cyan), 1px 0 var(--neon-pink), 0 0 10px var(--neon-pink), 0 0 30px var(--neon-pink); }
+    }
+
+    @keyframes livePulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    @keyframes scanline {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .design-selector {
@@ -301,42 +322,36 @@
     }
 
     .design-selector-button {
-      background: #ffffff;
-      color: #212121;
-      border: none;
-      border-radius: 50%;
+      background: var(--surface-color);
+      color: var(--neon-cyan);
+      border: 1px solid var(--neon-cyan);
+      border-radius: 4px;
       width: 48px;
       height: 48px;
       padding: 0;
       font-size: 0.9rem;
       font-weight: 500;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+      box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
       position: relative;
-    }
-
-    [data-theme="dark"] .design-selector-button {
-      background: #2d2d2d;
-      color: #ffffff;
+      font-family: 'Share Tech Mono', monospace;
     }
 
     .design-selector-button .current-theme {
       opacity: 0;
       width: 0;
       white-space: nowrap;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       margin-right: 0;
     }
 
     .design-selector-button i {
-      transition: transform 0.3s ease;
+      transition: transform 0.2s ease;
       font-size: 1.2rem;
     }
 
@@ -347,14 +362,14 @@
     .design-selector-button .fa-chevron-down {
       opacity: 0;
       width: 0;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
     }
 
     .design-selector.expanded .design-selector-button {
       border-radius: 4px;
       width: auto;
       min-width: 160px;
-      padding: 10px 16px;
+      padding: 10px 20px;
       justify-content: space-between;
     }
 
@@ -376,11 +391,10 @@
     }
 
     .design-selector-button:hover {
-      background-color: #1976d2;
-      color: white;
-      box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.2);
+      background-color: var(--neon-cyan);
+      color: #0a0a14;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.5), 0 0 30px rgba(0, 240, 255, 0.2);
       transform: translateY(-2px);
     }
 
@@ -388,23 +402,16 @@
       position: absolute;
       top: calc(100% + 8px);
       left: 0;
-      background: #ffffff;
-      border: 1px solid rgba(0, 0, 0, 0.12);
+      background: var(--surface-color);
+      border: 1px solid var(--neon-cyan);
       border-radius: 4px;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.15);
       min-width: 200px;
       opacity: 0;
       visibility: hidden;
       transform: translateY(-10px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s ease;
       overflow: hidden;
-    }
-
-    [data-theme="dark"] .design-selector-menu {
-      background: #2d2d2d;
-      border: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .design-selector.expanded .design-selector-menu {
@@ -420,13 +427,9 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      color: #212121;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    }
-
-    [data-theme="dark"] .design-selector-option {
-      color: #ffffff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-color);
+      border-bottom: 1px solid var(--border-color);
+      font-family: 'Share Tech Mono', monospace;
     }
 
     .design-selector-option:last-child {
@@ -434,23 +437,19 @@
     }
 
     .design-selector-option:hover {
-      background: #1976d2;
+      background: var(--neon-pink);
       color: white;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     }
 
     .design-selector-option.active {
-      background: rgba(25, 118, 210, 0.1);
-      color: #1976d2;
+      background: rgba(255, 45, 149, 0.15);
+      color: var(--neon-pink);
       font-weight: 600;
     }
 
-    [data-theme="dark"] .design-selector-option.active {
-      background: rgba(25, 118, 210, 0.2);
-      color: #64b5f6;
-    }
-
     .design-selector-option.active:hover {
-      background: #1976d2;
+      background: var(--neon-pink);
       color: white;
     }
 
@@ -463,58 +462,31 @@
       position: fixed;
       top: 24px;
       right: 24px;
-      background: #ffffff;
-      border: none;
-      border-radius: 50%;
+      background: var(--surface-color);
+      border: 1px solid var(--neon-pink);
+      border-radius: 4px;
       width: 48px;
       height: 48px;
+      padding: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
+      box-shadow: 0 0 8px rgba(255, 45, 149, 0.2);
       z-index: 1000;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--neon-pink);
       overflow: hidden;
+      font-family: 'Share Tech Mono', monospace;
     }
 
-    [data-theme="dark"] .theme-toggle {
-      background: #2d2d2d;
-    }
-
-    .theme-toggle::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .theme-toggle:hover {
-      background: #1976d2;
-      box-shadow: 
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 2px 4px rgba(0, 0, 0, 0.3);
-      transform: translateY(-2px);
-    }
-
-    .theme-toggle:active::after {
-      width: 100px;
-      height: 100px;
-    }
-    
     .theme-toggle .toggle-label {
       opacity: 0;
       width: 0;
       white-space: nowrap;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       margin-left: 0;
       font-size: 0.9rem;
       font-weight: 500;
@@ -522,8 +494,8 @@
 
     .theme-toggle i {
       font-size: 1.2rem;
-      color: var(--text-color);
-      transition: all 0.3s ease;
+      color: var(--neon-pink);
+      transition: all 0.2s ease;
       position: absolute;
     }
 
@@ -546,6 +518,14 @@
       position: relative;
     }
 
+    .theme-toggle:hover {
+      background: var(--neon-pink);
+      box-shadow: 0 0 15px rgba(255, 45, 149, 0.5), 0 0 30px rgba(255, 45, 149, 0.2);
+      transform: translateY(-2px) scale(1.05);
+      border-color: var(--neon-pink);
+      color: white;
+    }
+
     .theme-toggle:hover i {
       color: white;
       transform: rotate(15deg);
@@ -554,86 +534,88 @@
     .theme-toggle.expanded:hover i {
       transform: rotate(15deg);
     }
-    
-    .theme-toggle::before {
-      content: attr(data-tooltip);
-      position: absolute;
-      top: 100%;
-      right: 0;
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
-      border: 1px solid rgba(0, 0, 0, 0.12);
-      border-radius: 4px;
-      font-size: 0.85rem;
-      white-space: nowrap;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-4px);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      pointer-events: none;
-      z-index: 1001;
-    }
 
-    [data-theme="dark"] .theme-toggle::before {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-      border-color: rgba(255, 255, 255, 0.12);
-    }
-    
-    .theme-toggle:hover::before {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-
-    .theme-toggle i {
-      font-size: 1.2rem;
-      color: var(--text-color);
-      transition: all 0.3s ease;
-    }
-
+    /* Main Frame */
     .elegant-frame {
       max-width: 1200px;
       margin: 0 auto;
-      background: #ffffff;
-      border: none;
-      border-radius: 4px;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.1),
-        0 4px 8px rgba(0, 0, 0, 0.1),
-        0 8px 16px rgba(0, 0, 0, 0.1),
-        0 16px 32px rgba(0, 0, 0, 0.1);
+      background: var(--surface-color);
+      border: 1px solid var(--neon-cyan);
+      border-radius: 8px;
+      box-shadow:
+        0 0 15px rgba(0, 240, 255, 0.1),
+        0 0 30px rgba(255, 45, 149, 0.05),
+        inset 0 0 30px rgba(0, 240, 255, 0.02);
       position: relative;
       overflow: hidden;
       padding: 60px 50px;
-      transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: fadeInUp 0.8s ease-out;
     }
 
-    [data-theme="dark"] .elegant-frame {
-      background: #1e1e1e;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.3),
-        0 4px 8px rgba(0, 0, 0, 0.3),
-        0 8px 16px rgba(0, 0, 0, 0.3),
-        0 16px 32px rgba(0, 0, 0, 0.3);
-    }
-
+    /* Scanline overlay */
     .elegant-frame::before {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 240, 255, 0.015) 2px,
+        rgba(0, 240, 255, 0.015) 4px
+      );
+      pointer-events: none;
+      z-index: 0;
     }
 
-    /* Corner decorations hidden - not part of Material Design */
+    /* Corner bracket decoration (top-right via ::after on frame) */
     .elegant-frame::after {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      width: 30px;
+      height: 30px;
+      border-top: 2px solid var(--neon-cyan);
+      border-left: 2px solid var(--neon-cyan);
+      pointer-events: none;
+      z-index: 0;
+      box-shadow: -2px -2px 6px rgba(0, 240, 255, 0.3);
     }
 
     .corner-decoration {
-      display: none;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .corner-decoration.top-right {
+      top: 16px;
+      right: 16px;
+      border-top: 2px solid var(--neon-pink);
+      border-right: 2px solid var(--neon-pink);
+      box-shadow: 2px -2px 6px rgba(255, 45, 149, 0.3);
+    }
+
+    .corner-decoration.bottom-left {
+      bottom: 16px;
+      left: 16px;
+      border-bottom: 2px solid var(--neon-pink);
+      border-left: 2px solid var(--neon-pink);
+      box-shadow: -2px 2px 6px rgba(255, 45, 149, 0.3);
+    }
+
+    .corner-decoration.bottom-right {
+      bottom: 16px;
+      right: 16px;
+      border-bottom: 2px solid var(--neon-cyan);
+      border-right: 2px solid var(--neon-cyan);
+      box-shadow: 2px 2px 6px rgba(0, 240, 255, 0.3);
     }
 
     .header {
@@ -649,37 +631,41 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 32px;
-      border: 4px solid var(--surface-color);
-      box-shadow: 0 8px 32px var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 3px solid var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.15);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .profile-img:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px var(--shadow-hover);
+      box-shadow: 0 0 20px rgba(0, 240, 255, 0.6), 0 0 40px rgba(0, 240, 255, 0.25);
     }
 
     h1 {
+      font-family: 'Orbitron', sans-serif;
       font-size: 2.5rem;
-      font-weight: 300;
+      font-weight: 700;
       color: var(--text-color);
       margin-bottom: 4px;
-      letter-spacing: 0;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      animation: glitch 5s ease-in-out infinite;
     }
 
     .tagline {
-      font-size: 1.2rem;
-      color: #4a4a4a;
+      font-size: 1.1rem;
+      color: var(--neon-cyan);
       font-weight: 400;
-      font-style: italic;
+      font-style: normal;
       margin-bottom: 8px;
+      text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
     }
 
     [data-theme="dark"] .tagline {
-      color: #d0d0d0;
+      color: var(--neon-cyan);
     }
 
-    /* New Section Styles */
+    /* Section Styles */
     .major-section {
       margin: 80px 0;
       position: relative;
@@ -692,10 +678,14 @@
     }
 
     .section-title {
+      font-family: 'Orbitron', sans-serif;
       font-size: 2.5rem;
-      font-weight: 300;
+      font-weight: 700;
       margin-bottom: 8px;
-      color: var(--text-color);
+      color: var(--neon-pink);
+      text-shadow: 0 0 10px var(--neon-pink), 0 0 20px var(--neon-pink), 0 0 40px var(--neon-pink);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     .section-subtitle {
@@ -715,67 +705,33 @@
     }
 
     .role-card {
-      background: #ffffff;
-      border: none;
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
       border-radius: 4px;
       padding: 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s ease;
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      cursor: pointer;
-    }
-
-    [data-theme="dark"] .role-card {
-      background: #2d2d2d;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.5),
-        0 1px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .role-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .role-card:active::after {
-      width: 300px;
-      height: 300px;
     }
 
     .role-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(255, 45, 149, 0.15), 0 0 40px rgba(0, 240, 255, 0.08);
+      border-color: var(--neon-pink);
     }
 
-    [data-theme="dark"] .role-card:hover {
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.7),
-        0 3px 6px rgba(0, 0, 0, 0.7);
-    }
-
+    /* Neon gradient top accent on cards */
     .role-card::before {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: var(--primary);
+      height: 3px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
+      box-shadow: 0 0 10px rgba(255, 45, 149, 0.3);
     }
 
     .role-header {
@@ -786,60 +742,52 @@
     }
 
     .role-badge {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      height: 32px;
-      line-height: 32px;
-      border: none;
+      font-family: 'Orbitron', sans-serif;
     }
 
     .badge-governance {
-      background: var(--purple-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-governance {
-      background: rgba(206, 147, 216, 0.2);
-      color: var(--purple-accent);
+      background: transparent;
+      color: var(--neon-purple);
+      border: 1px solid var(--neon-purple);
+      box-shadow: 0 0 6px rgba(176, 38, 255, 0.2);
     }
 
     .badge-growth {
-      background: var(--cyan-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-growth {
-      background: rgba(128, 203, 196, 0.2);
-      color: var(--cyan-accent);
+      background: transparent;
+      color: var(--neon-cyan);
+      border: 1px solid var(--neon-cyan);
+      box-shadow: 0 0 6px rgba(0, 240, 255, 0.2);
     }
 
     .badge-leadership {
-      background: var(--green-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-leadership {
-      background: rgba(129, 199, 132, 0.2);
+      background: transparent;
       color: var(--green-accent);
+      border: 1px solid var(--green-accent);
+      box-shadow: 0 0 6px rgba(0, 255, 136, 0.2);
     }
 
     .badge-advisor {
-      background: var(--orange-accent);
-      color: #fff;
+      background: transparent;
+      color: #ff6b35;
+      border: 1px solid #ff6b35;
+      box-shadow: 0 0 6px rgba(255, 107, 53, 0.2);
     }
 
     [data-theme="dark"] .badge-advisor {
-      background: rgba(255, 171, 145, 0.2);
-      color: var(--orange-accent);
+      color: #ff8c5a;
+      border-color: #ff8c5a;
     }
 
     .role-title {
-      font-size: 1.2rem;
-      font-weight: 700;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
       margin-bottom: 6px;
       color: var(--text-color);
       line-height: 1.3;
@@ -847,9 +795,10 @@
 
     .role-company {
       font-size: 1rem;
-      font-weight: 500;
+      font-weight: 600;
       margin-bottom: 12px;
-      color: var(--primary);
+      color: var(--neon-pink);
+      text-shadow: 0 0 8px rgba(255, 45, 149, 0.3);
     }
 
     .role-description {
@@ -864,56 +813,25 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 10px 24px;
+      padding: 10px 20px;
       background: transparent;
-      color: #1976d2;
+      color: var(--neon-cyan);
       text-decoration: none;
-      border: none;
+      border: 1px solid var(--neon-cyan);
       border-radius: 4px;
       font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      font-size: 0.875rem;
+      transition: all 0.2s ease;
+      font-size: 0.9rem;
       margin-top: auto;
-      position: relative;
-      overflow: hidden;
-      box-shadow: none;
-    }
-
-    [data-theme="dark"] .role-button {
-      color: #90caf9;
-    }
-
-    .role-button::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      font-family: 'Share Tech Mono', monospace;
+      box-shadow: 0 0 6px rgba(0, 240, 255, 0.15);
     }
 
     .role-button:hover {
-      background: rgba(25, 118, 210, 0.08);
-      color: #1565c0;
-      box-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.2),
-        0 1px 2px rgba(0, 0, 0, 0.2);
-    }
-
-    .role-button:active::before {
-      width: 300px;
-      height: 300px;
-    }
-
-    [data-theme="dark"] .role-button:hover {
-      background: rgba(144, 202, 249, 0.16);
-      color: #90caf9;
+      background: var(--neon-cyan);
+      color: #0a0a14;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.15);
     }
 
     /* Community Impact Section */
@@ -929,25 +847,17 @@
     }
 
     .stat-card {
-      background: #ffffff;
-      border: none;
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
       border-radius: 4px;
       padding: 24px;
       text-align: center;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
       position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .stat-card {
-      background: #2d2d2d;
     }
 
     .stat-card.with-button {
@@ -961,8 +871,8 @@
 
     .stat-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 4px 16px var(--shadow-hover);
-      border-color: var(--border-hover);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.1);
+      border-color: var(--neon-cyan);
     }
 
     .stat-card .role-button {
@@ -970,6 +880,7 @@
     }
 
     .stat-title {
+      font-family: 'Orbitron', sans-serif;
       font-size: 1rem;
       font-weight: 700;
       color: var(--text-color);
@@ -985,9 +896,11 @@
     }
 
     .stat-number {
+      font-family: 'Orbitron', sans-serif;
       font-size: 2.5rem;
-      font-weight: 300;
-      color: var(--primary);
+      font-weight: 700;
+      color: var(--neon-pink);
+      text-shadow: 0 0 10px rgba(255, 45, 149, 0.4), 0 0 20px rgba(255, 45, 149, 0.15);
       margin-bottom: 6px;
     }
 
@@ -1005,49 +918,23 @@
     }
 
     .project-card {
-      background: #ffffff;
-      border: none;
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
       border-radius: 4px;
       padding: 32px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s ease;
       text-align: left;
       display: flex;
       flex-direction: column;
       height: 100%;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
       position: relative;
       overflow: hidden;
     }
 
-    [data-theme="dark"] .project-card {
-      background: #2d2d2d;
-    }
-
-    .project-card::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .project-card:active::after {
-      width: 300px;
-      height: 300px;
-    }
-
     .project-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(255, 45, 149, 0.15), 0 0 40px rgba(0, 240, 255, 0.08);
+      border-color: var(--neon-pink);
     }
 
     .project-card .role-button {
@@ -1064,34 +951,31 @@
     .project-icon {
       width: 48px;
       height: 48px;
-      border-radius: 12px;
-      background: var(--purple-accent);
+      border-radius: 4px;
+      background: var(--neon-purple);
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
+      box-shadow: 0 0 10px rgba(176, 38, 255, 0.3);
     }
 
     .project-status {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      background: var(--green-accent);
-      color: #fff;
-      border: none;
-      height: 32px;
-      line-height: 32px;
-    }
-
-    [data-theme="dark"] .project-status {
-      background: rgba(129, 199, 132, 0.2);
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: transparent;
       color: var(--green-accent);
+      border: 1px solid var(--green-accent);
+      box-shadow: 0 0 6px rgba(0, 255, 136, 0.2);
+      font-family: 'Orbitron', sans-serif;
     }
 
     .project-title {
-      font-size: 1.4rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 16px;
       color: var(--text-color);
@@ -1116,10 +1000,12 @@
     }
 
     .project-stat-number {
+      font-family: 'Orbitron', sans-serif;
       font-size: 1.5rem;
       font-weight: 700;
-      color: var(--purple-accent);
+      color: var(--neon-pink);
       margin-bottom: 4px;
+      text-shadow: 0 0 8px rgba(255, 45, 149, 0.3);
     }
 
     .project-stat-label {
@@ -1129,29 +1015,55 @@
 
     /* Innovation Lab Section */
     .ecosystem-highlight {
-      background: #ffffff;
-      border: none;
-      border-left: 4px solid var(--primary);
+      background: linear-gradient(135deg, rgba(176, 38, 255, 0.08), rgba(0, 240, 255, 0.05));
+      border: 1px solid rgba(0, 240, 255, 0.2);
       border-radius: 4px;
       padding: 32px 24px;
       margin: 0 auto;
       max-width: 800px;
       position: relative;
       overflow: hidden;
-      box-shadow:
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
     }
 
-    [data-theme="dark"] .ecosystem-highlight {
-      background: #2d2d2d;
-      border-left-color: var(--primary);
+    .ecosystem-highlight::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        radial-gradient(circle at 20% 20%, rgba(0, 240, 255, 0.15) 1px, transparent 1px),
+        radial-gradient(circle at 80% 30%, rgba(255, 45, 149, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at 40% 70%, rgba(176, 38, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.12) 1px, transparent 1px),
+        radial-gradient(circle at 15% 60%, rgba(255, 45, 149, 0.08) 1px, transparent 1px),
+        radial-gradient(circle at 70% 15%, rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+        radial-gradient(circle at 25% 90%, rgba(176, 38, 255, 0.08) 1px, transparent 1px),
+        radial-gradient(circle at 60% 50%, rgba(0, 240, 255, 0.06) 1px, transparent 1px),
+        radial-gradient(circle at 85% 60%, rgba(255, 45, 149, 0.15) 2px, transparent 2px),
+        radial-gradient(circle at 30% 40%, rgba(0, 240, 255, 0.1) 1.5px, transparent 1.5px);
+      background-size:
+        150px 150px, 200px 200px, 180px 180px, 160px 160px, 140px 140px,
+        170px 170px, 190px 190px, 220px 220px, 250px 250px, 180px 180px;
+      pointer-events: none;
+      opacity: 0.6;
     }
 
-    /* Clean Material surface - no decorative pseudo-elements */
-    .ecosystem-highlight::before,
     .ecosystem-highlight::after {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+        45deg,
+        transparent 0%,
+        rgba(0, 240, 255, 0.02) 50%,
+        transparent 100%
+      );
+      pointer-events: none;
     }
 
     .innovation-tools {
@@ -1161,47 +1073,31 @@
     }
 
     .tool-card {
-      background: #ffffff;
-      border: none;
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
       border-radius: 4px;
       padding: 24px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: all 0.2s ease;
       display: flex;
       flex-direction: column;
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
       position: relative;
       overflow: hidden;
     }
 
-    [data-theme="dark"] .tool-card {
-      background: #2d2d2d;
-    }
-
-    .tool-card::after {
+    .tool-card::before {
       content: '';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-
-    .tool-card:active::after {
-      width: 300px;
-      height: 300px;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--neon-pink), var(--neon-cyan));
     }
 
     .tool-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translateY(-4px);
+      box-shadow: 0 0 20px rgba(255, 45, 149, 0.15), 0 0 40px rgba(0, 240, 255, 0.08);
+      border-color: var(--neon-cyan);
     }
 
     .tool-header {
@@ -1214,7 +1110,7 @@
     .tool-icon {
       width: 40px;
       height: 40px;
-      border-radius: 10px;
+      border-radius: 4px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1223,51 +1119,41 @@
     }
 
     .tool-icon.analytics {
-      background: var(--blue-accent);
+      background: linear-gradient(135deg, var(--blue-accent), var(--neon-purple));
+      box-shadow: 0 0 8px rgba(176, 38, 255, 0.3);
     }
 
     .tool-icon.development {
-      background: var(--cyan-accent);
+      background: linear-gradient(135deg, var(--neon-cyan), var(--blue-accent));
+      box-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
     }
 
     .tool-badge {
-      padding: 0 12px;
-      border-radius: 16px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      height: 32px;
-      line-height: 32px;
-      border: none;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: 'Orbitron', sans-serif;
     }
 
     .badge-featured {
-      background: var(--purple-accent);
-      color: #fff;
-    }
-
-    [data-theme="dark"] .badge-featured {
-      background: rgba(206, 147, 216, 0.2);
-      color: var(--purple-accent);
-    }
-
-    @keyframes livePulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+      background: transparent;
+      color: var(--neon-purple);
+      border: 1px solid var(--neon-purple);
+      box-shadow: 0 0 6px rgba(176, 38, 255, 0.2);
     }
 
     .badge-live-data {
-      background: var(--green-accent);
-      color: #fff;
+      background: transparent;
+      color: var(--green-accent);
+      border: 1px solid var(--green-accent);
+      box-shadow: 0 0 6px rgba(0, 255, 136, 0.2);
       animation: livePulse 2.5s ease-in-out infinite;
     }
 
-    [data-theme="dark"] .badge-live-data {
-      background: rgba(129, 199, 132, 0.2);
-      color: var(--green-accent);
-    }
-
     .tool-title {
-      font-size: 1.2rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 12px;
       color: var(--text-color);
@@ -1290,19 +1176,19 @@
     }
 
     .tool-tag {
-      padding: 0 12px;
-      background: rgba(0, 0, 0, 0.08);
-      border: none;
-      border-radius: 16px;
+      padding: 3px 10px;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
       font-size: 0.75rem;
-      font-weight: 500;
       color: var(--text-secondary);
-      height: 32px;
-      line-height: 32px;
+      transition: all 0.2s ease;
     }
 
-    [data-theme="dark"] .tool-tag {
-      background: rgba(255, 255, 255, 0.08);
+    .tool-tag:hover {
+      border-color: var(--neon-cyan);
+      color: var(--neon-cyan);
+      box-shadow: 0 0 6px rgba(0, 240, 255, 0.15);
     }
 
     /* Links section */
@@ -1325,64 +1211,36 @@
       align-items: center;
       gap: 8px;
       padding: 12px 24px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
+      background: transparent;
+      color: var(--neon-cyan);
       text-decoration: none;
       border-radius: 4px;
       font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      border: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .links a {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-    }
-
-    .links a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 6px rgba(0, 240, 255, 0.1);
+      border: 1px solid var(--neon-cyan);
+      font-family: 'Share Tech Mono', monospace;
     }
 
     .links a:hover {
-      background: #1976d2;
-      color: white;
+      background: var(--neon-cyan);
+      color: #0a0a14;
       transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
+      box-shadow: 0 0 15px rgba(0, 240, 255, 0.4), 0 0 30px rgba(0, 240, 255, 0.15);
+      border-color: var(--neon-cyan);
     }
 
-    .links a:active::before {
-      width: 300px;
-      height: 300px;
-    }
-    
     .links a:hover i,
     .links a:hover svg {
-      color: white;
-      fill: white;
+      color: #0a0a14;
+      fill: #0a0a14;
     }
 
-    /* GitHub repository link - centered below frame */
+    /* GitHub repository link */
     .github-repo-link {
       display: flex;
       justify-content: center;
+      gap: 16px;
       margin-top: 12px;
       margin-bottom: 20px;
     }
@@ -1392,59 +1250,30 @@
       align-items: center;
       gap: 8px;
       padding: 12px 24px;
-      background: #ffffff;
-      color: rgba(0, 0, 0, 0.87);
+      background: transparent;
+      color: var(--neon-pink);
       text-decoration: none;
       border-radius: 4px;
       font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.12),
-        0 1px 2px rgba(0, 0, 0, 0.24);
-      border: none;
-      position: relative;
-      overflow: hidden;
-    }
-
-    [data-theme="dark"] .github-repo-link a {
-      background: #2d2d2d;
-      color: rgba(255, 255, 255, 0.87);
-    }
-
-    .github-repo-link a::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      border-radius: 50%;
-      background: rgba(25, 118, 210, 0.2);
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
+      transition: all 0.2s ease;
+      box-shadow: 0 0 6px rgba(255, 45, 149, 0.1);
+      border: 1px solid var(--neon-pink);
+      font-family: 'Share Tech Mono', monospace;
     }
 
     .github-repo-link a:hover {
-      background: #1976d2;
+      background: var(--neon-pink);
       color: white;
       transform: translateY(-2px);
-      box-shadow: 
-        0 3px 6px rgba(0, 0, 0, 0.16),
-        0 3px 6px rgba(0, 0, 0, 0.23);
-    }
-
-    .github-repo-link a:active::before {
-      width: 300px;
-      height: 300px;
+      box-shadow: 0 0 15px rgba(255, 45, 149, 0.4), 0 0 30px rgba(255, 45, 149, 0.15);
+      border-color: var(--neon-pink);
     }
 
     .github-repo-link a:hover i {
       color: white;
     }
 
-    /* Copyright text - centered above GitHub link */
+    /* Copyright text */
     .copyright {
       text-align: center;
       font-size: 0.9rem;
@@ -1453,7 +1282,52 @@
       margin-bottom: 16px;
     }
 
+    /* Animations */
+    .header, .major-section, .links {
+      animation: fadeInUp 0.6s ease-out;
+    }
 
+    .major-section:nth-child(3) { animation-delay: 0.1s; }
+    .major-section:nth-child(4) { animation-delay: 0.2s; }
+    .major-section:nth-child(5) { animation-delay: 0.3s; }
+    .links { animation-delay: 0.4s; }
+
+    /* Brand logos in role cards */
+    .role-card { position: relative; }
+    .role-card.has-brand { padding-left: 24px; }
+    .role-card.has-brand .brand-logo { position: static; width: 48px; height: 48px; margin-right: 8px; }
+    .role-card.has-brand .brand-logo.dark { display: none; }
+    .role-card.has-brand .role-header { display: flex; align-items: center; gap: 12px; }
+
+    /* Theme-based logo switching */
+    :root[data-theme="light"] .role-card.has-brand .brand-logo.dark { display: none; }
+    :root[data-theme="light"] .role-card.has-brand .brand-logo.light { display: block; }
+
+    :root[data-theme="dark"] .role-card.has-brand .brand-logo.light { display: none; }
+    :root[data-theme="dark"] .role-card.has-brand .brand-logo.dark { display: block; }
+
+    /* Project card brand header and dark-mode switching */
+    .project-card.has-brand .brand-logo { width: 48px; height: 48px; margin-right: 8px; vertical-align: middle; }
+    .project-card.has-brand .brand-logo.dark { display: none; }
+    .project-card.has-brand .project-header { display: flex; align-items: center; gap: 12px; }
+
+    :root[data-theme="light"] .project-card.has-brand .brand-logo.dark { display: none; }
+    :root[data-theme="light"] .project-card.has-brand .brand-logo.light { display: block; }
+
+    :root[data-theme="dark"] .project-card.has-brand .brand-logo.light { display: none; }
+    :root[data-theme="dark"] .project-card.has-brand .brand-logo.dark { display: block; }
+
+    /* The Graph extended logo - light/dark mode switching */
+    :root[data-theme="light"] .graph-extended-logo.light { display: block; }
+    :root[data-theme="light"] .graph-extended-logo.dark { display: none; }
+
+    :root[data-theme="dark"] .graph-extended-logo.light { display: none; }
+    :root[data-theme="dark"] .graph-extended-logo.dark { display: block; }
+
+    /* Farcaster button icon spacing */
+    a[aria-label="Farcaster"] svg { margin-right: 6px; vertical-align: -2px; }
+
+    /* Responsive - 768px */
     @media (max-width: 768px) {
       body {
         padding: 40px 15px;
@@ -1503,11 +1377,11 @@
       }
 
       .tagline {
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       .roles-grid {
@@ -1564,6 +1438,7 @@
       }
     }
 
+    /* Responsive - 480px */
     @media (max-width: 480px) {
       body {
         padding: 20px 10px;
@@ -1571,11 +1446,11 @@
 
       .elegant-frame {
         padding: 30px 20px;
-        border-width: 3px;
+        border-width: 1px;
       }
 
       h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
 
       .profile-img {
@@ -1584,7 +1459,7 @@
       }
 
       .section-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
       }
 
       .role-card, .project-card, .tool-card {
@@ -1621,87 +1496,22 @@
       }
     }
 
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .elegant-frame {
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .header, .major-section, .links {
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    .major-section:nth-child(3) { animation-delay: 0.1s; }
-    .major-section:nth-child(4) { animation-delay: 0.2s; }
-    .major-section:nth-child(5) { animation-delay: 0.3s; }
-    .links { animation-delay: 0.4s; }
-
-    /* Brand logos in role cards - header-aligned */
-    .role-card { position: relative; }
-    .role-card.has-brand { padding-left: 24px; }
-    .role-card.has-brand .brand-logo { position: static; width: 48px; height: 48px; margin-right: 8px; }
-    .role-card.has-brand .brand-logo.dark { display: none; }
-    .role-card.has-brand .role-header { display: flex; align-items: center; gap: 12px; }
-
-    /* Theme-based logo switching */
-    :root[data-theme="light"] .role-card.has-brand .brand-logo.dark { display: none; }
-    :root[data-theme="light"] .role-card.has-brand .brand-logo.light { display: block; }
-    
-    :root[data-theme="dark"] .role-card.has-brand .brand-logo.light { display: none; }
-    :root[data-theme="dark"] .role-card.has-brand .brand-logo.dark { display: block; }
-
-    /* Project card brand header and dark-mode switching */
-    .project-card.has-brand .brand-logo { width: 48px; height: 48px; margin-right: 8px; vertical-align: middle; }
-    .project-card.has-brand .brand-logo.dark { display: none; }
-    .project-card.has-brand .project-header { display: flex; align-items: center; gap: 12px; }
-
-    :root[data-theme="light"] .project-card.has-brand .brand-logo.dark { display: none; }
-    :root[data-theme="light"] .project-card.has-brand .brand-logo.light { display: block; }
-    
-    :root[data-theme="dark"] .project-card.has-brand .brand-logo.light { display: none; }
-    :root[data-theme="dark"] .project-card.has-brand .brand-logo.dark { display: block; }
-
-    /* The Graph extended logo - light/dark mode switching */
-    :root[data-theme="light"] .graph-extended-logo.light { display: block; }
-    :root[data-theme="light"] .graph-extended-logo.dark { display: none; }
-    
-    :root[data-theme="dark"] .graph-extended-logo.light { display: none; }
-    :root[data-theme="dark"] .graph-extended-logo.dark { display: block; }
-
-    /* Farcaster button icon spacing */
-    a[aria-label="Farcaster"] svg { margin-right: 6px; vertical-align: -2px; }
-
 </style>
 
   <!-- Load fonts asynchronously to prevent render blocking -->
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" /></noscript>
+
   <!-- Load Font Awesome asynchronously to prevent render blocking -->
-  <!-- Note: Font Awesome contains many unused icons, but loading async minimizes impact -->
-  <!-- Consider using a subset or icon font in future for better performance -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
-  
+
   <!-- Fallback script for browsers that don't support onload on link elements -->
   <script>
     !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
   </script>
-  
+
   <script>
-    /* Performance: Minimal inline JavaScript - removed ~95 lines of unused code (generateSocialPreview)
-       Only essential theme toggle functionality remains for optimal load time */
-    
     // Dark mode functionality
     let expandTimeout = null;
     function toggleTheme() {
@@ -1709,21 +1519,18 @@
       const themeIcon = document.getElementById('theme-icon');
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
       const currentTheme = html.getAttribute('data-theme');
-      
-      // Expand toggle to show label
+
       if (themeToggleBtn) {
-        // Clear any existing timeout to prevent memory leaks
         if (expandTimeout) {
           clearTimeout(expandTimeout);
         }
         themeToggleBtn.classList.add('expanded');
-        // Collapse after 2 seconds
         expandTimeout = setTimeout(() => {
           themeToggleBtn.classList.remove('expanded');
           expandTimeout = null;
         }, 2000);
       }
-      
+
       if (currentTheme === 'dark') {
         html.setAttribute('data-theme', 'light');
         if (themeIcon) {
@@ -1748,25 +1555,22 @@
     // Design selector functionality
     let designSelectorInitialized = false;
     function initDesignSelector() {
-      // Prevent multiple initializations
       if (designSelectorInitialized) {
         return;
       }
-      
+
       const selector = document.getElementById('design-selector');
       const button = document.getElementById('design-selector-button');
-      
-      // Early return if elements don't exist
+
       if (!selector || !button) {
         return;
       }
-      
+
       designSelectorInitialized = true;
-      
+
       const options = selector.querySelectorAll('.design-selector-option');
       const currentThemeSpan = button.querySelector('.current-theme');
-      
-      // Get current page theme name
+
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
       const themeNames = {
         'index.html': 'Elegant Frame',
@@ -1778,29 +1582,27 @@
         'index-manga.html': 'Manga'
       };
 
-      // Update button text and active state
       if (currentThemeSpan) {
-        currentThemeSpan.textContent = themeNames[currentPage] || 'Material Design';
+        currentThemeSpan.textContent = themeNames[currentPage] || 'Cyberpunk Neon';
       }
       if (options && options.length > 0) {
         options.forEach(option => {
-        const themeFile = option.getAttribute('data-theme');
-        const icon = option.querySelector('i');
-        if (themeFile === currentPage) {
-          option.classList.add('active');
-          if (icon) {
-            icon.className = 'fas fa-check';
+          const themeFile = option.getAttribute('data-theme');
+          const icon = option.querySelector('i');
+          if (themeFile === currentPage) {
+            option.classList.add('active');
+            if (icon) {
+              icon.className = 'fas fa-check';
+            }
+          } else {
+            option.classList.remove('active');
+            if (icon) {
+              icon.className = '';
+            }
           }
-        } else {
-          option.classList.remove('active');
-          if (icon) {
-            icon.className = '';
-          }
-        }
-      });
+        });
       }
-      
-      // Toggle menu on button click
+
       button.addEventListener('click', function(e) {
         e.stopPropagation();
         if (selector) {
@@ -1808,15 +1610,13 @@
           button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
         }
       });
-      
-      // Handle option clicks and keyboard events
+
       if (options && options.length > 0) {
         options.forEach(option => {
-        // Make option keyboard accessible (already set in HTML, but ensure it's set)
         if (!option.hasAttribute('tabindex')) {
           option.setAttribute('tabindex', '0');
         }
-        
+
         const handleOptionSelect = function() {
           const themeFile = this.getAttribute('data-theme');
           if (themeFile && themeFile !== currentPage) {
@@ -1828,12 +1628,12 @@
             }
           }
         };
-        
+
         option.addEventListener('click', function(e) {
           e.stopPropagation();
           handleOptionSelect.call(this);
         });
-        
+
         option.addEventListener('keydown', function(e) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
@@ -1843,28 +1643,26 @@
         });
       });
       }
-      
-      // Close menu when clicking outside
+
       document.addEventListener('click', function(e) {
         if (selector && button && !selector.contains(e.target)) {
           selector.classList.remove('expanded');
           button.setAttribute('aria-expanded', 'false');
         }
       });
-      
-      // Close menu on Escape key
+
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && selector && selector.classList.contains('expanded')) {
           selector.classList.remove('expanded');
           if (button) {
             button.setAttribute('aria-expanded', 'false');
-            button.focus(); // Return focus to button for accessibility
+            button.focus();
           }
         }
       });
     }
 
-    // Optimize FCP: Add loaded class after initial render to enable transitions
+    // Optimize FCP
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.add('loaded');
@@ -1878,16 +1676,13 @@
       const savedTheme = localStorage.getItem('theme');
       const themeIcon = document.getElementById('theme-icon');
       const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      
-      // Attach event listener to theme toggle button
+
       if (themeToggleBtn) {
         themeToggleBtn.addEventListener('click', toggleTheme);
       }
-      
-      // Initialize design selector
+
       initDesignSelector();
-      
-      // Only use light mode if explicitly saved as 'light' in localStorage
+
       if (savedTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
         if (themeIcon) {
@@ -1897,7 +1692,6 @@
           themeToggleBtn.setAttribute('aria-pressed', 'false');
         }
       } else {
-        // Default to dark mode
         document.documentElement.setAttribute('data-theme', 'dark');
         if (themeIcon) {
           themeIcon.className = 'fas fa-moon';
@@ -1912,12 +1706,12 @@
 <body>
   <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-to-main">Skip to main content</a>
-  
+
   <!-- Design Theme Selector -->
   <div class="design-selector" id="design-selector">
     <button class="design-selector-button" id="design-selector-button" aria-label="Select design theme" aria-expanded="false" aria-controls="design-selector-menu" aria-haspopup="true">
       <i class="fas fa-palette"></i>
-      <span class="current-theme">Material Design</span>
+      <span class="current-theme">Cyberpunk Neon</span>
       <i class="fas fa-chevron-down"></i>
     </button>
     <div class="design-selector-menu" id="design-selector-menu" role="menu">
@@ -1925,8 +1719,8 @@
         <i></i>
         <span>Elegant Frame</span>
       </div>
-      <div class="design-selector-option active" data-theme="index-material.html" role="menuitem" tabindex="0">
-        <i class="fas fa-check"></i>
+      <div class="design-selector-option" data-theme="index-material.html" role="menuitem" tabindex="0">
+        <i></i>
         <span>Material Design</span>
       </div>
       <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0">
@@ -1941,8 +1735,8 @@
         <i></i>
         <span>Gothic Cathedral</span>
       </div>
-      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0">
-        <i></i>
+      <div class="design-selector-option active" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0">
+        <i class="fas fa-check"></i>
         <span>Cyberpunk Neon</span>
       </div>
       <div class="design-selector-option" data-theme="index-manga.html" role="menuitem" tabindex="0">
@@ -1952,7 +1746,7 @@
     </div>
   </div>
 
-  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true" data-tooltip="Toggle theme">
+  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true">
     <i class="fas fa-moon" id="theme-icon"></i>
     <span class="toggle-label">Dark/Light Mode</span>
   </button>
@@ -1962,7 +1756,7 @@
     <div class="corner-decoration top-right"></div>
     <div class="corner-decoration bottom-left"></div>
     <div class="corner-decoration bottom-right"></div>
-    
+
     <!-- Header Links -->
     <div class="links links-header">
       <a href="mailto:pdiomede@yahoo.com" aria-label="Email Paolo Diomede">
@@ -1992,14 +1786,8 @@
         GitHub
       </a>
     </div>
-    
+
     <header class="header">
-      <!-- Performance: Critical image optimizations:
-           - fetchpriority="high": Prioritize loading this above-the-fold image
-           - width/height: Explicit dimensions prevent layout shift (improves CLS)
-           - decoding="async": Non-blocking image decode for faster rendering
-           - Preloaded in <head> for fastest LCP -->
-      <!-- Performance: Critical above-the-fold image optimized with fetchpriority, explicit dimensions, and async decoding -->
       <img src="./images/me2024.jpg" alt="Paolo Diomede's Profile Picture" class="profile-img" fetchpriority="high" width="120" height="120" decoding="async" loading="eager" />
       <h1>Paolo Diomede</h1>
       <p class="tagline">Securing and growing web3 through technical excellence and ecosystem leadership</p>
@@ -2009,11 +1797,7 @@
     <section class="major-section" aria-label="Current Roles">
       <div class="roles-grid">
         <div class="role-card has-brand">
-          <!-- Performance: Below-the-fold images use loading="lazy" for deferred loading
-               and explicit width/height to prevent layout shift -->
           <div class="role-header">
-            <!-- Performance: Below-the-fold images optimized with lazy loading and async decoding -->
-            <!-- Note: Consider optimizing certora.jpg to WebP format for better compression (~43KB savings) -->
             <img class="brand-logo light" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
 
@@ -2144,7 +1928,7 @@
             <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
             <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color);">Ecosystem Communities</h3>
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color); font-family: 'Orbitron', sans-serif;">Ecosystem Communities</h3>
 
           <div class="community-stats" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center;">
             <div class="stat-card with-button">
@@ -2163,7 +1947,7 @@
             </div>
 
             <div class="stat-card with-button">
-              <div class="stat-icon" style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue-accent), var(--purple-accent)); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto;">
+              <div class="stat-icon" style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--blue-accent), var(--neon-purple)); color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto; box-shadow: 0 0 10px rgba(176, 38, 255, 0.3);">
                 <i class="fas fa-users-cog"></i>
               </div>
               <div class="stat-title">Graph AdvocatesDAO</div>
@@ -2179,12 +1963,9 @@
       <div class="community-projects">
         <div class="project-card has-brand">
           <div class="project-header">
-            <!-- Performance: PNG images optimized with lazy loading and async decoding -->
-            <!-- Note: Consider converting PNG logos to WebP or optimizing PNG compression for better delivery -->
             <img class="brand-logo light" src="./images/The_Graph_Logomark_light_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/The_Graph_Logomark_dark_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
 
-            <!-- Commented out: project icon with blue background -->
             <div class="project-status" style="background: rgba(185, 28, 28, 0.1); color: #dc2626; border-color: rgba(185, 28, 28, 0.2);">Past Role</div>
           </div>
           <h3 class="project-title">Ecosystem Manager</h3>
@@ -2280,12 +2061,12 @@
       </a>
     </div>
   </main>
-  
+
   <!-- Copyright -->
   <div class="copyright">
     &copy; 2026 Paolo Diomede. All rights reserved.
   </div>
-  
+
   <!-- GitHub Repository Link -->
   <div class="github-repo-link">
     <a href="https://github.com/pdiomede/pdiomede.com" target="_blank" rel="noopener noreferrer" aria-label="View this repo on GitHub">

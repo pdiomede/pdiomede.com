@@ -47,6 +47,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png" />
   <link rel="manifest" href="./manifest.json" />
+  <link rel="llms-txt" href="./llms.txt" />
   
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">
@@ -75,7 +76,7 @@
       ],
       "description": "Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem",
       "url": "https://pdiomede.com",
-      "image": "https://pdiomede.com/images/me2024.jpg",
+      "image": "https://pdiomede.com/images/social-card.png",
       "email": "pdiomede@yahoo.com",
       "contactPoint": {
         "@type": "ContactPoint",
@@ -114,7 +115,7 @@
         {
           "@type": "Organization",
           "name": "Graphtronauts",
-          "url": "https://graphtronauts.app",
+          "url": "https://x.com/graphtronauts_c",
           "description": "The largest community of GRT delegators and long-term holders"
         },
         {
@@ -162,11 +163,11 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta property="og:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta property="og:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1200" />
-  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta property="og:updated_time" content="2026-01-27T00:00:00+00:00" />
   <meta property="article:author" content="Paolo Diomede" />
 
@@ -175,8 +176,8 @@
   <meta name="twitter:url" content="https://pdiomede.com/" />
   <meta name="twitter:title" content="Paolo Diomede - Web3 Governance & Ecosystem Builder" />
   <meta name="twitter:description" content="Securing and growing web3 through technical excellence and ecosystem leadership. Technical Account Manager at Certora, Advisory Board Member at Livepeer, and community leader across The Graph ecosystem." />
-  <meta name="twitter:image" content="https://pdiomede.com/images/me2024.jpg" />
-  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder Profile Photo" />
+  <meta name="twitter:image" content="https://pdiomede.com/images/social-card.png" />
+  <meta name="twitter:image:alt" content="Paolo Diomede - Web3 Governance & Ecosystem Builder | Certora, Livepeer, The Graph" />
   <meta name="twitter:creator" content="@pdiomede" />
   <meta name="twitter:site" content="@pdiomede" />
 
@@ -1051,6 +1052,18 @@
       border: 1px solid rgba(139, 92, 246, 0.2);
     }
 
+    @keyframes livePulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .badge-live-data {
+      background: rgba(34, 197, 94, 0.1);
+      color: #22c55e;
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      animation: livePulse 2.5s ease-in-out infinite;
+    }
+
     .tool-title {
       font-size: 1.2rem;
       font-weight: 700;
@@ -1131,6 +1144,7 @@
     .github-repo-link {
       display: flex;
       justify-content: center;
+      gap: 16px;
       margin-top: 12px;
       margin-bottom: 20px;
     }
@@ -1488,7 +1502,12 @@
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
       const themeNames = {
         'index.html': 'Elegant Frame',
-        'index-material.html': 'Material Design'
+        'index-material.html': 'Material Design',
+        'index-popart.html': 'Pop Art',
+        'index-renaissance.html': 'Renaissance',
+        'index-gothic.html': 'Gothic Cathedral',
+        'index-cyberpunk.html': 'Cyberpunk Neon',
+        'index-manga.html': 'Manga'
       };
       
       // Update button text and active state
@@ -1642,6 +1661,26 @@
         <i></i>
         <span>Material Design</span>
       </div>
+      <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0">
+        <i></i>
+        <span>Pop Art</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-renaissance.html" role="menuitem" tabindex="0">
+        <i></i>
+        <span>Renaissance</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-gothic.html" role="menuitem" tabindex="0">
+        <i></i>
+        <span>Gothic Cathedral</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0">
+        <i></i>
+        <span>Cyberpunk Neon</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-manga.html" role="menuitem" tabindex="0">
+        <i></i>
+        <span>Manga</span>
+      </div>
     </div>
   </div>
   
@@ -1754,10 +1793,81 @@
       </div>
     </section>
 
+    <!-- Innovation Lab Section -->
+    <section class="major-section" aria-label="Innovation Lab">
+      <div class="section-header">
+        <h2 class="section-title">Innovation Lab</h2>
+        <p class="section-subtitle"><em>Crafting tools that empower the web3 community</em></p>
+      </div>
+
+      <div class="innovation-tools">
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-icon development">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="tool-badge badge-live-data">LIVE DATA</div>
+          </div>
+          <h3 class="tool-title">Graph Tools Pro</h3>
+          <p class="tool-description">
+            Comprehensive suite of powerful dashboards providing deep insights into The Graph ecosystem.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag">Tools</span>
+            <span class="tool-tag">Dashboard</span>
+            <span class="tool-tag">web3</span>
+          </div>
+          <a href="https://graphtools.pro" target="_blank" rel="noopener noreferrer" class="role-button">
+            <i class="fas fa-external-link-alt"></i>
+            Explore Project
+          </a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-icon development">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="tool-badge badge-featured">Featured</div>
+          </div>
+          <h3 class="tool-title">Indexer Score</h3>
+          <p class="tool-description">
+            Revolutionary metric tracking indexer performance in The Graph Network, featured in Messari's State of The Graph Q1 2025 report.
+          </p>
+          <div class="tool-tags">
+            <span class="tool-tag">Analytics</span>
+            <span class="tool-tag">The Graph</span>
+            <span class="tool-tag">Featured</span>
+          </div>
+          <a href="https://indexerscore.com" target="_blank" rel="noopener noreferrer" class="role-button">
+            <i class="fas fa-external-link-alt"></i>
+            Explore Project
+          </a>
+        </div>
+
+        <div class="tool-card">
+          <div class="tool-header">
+            <div class="tool-icon" style="background: var(--blue-accent); color: white;">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="tool-badge badge-featured">Industry Recognition</div>
+          </div>
+          <h3 class="tool-title">Messari Report Feature</h3>
+          <p class="tool-description">
+            IndexerScore.com was prominently featured in the official Messari 'State of The Graph Q1 2025' industry report.
+          </p>
+          <a href="https://messari.io/report/state-of-the-graph-q1-2025" target="_blank" rel="noopener noreferrer" class="role-button">
+            <i class="fas fa-external-link-alt"></i>
+            View Report
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Community Impact Section -->
     <section class="major-section community-section" aria-label="Community Impact">
       <div class="section-header">
-        <h2 class="section-title">Community Impact (2022-2025)</h2>
+        <h2 class="section-title">Community Impact (2021-2025)</h2>
         <p class="section-subtitle"><em>Building bridges and fostering connections across web3 ecosystems</em></p>
       </div>
 
@@ -1824,7 +1934,7 @@
             Learn More
           </a>
         </div>
-        
+
         <div class="project-card">
           <div class="project-header">
             <div class="project-icon">
@@ -1842,18 +1952,18 @@
               <div class="project-stat-label">Members</div>
             </div>
           </div>
-          <a href="https://graphtronauts.app" target="_blank" rel="noopener noreferrer" class="role-button">
+          <a href="https://x.com/graphtronauts_c" target="_blank" rel="noopener noreferrer" class="role-button">
             <i class="fas fa-external-link-alt"></i>
             Join Community
           </a>
         </div>
-        
+
         <div class="project-card">
           <div class="project-header">
             <div class="project-icon" style="background: var(--cyan-accent);">
               <i class="fas fa-users"></i>
             </div>
-            <div class="project-status">Active</div>
+            <div class="project-status" style="background: rgba(185, 28, 28, 0.1); color: #dc2626; border-color: rgba(185, 28, 28, 0.2);">Not Active</div>
           </div>
           <h3 class="project-title">Live Pioneers</h3>
           <p class="project-description">
@@ -1865,79 +1975,9 @@
               <div class="project-stat-label">Members</div>
             </div>
           </div>
-          <a href="https://livepioneers.app" target="_blank" rel="noopener noreferrer" class="role-button">
+          <a href="https://x.com/livepioneers" target="_blank" rel="noopener noreferrer" class="role-button">
             <i class="fas fa-external-link-alt"></i>
             Join Community
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Innovation Lab Section -->
-    <section class="major-section" aria-label="Innovation Lab">
-      <div class="section-header">
-        <h2 class="section-title">Innovation Lab (2024-2025)</h2>
-        <p class="section-subtitle"><em>Crafting tools that empower the web3 community</em></p>
-      </div>
-
-      <div class="innovation-tools">
-        <div class="tool-card">
-          <div class="tool-header">
-            <div class="tool-icon development">
-              <i class="fas fa-code"></i>
-            </div>
-            <div class="tool-badge badge-featured">Featured</div>
-          </div>
-          <h3 class="tool-title">IndexerScore.com</h3>
-          <p class="tool-description">
-            Revolutionary metric tracking indexer performance in The Graph Network, featured in Messari's State of The Graph Q1 2025 report.
-          </p>
-          <div class="tool-tags">
-            <span class="tool-tag">Analytics</span>
-            <span class="tool-tag">The Graph</span>
-            <span class="tool-tag">Featured</span>
-          </div>
-          <a href="https://indexerscore.com" target="_blank" rel="noopener noreferrer" class="role-button">
-            <i class="fas fa-external-link-alt"></i>
-            Explore Project
-          </a>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-header">
-            <div class="tool-icon" style="background: var(--blue-accent); color: white;">
-              <i class="fas fa-chart-line"></i>
-            </div>
-            <div class="tool-badge badge-featured">Industry Recognition</div>
-          </div>
-          <h3 class="tool-title">Messari Report Feature</h3>
-          <p class="tool-description">
-            IndexerScore.com was prominently featured in the official Messari 'State of The Graph Q1 2025' industry report.
-          </p>
-          <a href="https://messari.io/report/state-of-the-graph-q1-2025" target="_blank" rel="noopener noreferrer" class="role-button">
-            <i class="fas fa-external-link-alt"></i>
-            View Report
-          </a>
-        </div>
-
-        <div class="tool-card">
-          <div class="tool-header">
-            <div class="tool-icon development">
-              <i class="fas fa-code"></i>
-            </div>
-          </div>
-          <h3 class="tool-title">GraphTools.pro</h3>
-          <p class="tool-description">
-            Comprehensive suite of powerful dashboards providing deep insights into The Graph ecosystem.
-          </p>
-          <div class="tool-tags">
-            <span class="tool-tag">Tools</span>
-            <span class="tool-tag">Dashboard</span>
-            <span class="tool-tag">web3</span>
-          </div>
-          <a href="https://graphtools.pro" target="_blank" rel="noopener noreferrer" class="role-button">
-            <i class="fas fa-external-link-alt"></i>
-            Explore Project
           </a>
         </div>
       </div>
