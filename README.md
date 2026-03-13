@@ -28,7 +28,7 @@ Personal portfolio highlighting work in:
 - 🔒 **Security** - Content Security Policy, SRI, secure headers
 - 🌗 **Dark Mode** - System preference detection with manual toggle
 - 📱 **Responsive** - Mobile-first design, works on all devices
-- 🎨 **Design Variants** - Five distinct themes: Elegant Frame, Material Design, Pop Art, Cyberpunk Neon, and Terminal
+- 🎨 **Design Variants** - Five distinct themes: Elegant Frame, Cyberpunk Neon, Material Design, Pop Art, and Terminal
 
 ---
 
@@ -51,9 +51,9 @@ cd pdiomede.com
 Switch between themes using the palette selector in the top-left corner of any page.
 
 - **Elegant Frame** (`index.html`) - Default design with clean borders and subtle gradients
+- **Cyberpunk Neon** (`index-cyberpunk.html`) - Futuristic neon aesthetic with Orbitron/Share Tech Mono fonts, neon pink and cyan glow effects, scanlines, and glitch animations (dark mode only)
 - **Material Design** (`index-material.html`) - Google's Material Design with elevation shadows, ripple effects, flat chips, solid-color typography, and Roboto font hierarchy (300/400/500 weights)
 - **Pop Art** (`index-popart.html`) - Bold comic-book aesthetic with Bangers/Comic Neue fonts, thick borders, hard drop shadows, Ben-Day dots pattern, and primary color palette
-- **Cyberpunk Neon** (`index-cyberpunk.html`) - Futuristic neon aesthetic with Orbitron/Share Tech Mono fonts, neon pink and cyan glow effects, scanlines, and glitch animations (dark mode only)
 - **Terminal** (`index-terminal.html`) - Hacker terminal aesthetic with Source Code Pro/Fira Code monospace fonts, classic green-on-black palette, CRT scanline effects, and blinking cursor animations (dark mode only)
 
 All five variants are fully responsive and share identical content. Cyberpunk Neon and Terminal are dark-only themes; the others support light and dark mode.
@@ -65,9 +65,9 @@ All five variants are fully responsive and share identical content. Cyberpunk Ne
 ```
 pdiomede.com/
 ├── index.html              # Main HTML (Elegant Frame theme)
+├── index-cyberpunk.html    # Cyberpunk Neon variant (dark only)
 ├── index-material.html     # Material Design variant
 ├── index-popart.html       # Pop Art variant
-├── index-cyberpunk.html    # Cyberpunk Neon variant (dark only)
 ├── index-terminal.html     # Terminal/Hacker variant (dark only)
 ├── README.md               # This file
 ├── CHANGELOG.md            # Version history
