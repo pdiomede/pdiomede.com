@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(wc -l /Users/pdiomede/Documents/WORK/_coding/www/pdiomede/index*.html)",
+      "Bash(grep -n \"preload\" index*.html)",
+      "Bash(grep -n \"fetchpriority\" index*.html)",
+      "Bash(grep -n \"width=\"\".*\"\" height=\" index*.html)",
+      "Bash(grep -n \"aria-label\" index*.html)",
+      "Bash(grep -n \"</style>\" index*.html)",
+      "Bash(grep -n \"theme-color\" index*.html)",
+      "Bash(grep -n \"dateModified\" index*.html)",
+      "Bash(grep -n \"toggleDarkMode\\\\|theme-toggle\" index*.html)",
+      "Bash(grep -n \"Version:\" index*.html)",
+      "Bash(grep -n \"profile-img\" index*.html)",
+      "Bash(grep -n \"Elegant Frame\\\\|Material Design\\\\|Pop Art\" index*.html)",
+      "Bash(grep -n \"role-grid\" index*.html)",
+      "Bash(grep -n \"roles-grid\" index*.html)",
+      "Bash(grep -n \"\\\\.profile-img\\\\|.profile-img {\" index*.html)",
+      "Bash(grep -n \"Cannot read property\\\\|null check\\\\|typeof\" index*.html)",
+      "Bash(grep -n \"function initDesignSelector\" index*.html)",
+      "Bash(grep -n \"Account Mgmt\\\\|Account Management\" index*.html)",
+      "Bash(grep -n \"\\\\.role-button\\\\|role-button\" index*.html)",
+      "Bash(grep \"class=\"\"role-button\"\"\\\\|class=\"\"pop-button\"\"\" index*.html)",
+      "Bash(grep -n \"\\\\.elegant-frame\\\\|\\\\.material\\\\|\\\\.pop-art\" index*.html)",
+      "Bash(grep -n \"<main id=\"\"main-content\"\"\" index*.html)",
+      "Bash(grep -n \"doctype\\\\|DOCTYPE\" index*.html)",
+      "Bash(grep -n \"lang=\"\"en\"\"\" index*.html)",
+      "Bash(grep -n \"charset\" index*.html)",
+      "Bash(grep -n \"</html>\" index*.html)"
+    ]
+  }
+}
