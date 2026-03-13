@@ -28,7 +28,7 @@ Personal portfolio highlighting work in:
 - 🔒 **Security** - Content Security Policy, SRI, secure headers
 - 🌗 **Dark Mode** - System preference detection with manual toggle
 - 📱 **Responsive** - Mobile-first design, works on all devices
-- 🎨 **Design Variants** - Seven distinct themes: Elegant Frame, Material Design, Pop Art, Renaissance, Gothic Cathedral, Cyberpunk Neon, and Manga
+- 🎨 **Design Variants** - Five distinct themes: Elegant Frame, Material Design, Pop Art, Cyberpunk Neon, and Terminal
 
 ---
 
@@ -53,12 +53,10 @@ Switch between themes using the palette selector in the top-left corner of any p
 - **Elegant Frame** (`index.html`) - Default design with clean borders and subtle gradients
 - **Material Design** (`index-material.html`) - Google's Material Design with elevation shadows, ripple effects, flat chips, solid-color typography, and Roboto font hierarchy (300/400/500 weights)
 - **Pop Art** (`index-popart.html`) - Bold comic-book aesthetic with Bangers/Comic Neue fonts, thick borders, hard drop shadows, Ben-Day dots pattern, and primary color palette
-- **Renaissance** (`index-renaissance.html`) - Classical art inspired with Playfair Display/Cormorant Garamond fonts, gold and cream palette, ornate borders, and parchment textures
-- **Gothic Cathedral** (`index-gothic.html`) - Medieval cathedral aesthetic with Cinzel/EB Garamond fonts, deep purple and crimson palette, pointed arch shapes, and stone textures
-- **Cyberpunk Neon** (`index-cyberpunk.html`) - Futuristic neon aesthetic with Orbitron/Share Tech Mono fonts, neon pink and cyan glow effects, scanlines, and glitch animations
-- **Manga** (`index-manga.html`) - Japanese manga/anime inspired with Noto Sans JP/Kosugi Maru fonts, bold black borders, speed lines, screentone patterns, and red accents
+- **Cyberpunk Neon** (`index-cyberpunk.html`) - Futuristic neon aesthetic with Orbitron/Share Tech Mono fonts, neon pink and cyan glow effects, scanlines, and glitch animations (dark mode only)
+- **Terminal** (`index-terminal.html`) - Hacker terminal aesthetic with Source Code Pro/Fira Code monospace fonts, classic green-on-black palette, CRT scanline effects, and blinking cursor animations (dark mode only)
 
-All seven variants support dark mode, are fully responsive, and share identical content.
+All five variants are fully responsive and share identical content. Cyberpunk Neon and Terminal are dark-only themes; the others support light and dark mode.
 
 ---
 
@@ -69,10 +67,8 @@ pdiomede.com/
 ├── index.html              # Main HTML (Elegant Frame theme)
 ├── index-material.html     # Material Design variant
 ├── index-popart.html       # Pop Art variant
-├── index-renaissance.html  # Renaissance variant
-├── index-gothic.html       # Gothic Cathedral variant
-├── index-cyberpunk.html    # Cyberpunk Neon variant
-├── index-manga.html        # Manga variant
+├── index-cyberpunk.html    # Cyberpunk Neon variant (dark only)
+├── index-terminal.html     # Terminal/Hacker variant (dark only)
 ├── README.md               # This file
 ├── CHANGELOG.md            # Version history
 ├── LICENSE.md              # MIT License
@@ -137,7 +133,7 @@ All critical HTTP security headers are properly configured via meta tags in HTML
 - HTML5 (semantic markup, ARIA)
 - CSS3 (Grid, Flexbox, Custom Properties)
 - Vanilla JavaScript (minimal, theme toggle only)
-- Google Fonts (Geist, Inter, Bangers, Comic Neue, Playfair Display, Cormorant Garamond, Cinzel, EB Garamond, Orbitron, Share Tech Mono, Noto Sans JP, Kosugi Maru)
+- Google Fonts (Geist, Inter, Bangers, Comic Neue, Orbitron, Share Tech Mono, Source Code Pro, Fira Code)
 - Font Awesome 6.4.0 (with SRI)
 
 ---

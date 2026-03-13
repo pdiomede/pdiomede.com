@@ -186,33 +186,6 @@
     /* Cyberpunk Neon Theme */
 
     :root {
-      --bg-color: #1a1a2e;
-      --text-color: #ffffff;
-      --text-secondary: #b0b0cc;
-      --text-muted: #7a7a99;
-      --surface-color: #12121f;
-      --border-color: #2a2a44;
-      --border-hover: #ff2d95;
-      --link-color: #00f0ff;
-      --link-hover: #ff2d95;
-      --shadow: rgba(0, 240, 255, 0.1);
-      --shadow-hover: rgba(255, 45, 149, 0.2);
-      --button-bg: transparent;
-      --button-hover: #ff2d95;
-      --button-text: #00f0ff;
-      --highlight-bg: linear-gradient(90deg, #ff2d95, #00f0ff);
-      --frame-border: #2a2a44;
-      --frame-shadow: rgba(255, 45, 149, 0.15);
-      --purple-accent: #b026ff;
-      --blue-accent: #0066ff;
-      --cyan-accent: #00f0ff;
-      --green-accent: #00ff88;
-      --neon-pink: #ff2d95;
-      --neon-cyan: #00f0ff;
-      --neon-purple: #b026ff;
-    }
-
-    [data-theme="dark"] {
       --bg-color: #0a0a14;
       --text-color: #e0e0ff;
       --text-secondary: #9999bb;
@@ -661,7 +634,7 @@
       text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
     }
 
-    [data-theme="dark"] .tagline {
+    .tagline {
       color: var(--neon-cyan);
     }
 
@@ -779,7 +752,7 @@
       box-shadow: 0 0 6px rgba(255, 107, 53, 0.2);
     }
 
-    [data-theme="dark"] .badge-advisor {
+    .badge-advisor {
       color: #ff8c5a;
       border-color: #ff8c5a;
     }
@@ -1299,30 +1272,19 @@
     .role-card.has-brand .brand-logo.dark { display: none; }
     .role-card.has-brand .role-header { display: flex; align-items: center; gap: 12px; }
 
-    /* Theme-based logo switching */
-    :root[data-theme="light"] .role-card.has-brand .brand-logo.dark { display: none; }
-    :root[data-theme="light"] .role-card.has-brand .brand-logo.light { display: block; }
+    /* Dark-only: always show dark brand logos */
+    .role-card.has-brand .brand-logo.light { display: none; }
+    .role-card.has-brand .brand-logo.dark { display: block; }
 
-    :root[data-theme="dark"] .role-card.has-brand .brand-logo.light { display: none; }
-    :root[data-theme="dark"] .role-card.has-brand .brand-logo.dark { display: block; }
-
-    /* Project card brand header and dark-mode switching */
+    /* Project card brand header */
     .project-card.has-brand .brand-logo { width: 48px; height: 48px; margin-right: 8px; vertical-align: middle; }
-    .project-card.has-brand .brand-logo.dark { display: none; }
+    .project-card.has-brand .brand-logo.light { display: none; }
+    .project-card.has-brand .brand-logo.dark { display: block; }
     .project-card.has-brand .project-header { display: flex; align-items: center; gap: 12px; }
 
-    :root[data-theme="light"] .project-card.has-brand .brand-logo.dark { display: none; }
-    :root[data-theme="light"] .project-card.has-brand .brand-logo.light { display: block; }
-
-    :root[data-theme="dark"] .project-card.has-brand .brand-logo.light { display: none; }
-    :root[data-theme="dark"] .project-card.has-brand .brand-logo.dark { display: block; }
-
-    /* The Graph extended logo - light/dark mode switching */
-    :root[data-theme="light"] .graph-extended-logo.light { display: block; }
-    :root[data-theme="light"] .graph-extended-logo.dark { display: none; }
-
-    :root[data-theme="dark"] .graph-extended-logo.light { display: none; }
-    :root[data-theme="dark"] .graph-extended-logo.dark { display: block; }
+    /* The Graph extended logo - always dark */
+    .graph-extended-logo.light { display: none; }
+    .graph-extended-logo.dark { display: block; }
 
     /* Farcaster button icon spacing */
     a[aria-label="Farcaster"] svg { margin-right: 6px; vertical-align: -2px; }
@@ -1512,45 +1474,7 @@
   </script>
 
   <script>
-    // Dark mode functionality
-    let expandTimeout = null;
-    function toggleTheme() {
-      const html = document.documentElement;
-      const themeIcon = document.getElementById('theme-icon');
-      const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      const currentTheme = html.getAttribute('data-theme');
-
-      if (themeToggleBtn) {
-        if (expandTimeout) {
-          clearTimeout(expandTimeout);
-        }
-        themeToggleBtn.classList.add('expanded');
-        expandTimeout = setTimeout(() => {
-          themeToggleBtn.classList.remove('expanded');
-          expandTimeout = null;
-        }, 2000);
-      }
-
-      if (currentTheme === 'dark') {
-        html.setAttribute('data-theme', 'light');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-sun';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'false');
-        }
-        localStorage.setItem('theme', 'light');
-      } else {
-        html.setAttribute('data-theme', 'dark');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-moon';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'true');
-        }
-        localStorage.setItem('theme', 'dark');
-      }
-    }
+    // Cyberpunk Neon is dark-only — no theme toggle needed
 
     // Design selector functionality
     let designSelectorInitialized = false;
@@ -1576,10 +1500,8 @@
         'index.html': 'Elegant Frame',
         'index-material.html': 'Material Design',
         'index-popart.html': 'Pop Art',
-        'index-renaissance.html': 'Renaissance',
-        'index-gothic.html': 'Gothic Cathedral',
         'index-cyberpunk.html': 'Cyberpunk Neon',
-        'index-manga.html': 'Manga'
+        'index-terminal.html': 'Terminal'
       };
 
       if (currentThemeSpan) {
@@ -1671,35 +1593,9 @@
       document.body.classList.add('loaded');
     }
 
-    // Initialize theme on page load - DEFAULT TO DARK MODE
+    // Initialize on page load - always dark mode
     document.addEventListener('DOMContentLoaded', function() {
-      const savedTheme = localStorage.getItem('theme');
-      const themeIcon = document.getElementById('theme-icon');
-      const themeToggleBtn = document.getElementById('theme-toggle-btn');
-
-      if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', toggleTheme);
-      }
-
       initDesignSelector();
-
-      if (savedTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-sun';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'false');
-        }
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-moon';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'true');
-        }
-      }
     });
   </script>
 </head>
@@ -1727,29 +1623,18 @@
         <i></i>
         <span>Pop Art</span>
       </div>
-      <div class="design-selector-option" data-theme="index-renaissance.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Renaissance</span>
-      </div>
-      <div class="design-selector-option" data-theme="index-gothic.html" role="menuitem" tabindex="0">
-        <i></i>
-        <span>Gothic Cathedral</span>
-      </div>
       <div class="design-selector-option active" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0">
         <i class="fas fa-check"></i>
         <span>Cyberpunk Neon</span>
       </div>
-      <div class="design-selector-option" data-theme="index-manga.html" role="menuitem" tabindex="0">
+      <div class="design-selector-option" data-theme="index-terminal.html" role="menuitem" tabindex="0">
         <i></i>
-        <span>Manga</span>
+        <span>Terminal</span>
       </div>
     </div>
   </div>
 
-  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true">
-    <i class="fas fa-moon" id="theme-icon"></i>
-    <span class="toggle-label">Dark/Light Mode</span>
-  </button>
+  <!-- Cyberpunk Neon: dark-only theme, no light/dark toggle -->
 
   <main id="main-content" class="elegant-frame">
     <!-- Corner decorations -->

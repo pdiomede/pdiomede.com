@@ -17,7 +17,7 @@
     Version:      v2.5.1
     Description:  Personal portfolio website showcasing web3 ecosystem building,
                   governance expertise, and community leadership
-    Theme:        Manga / Anime
+    Theme:        Terminal
 
     For complete documentation, version history, and technical details,
     see CHANGELOG.md in the project root directory.
@@ -30,7 +30,7 @@
   <meta name="robots" content="index, follow" />
 
   <!-- Additional SEO Meta Tags -->
-  <meta name="theme-color" content="#e60012" />
+  <meta name="theme-color" content="#00ff00" />
   <meta name="format-detection" content="telephone=no" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <link rel="canonical" href="https://pdiomede.com/" />
@@ -183,56 +183,31 @@
   <meta name="twitter:site" content="@pdiomede" />
 
   <style>
-    /* Manga / Anime Theme
-       Fonts: Noto Sans JP for headings, Kosugi Maru for body
-       Inspired by manga panels, speed lines, screentone patterns, and speech bubbles */
+    /* ==========================================================================
+       Terminal / Hacker Theme
+       Dark-only theme inspired by classic green-phosphor CRT terminals.
+       All text is monospace. No light mode.
+       ========================================================================== */
 
     :root {
-      --bg-color: #ffffff;
-      --text-color: #000000;
-      --text-secondary: #555555;
-      --text-muted: #777777;
-      --surface-color: #ffffff;
-      --border-color: #333333;
-      --border-hover: #000000;
-      --link-color: #e60012;
-      --link-hover: #cc0010;
-      --shadow: rgba(0, 0, 0, 0.15);
-      --shadow-hover: rgba(0, 0, 0, 0.25);
-      --button-bg: #000000;
-      --button-hover: #e60012;
-      --button-text: #ffffff;
-      --highlight-bg: #e60012;
-      --frame-border: #000000;
-      --frame-shadow: rgba(0, 0, 0, 1);
-      --accent: #e60012;
-      --surface-alt: #f5f5f5;
-      --card-shadow: 3px 3px 0px #000000;
-      --card-shadow-hover: 5px 5px 0px #000000;
-    }
-
-    [data-theme="dark"] {
-      --bg-color: #0d0d0d;
-      --text-color: #f0f0f0;
-      --text-secondary: #b0b0b0;
-      --text-muted: #888888;
-      --surface-color: #1a1a1a;
-      --border-color: #444444;
-      --border-hover: #ff1a1a;
-      --link-color: #ff1a1a;
-      --link-hover: #ff4d4d;
-      --shadow: rgba(0, 0, 0, 0.4);
-      --shadow-hover: rgba(0, 0, 0, 0.6);
-      --button-bg: #f0f0f0;
-      --button-hover: #ff1a1a;
-      --button-text: #0d0d0d;
-      --highlight-bg: #ff1a1a;
-      --frame-border: #444444;
-      --frame-shadow: rgba(0, 0, 0, 0.8);
-      --accent: #ff1a1a;
-      --surface-alt: #1a1a1a;
-      --card-shadow: 3px 3px 0px rgba(255, 26, 26, 0.3);
-      --card-shadow-hover: 5px 5px 0px rgba(255, 26, 26, 0.5);
+      --bg-color: #0a0a0a;
+      --text-color: #00ff00;
+      --text-secondary: #00cc00;
+      --text-muted: #008800;
+      --surface-color: #111111;
+      --border-color: rgba(0, 255, 0, 0.25);
+      --border-hover: rgba(0, 255, 0, 0.5);
+      --link-color: #00ff00;
+      --link-hover: #33ff33;
+      --shadow: rgba(0, 255, 0, 0.08);
+      --shadow-hover: rgba(0, 255, 0, 0.15);
+      --button-bg: transparent;
+      --button-hover: #00ff00;
+      --button-text: #00ff00;
+      --highlight-color: #00ff00;
+      --amber: #ffb000;
+      --glow: 0 0 8px rgba(0, 255, 0, 0.4);
+      --glow-strong: 0 0 16px rgba(0, 255, 0, 0.6);
     }
 
     * {
@@ -243,34 +218,36 @@
 
     /* Critical CSS for FCP */
     body {
-      font-family: 'Kosugi Maru', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: 'Source Code Pro', 'Fira Code', 'Courier New', monospace;
       background-color: var(--bg-color);
       color: var(--text-color);
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
       padding: 60px 20px;
-      /* Diagonal hatching pattern */
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(0, 0, 0, 0.02) 10px,
-        rgba(0, 0, 0, 0.02) 11px
-      );
-    }
-
-    [data-theme="dark"] body {
-      background-image: repeating-linear-gradient(
-        45deg,
-        transparent,
-        transparent 10px,
-        rgba(255, 255, 255, 0.015) 10px,
-        rgba(255, 255, 255, 0.015) 11px
-      );
+      text-shadow: 0 0 4px rgba(0, 255, 0, 0.3);
     }
 
     body.loaded {
-      transition: background-color 0.15s ease, color 0.15s ease;
+      transition: background-color 0.1s ease, color 0.1s ease;
+    }
+
+    /* Scanline overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.08) 2px,
+        rgba(0, 0, 0, 0.08) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
     }
 
     /* Skip to main content link for accessibility */
@@ -280,20 +257,19 @@
       top: 20px;
       z-index: 9999;
       padding: 12px 20px;
-      background: var(--button-bg);
-      color: var(--button-text);
+      background: var(--surface-color);
+      color: var(--text-color);
       text-decoration: none;
-      border-radius: 0;
-      font-weight: 700;
-      border: 3px solid var(--frame-border);
-      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+      font-weight: 600;
+      font-family: 'Source Code Pro', monospace;
     }
 
     .skip-to-main:focus {
       left: 20px;
     }
 
-    /* Design Selector - Manga style */
+    /* ---- Design Selector ---- */
     .design-selector {
       position: fixed;
       top: 24px;
@@ -304,34 +280,34 @@
     .design-selector-button {
       background: var(--surface-color);
       color: var(--text-color);
-      border: 3px solid var(--frame-border);
+      border: 1px solid var(--border-color);
       border-radius: 0;
       width: 48px;
       height: 48px;
       padding: 0;
       font-size: 0.9rem;
-      font-weight: 700;
+      font-weight: 500;
       cursor: pointer;
-      transition: all 0.15s ease;
-      box-shadow: var(--card-shadow);
+      transition: all 0.1s ease;
+      box-shadow: var(--glow);
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
       position: relative;
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: 'Source Code Pro', monospace;
     }
 
     .design-selector-button .current-theme {
       opacity: 0;
       width: 0;
       white-space: nowrap;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease;
       margin-right: 0;
     }
 
     .design-selector-button i {
-      transition: transform 0.15s ease;
+      transition: transform 0.1s ease;
       font-size: 1.2rem;
     }
 
@@ -342,7 +318,7 @@
     .design-selector-button .fa-chevron-down {
       opacity: 0;
       width: 0;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease;
     }
 
     .design-selector.expanded .design-selector-button {
@@ -371,26 +347,26 @@
     }
 
     .design-selector-button:hover {
-      background-color: var(--accent);
-      color: white;
-      border-color: var(--frame-border);
-      box-shadow: var(--card-shadow-hover);
-      transform: translate(-2px, -2px);
+      background-color: var(--highlight-color);
+      color: #000;
+      border-color: var(--highlight-color);
+      box-shadow: var(--glow-strong);
+      text-shadow: none;
     }
 
     .design-selector-menu {
       position: absolute;
-      top: calc(100% + 8px);
+      top: calc(100% + 4px);
       left: 0;
       background: var(--surface-color);
-      border: 3px solid var(--frame-border);
+      border: 1px solid var(--border-color);
       border-radius: 0;
-      box-shadow: var(--card-shadow);
-      min-width: 220px;
+      box-shadow: var(--glow);
+      min-width: 200px;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(-10px);
-      transition: all 0.15s ease;
+      transform: translateY(-4px);
+      transition: all 0.1s ease;
       overflow: hidden;
     }
 
@@ -403,14 +379,14 @@
     .design-selector-option {
       padding: 12px 20px;
       cursor: pointer;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease;
       display: flex;
       align-items: center;
       gap: 10px;
       color: var(--text-color);
-      border-bottom: 2px solid var(--border-color);
-      font-family: 'Noto Sans JP', sans-serif;
-      font-weight: 500;
+      border-bottom: 1px solid var(--border-color);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.85rem;
     }
 
     .design-selector-option:last-child {
@@ -418,23 +394,21 @@
     }
 
     .design-selector-option:hover {
-      background: var(--accent);
-      color: white;
+      background: var(--highlight-color);
+      color: #000;
+      text-shadow: none;
     }
 
     .design-selector-option.active {
-      background: rgba(230, 0, 18, 0.1);
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    [data-theme="dark"] .design-selector-option.active {
-      background: rgba(255, 26, 26, 0.15);
+      background: rgba(0, 255, 0, 0.1);
+      color: var(--highlight-color);
+      font-weight: 600;
     }
 
     .design-selector-option.active:hover {
-      background: var(--accent);
-      color: white;
+      background: var(--highlight-color);
+      color: #000;
+      text-shadow: none;
     }
 
     .design-selector-option i {
@@ -442,101 +416,23 @@
       text-align: center;
     }
 
-    /* Theme toggle - Manga style */
-    .theme-toggle {
-      position: fixed;
-      top: 24px;
-      right: 24px;
-      background: var(--surface-color);
-      border: 3px solid var(--frame-border);
-      border-radius: 0;
-      width: 48px;
-      height: 48px;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.15s ease;
-      box-shadow: var(--card-shadow);
-      z-index: 1000;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--text-color);
-      overflow: hidden;
-      font-family: 'Noto Sans JP', sans-serif;
-    }
-
-    .theme-toggle .toggle-label {
-      opacity: 0;
-      width: 0;
-      white-space: nowrap;
-      transition: all 0.15s ease;
-      margin-left: 0;
-      font-size: 0.9rem;
-      font-weight: 700;
-    }
-
-    .theme-toggle i {
-      font-size: 1.2rem;
-      color: var(--text-color);
-      transition: all 0.15s ease;
-      position: absolute;
-    }
-
-    .theme-toggle.expanded {
-      border-radius: 0;
-      width: auto;
-      min-width: 160px;
-      padding: 10px 16px;
-      gap: 8px;
-    }
-
-    .theme-toggle.expanded .toggle-label {
-      opacity: 1;
-      width: auto;
-      margin-left: 8px;
-      position: relative;
-    }
-
-    .theme-toggle.expanded i {
-      position: relative;
-    }
-
-    .theme-toggle:hover {
-      background: var(--accent);
-      box-shadow: var(--card-shadow-hover);
-      transform: translate(-2px, -2px);
-      border-color: var(--frame-border);
-      color: white;
-    }
-
-    .theme-toggle:hover i {
-      color: white;
-      transform: rotate(15deg);
-    }
-
-    .theme-toggle.expanded:hover i {
-      transform: rotate(15deg);
-    }
-
-    /* Main frame - Manga panel style */
+    /* ---- Main Frame - CRT Effect ---- */
     .elegant-frame {
       max-width: 1200px;
       margin: 0 auto;
       background: var(--surface-color);
-      border: 5px solid var(--frame-border);
-      border-radius: 0;
-      box-shadow: 4px 4px 0px #000;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      box-shadow:
+        var(--glow),
+        inset 0 0 80px rgba(0, 255, 0, 0.02),
+        0 0 40px rgba(0, 255, 0, 0.05);
       position: relative;
       overflow: hidden;
       padding: 60px 50px;
     }
 
-    [data-theme="dark"] .elegant-frame {
-      box-shadow: 4px 4px 0px rgba(255, 26, 26, 0.3);
-    }
-
+    /* CRT curvature vignette */
     .elegant-frame::before {
       content: '';
       position: absolute;
@@ -544,59 +440,69 @@
       left: 0;
       right: 0;
       bottom: 0;
-      /* Screentone pattern overlay */
-      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-      background-size: 8px 8px;
+      background: radial-gradient(
+        ellipse at center,
+        transparent 60%,
+        rgba(0, 0, 0, 0.35) 100%
+      );
       pointer-events: none;
+      z-index: 2;
     }
 
-    [data-theme="dark"] .elegant-frame::before {
-      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    }
-
+    /* Top-left ASCII corner */
     .elegant-frame::after {
-      content: '';
+      content: '+--';
       position: absolute;
       top: 12px;
       left: 12px;
-      width: 30px;
-      height: 30px;
-      border-top: 3px solid var(--accent);
-      border-left: 3px solid var(--accent);
+      color: rgba(0, 255, 0, 0.2);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.75rem;
       pointer-events: none;
       z-index: 0;
     }
 
+    /* Corner decorations - ASCII style */
     .corner-decoration {
       position: absolute;
-      width: 30px;
-      height: 30px;
       pointer-events: none;
       z-index: 0;
+      color: rgba(0, 255, 0, 0.2);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.75rem;
+      width: auto;
+      height: auto;
+      border: none;
     }
 
     .corner-decoration.top-right {
       top: 12px;
       right: 12px;
-      border-top: 3px solid var(--accent);
-      border-right: 3px solid var(--accent);
+    }
+
+    .corner-decoration.top-right::before {
+      content: '--+';
     }
 
     .corner-decoration.bottom-left {
       bottom: 12px;
       left: 12px;
-      border-bottom: 3px solid var(--accent);
-      border-left: 3px solid var(--accent);
+    }
+
+    .corner-decoration.bottom-left::before {
+      content: '+--';
     }
 
     .corner-decoration.bottom-right {
       bottom: 12px;
       right: 12px;
-      border-bottom: 3px solid var(--accent);
-      border-right: 3px solid var(--accent);
     }
 
-    /* Header */
+    .corner-decoration.bottom-right::before {
+      content: '--+';
+    }
+
+    /* ---- Header ---- */
     .header {
       text-align: center;
       margin-bottom: 64px;
@@ -604,42 +510,63 @@
       z-index: 1;
     }
 
-    /* Profile image - manga-style double border frame */
     .profile-img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 32px;
-      border: 5px solid var(--frame-border);
-      box-shadow: 0 0 0 4px var(--surface-color), 0 0 0 7px var(--frame-border), 3px 3px 0px 7px rgba(0, 0, 0, 0.2);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      border: 2px solid var(--highlight-color);
+      box-shadow: var(--glow-strong);
+      transition: box-shadow 0.1s ease;
+      filter: saturate(0.7) brightness(0.9);
     }
 
     .profile-img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 0 4px var(--surface-color), 0 0 0 7px var(--accent), 5px 5px 0px 7px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0 24px rgba(0, 255, 0, 0.7);
+    }
+
+    /* Blinking cursor on h1 */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     h1 {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 900;
+      font-family: 'Source Code Pro', 'Fira Code', monospace;
+      font-size: 2.5rem;
+      font-weight: 700;
       color: var(--text-color);
       margin-bottom: 4px;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      text-shadow: var(--glow);
+      display: inline-block;
+    }
+
+    h1::after {
+      content: '|';
+      animation: blink 1s step-end infinite;
+      margin-left: 4px;
+      font-weight: 400;
+      color: var(--highlight-color);
     }
 
     .tagline {
-      font-size: 1.1rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 1.05rem;
       color: var(--text-secondary);
       font-weight: 400;
-      font-style: italic;
+      font-style: normal;
       margin-bottom: 8px;
+      text-shadow: 0 0 4px rgba(0, 204, 0, 0.3);
     }
 
-    /* Section styles */
+    .tagline::before {
+      content: '// ';
+      color: var(--text-muted);
+    }
+
+    /* ---- Section Styles ---- */
     .major-section {
       margin: 80px 0;
       position: relative;
@@ -649,69 +576,32 @@
     .section-header {
       text-align: center;
       margin-bottom: 32px;
-      position: relative;
     }
 
-    /* Section title with speed lines */
     .section-title {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 2.5rem;
-      font-weight: 900;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 2rem;
+      font-weight: 700;
       margin-bottom: 8px;
-      color: var(--text-color);
-      display: inline-block;
-      position: relative;
-      transform: rotate(-1deg);
-      -webkit-text-fill-color: var(--text-color);
+      color: var(--highlight-color);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-shadow: var(--glow);
     }
 
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: var(--accent);
-    }
-
-    /* Speed lines behind section headers */
-    .section-header::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 0;
-      right: 0;
-      height: 60px;
-      transform: translateY(-50%);
-      background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 4px,
-        rgba(0, 0, 0, 0.03) 4px,
-        rgba(0, 0, 0, 0.03) 5px
-      );
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    [data-theme="dark"] .section-header::before {
-      background: repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 4px,
-        rgba(255, 255, 255, 0.02) 4px,
-        rgba(255, 255, 255, 0.02) 5px
-      );
+    .section-title::before {
+      content: '> ';
+      color: var(--amber);
     }
 
     .section-subtitle {
-      font-size: 1.1rem;
-      color: var(--text-secondary);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.95rem;
+      color: var(--text-muted);
       font-weight: 400;
     }
 
-    /* Roles grid */
+    /* ---- Roles Grid ---- */
     .roles-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -722,41 +612,38 @@
       margin-right: auto;
     }
 
-    /* Cards - manga panel style with thick borders */
     .role-card {
-      background: var(--surface-color);
-      border: 3px solid var(--frame-border);
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
       border-radius: 0;
       padding: 24px;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease;
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      box-shadow: var(--card-shadow);
-      /* Screentone pattern on cards */
-      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
-      background-size: 6px 6px;
-    }
-
-    [data-theme="dark"] .role-card {
-      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .role-card:hover {
-      transform: translate(-2px, -2px) scale(1.02);
-      box-shadow: var(--card-shadow-hover);
-      border-color: var(--accent);
+      border-color: var(--highlight-color);
+      box-shadow: var(--glow);
     }
 
+    /* Terminal-style top bar on cards */
     .role-card::before {
-      content: '';
+      content: '[ ROLE ]';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: var(--accent);
+      padding: 4px 12px;
+      background: rgba(0, 255, 0, 0.08);
+      border-bottom: 1px solid var(--border-color);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     .role-header {
@@ -764,57 +651,45 @@
       align-items: center;
       justify-content: space-between;
       margin-bottom: 20px;
+      margin-top: 24px;
     }
 
-    /* Badges - bold manga style */
     .role-badge {
-      padding: 4px 10px;
+      padding: 3px 10px;
       border-radius: 0;
       font-size: 0.7rem;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      border: 2px solid var(--frame-border);
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: 'Source Code Pro', monospace;
+      border: 1px solid var(--border-color);
+      background: transparent;
+      color: var(--text-secondary);
     }
 
     .badge-governance {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--frame-border);
+      border-color: rgba(0, 255, 0, 0.4);
+      color: var(--highlight-color);
     }
 
     .badge-growth {
-      background: #000000;
-      color: #ffffff;
-      border-color: var(--frame-border);
-    }
-
-    [data-theme="dark"] .badge-growth {
-      background: #f0f0f0;
-      color: #0d0d0d;
+      border-color: rgba(0, 255, 0, 0.4);
+      color: var(--highlight-color);
     }
 
     .badge-leadership {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--frame-border);
+      border-color: rgba(0, 255, 0, 0.4);
+      color: var(--highlight-color);
     }
 
     .badge-advisor {
-      background: #000000;
-      color: #ffffff;
-      border-color: var(--frame-border);
-    }
-
-    [data-theme="dark"] .badge-advisor {
-      background: #f0f0f0;
-      color: #0d0d0d;
+      border-color: rgba(255, 176, 0, 0.5);
+      color: var(--amber);
     }
 
     .role-title {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 1.2rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 6px;
       color: var(--text-color);
@@ -822,48 +697,47 @@
     }
 
     .role-company {
+      font-family: 'Source Code Pro', monospace;
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 12px;
-      color: var(--accent);
-      font-family: 'Noto Sans JP', sans-serif;
+      color: var(--amber);
     }
 
     .role-description {
+      font-family: 'Source Code Pro', monospace;
       color: var(--text-secondary);
       line-height: 1.6;
       margin-bottom: 20px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       flex-grow: 1;
     }
 
-    /* Buttons - thick bordered manga style */
     .role-button {
       display: inline-flex;
       align-items: center;
       gap: 6px;
       padding: 10px 20px;
       background: transparent;
-      color: var(--text-color);
+      color: var(--highlight-color);
       text-decoration: none;
-      border: 3px solid var(--frame-border);
+      border: 1px solid var(--border-color);
       border-radius: 0;
-      font-weight: 700;
-      transition: all 0.15s ease;
-      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.1s ease;
+      font-size: 0.85rem;
       margin-top: auto;
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: 'Source Code Pro', monospace;
     }
 
     .role-button:hover {
-      background: var(--accent);
-      color: white;
-      border-color: var(--accent);
-      transform: translate(-1px, -1px);
-      box-shadow: 2px 2px 0px var(--frame-border);
+      background: var(--highlight-color);
+      color: #000;
+      border-color: var(--highlight-color);
+      text-shadow: none;
     }
 
-    /* Community Impact Section */
+    /* ---- Community Impact Section ---- */
     .community-section {
       text-align: center;
     }
@@ -876,23 +750,16 @@
     }
 
     .stat-card {
-      background: var(--surface-color);
-      border: 3px solid var(--frame-border);
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
       border-radius: 0;
       padding: 24px;
       text-align: center;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
       height: 100%;
-      box-shadow: var(--card-shadow);
-      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
-      background-size: 6px 6px;
-    }
-
-    [data-theme="dark"] .stat-card {
-      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .stat-card.with-button {
@@ -905,9 +772,8 @@
     }
 
     .stat-card:hover {
-      transform: translate(-2px, -2px) scale(1.02);
-      box-shadow: var(--card-shadow-hover);
-      border-color: var(--accent);
+      border-color: var(--highlight-color);
+      box-shadow: var(--glow);
     }
 
     .stat-card .role-button {
@@ -915,7 +781,7 @@
     }
 
     .stat-title {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: 'Source Code Pro', monospace;
       font-size: 1rem;
       font-weight: 700;
       color: var(--text-color);
@@ -924,29 +790,30 @@
     }
 
     .stat-description {
-      font-size: 0.8rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.78rem;
       color: var(--text-secondary);
       line-height: 1.5;
       margin-bottom: 16px;
     }
 
-    /* Stat numbers - large bold red */
     .stat-number {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 900;
-      color: var(--accent);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--highlight-color);
+      text-shadow: var(--glow-strong);
       margin-bottom: 6px;
-      -webkit-text-fill-color: var(--accent);
     }
 
     .stat-label {
+      font-family: 'Source Code Pro', monospace;
       font-size: 1rem;
       color: var(--text-secondary);
       font-weight: 700;
-      font-family: 'Noto Sans JP', sans-serif;
     }
 
+    /* ---- Community Projects ---- */
     .community-projects {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -955,28 +822,20 @@
     }
 
     .project-card {
-      background: var(--surface-color);
-      border: 3px solid var(--frame-border);
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
       border-radius: 0;
       padding: 32px;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease;
       text-align: left;
       display: flex;
       flex-direction: column;
       height: 100%;
-      box-shadow: var(--card-shadow);
-      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
-      background-size: 6px 6px;
-    }
-
-    [data-theme="dark"] .project-card {
-      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .project-card:hover {
-      transform: translate(-2px, -2px) scale(1.02);
-      box-shadow: var(--card-shadow-hover);
-      border-color: var(--accent);
+      border-color: var(--highlight-color);
+      box-shadow: var(--glow);
     }
 
     .project-card .role-button {
@@ -994,38 +853,40 @@
       width: 48px;
       height: 48px;
       border-radius: 0;
-      background: var(--accent);
-      color: white;
+      background: rgba(0, 255, 0, 0.1);
+      color: var(--highlight-color);
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 1.5rem;
-      border: 2px solid var(--frame-border);
+      border: 1px solid var(--border-color);
     }
 
     .project-status {
       padding: 6px 12px;
       border-radius: 0;
-      font-size: 0.8rem;
-      font-weight: 700;
-      background: rgba(0, 0, 0, 0.05);
-      color: var(--text-color);
-      border: 2px solid var(--frame-border);
-      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: rgba(0, 255, 0, 0.08);
+      color: var(--highlight-color);
+      border: 1px solid rgba(0, 255, 0, 0.3);
+      font-family: 'Source Code Pro', monospace;
     }
 
     .project-title {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 1.4rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 16px;
       color: var(--text-color);
     }
 
     .project-description {
+      font-family: 'Source Code Pro', monospace;
       color: var(--text-secondary);
       line-height: 1.6;
       margin-bottom: 24px;
+      font-size: 0.85rem;
     }
 
     .project-stats {
@@ -1041,58 +902,54 @@
     }
 
     .project-stat-number {
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: 'Source Code Pro', monospace;
       font-size: 1.5rem;
-      font-weight: 900;
-      color: var(--accent);
+      font-weight: 700;
+      color: var(--highlight-color);
+      text-shadow: var(--glow);
       margin-bottom: 4px;
     }
 
     .project-stat-label {
-      font-size: 0.9rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.85rem;
       color: var(--text-secondary);
     }
 
-    /* Ecosystem highlight - Speech bubble style */
+    /* ---- Innovation Lab / Ecosystem Highlight ---- */
     .ecosystem-highlight {
-      background: var(--surface-alt);
-      border: 3px solid var(--frame-border);
-      border-radius: 16px;
+      background: rgba(0, 255, 0, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 0;
       padding: 32px 24px;
       margin: 0 auto;
       max-width: 800px;
       position: relative;
-      overflow: visible;
-      box-shadow: var(--card-shadow);
-    }
-
-    /* Speech bubble triangle pointer */
-    .ecosystem-highlight::after {
-      content: '';
-      position: absolute;
-      bottom: -20px;
-      left: 60px;
-      width: 0;
-      height: 0;
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-top: 20px solid var(--frame-border);
+      overflow: hidden;
     }
 
     .ecosystem-highlight::before {
       content: '';
       position: absolute;
-      bottom: -15px;
-      left: 63px;
-      width: 0;
-      height: 0;
-      border-left: 12px solid transparent;
-      border-right: 12px solid transparent;
-      border-top: 17px solid var(--surface-alt);
-      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: none;
+      pointer-events: none;
     }
 
-    /* Innovation Lab tools */
+    .ecosystem-highlight::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: none;
+      pointer-events: none;
+    }
+
     .innovation-tools {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1100,26 +957,18 @@
     }
 
     .tool-card {
-      background: var(--surface-color);
-      border: 3px solid var(--frame-border);
+      background: var(--bg-color);
+      border: 1px solid var(--border-color);
       border-radius: 0;
       padding: 24px;
-      transition: all 0.15s ease;
+      transition: all 0.1s ease;
       display: flex;
       flex-direction: column;
-      box-shadow: var(--card-shadow);
-      background-image: radial-gradient(circle, rgba(0, 0, 0, 0.015) 1px, transparent 1px);
-      background-size: 6px 6px;
-    }
-
-    [data-theme="dark"] .tool-card {
-      background-image: radial-gradient(circle, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
     }
 
     .tool-card:hover {
-      transform: translate(-2px, -2px) scale(1.02);
-      box-shadow: var(--card-shadow-hover);
-      border-color: var(--accent);
+      border-color: var(--highlight-color);
+      box-shadow: var(--glow);
     }
 
     .tool-header {
@@ -1137,35 +986,33 @@
       align-items: center;
       justify-content: center;
       font-size: 1.2rem;
-      color: white;
-      border: 2px solid var(--frame-border);
+      color: var(--highlight-color);
+      background: rgba(0, 255, 0, 0.1);
+      border: 1px solid var(--border-color);
     }
 
     .tool-icon.analytics {
-      background: var(--accent);
+      background: rgba(0, 255, 0, 0.1);
     }
 
     .tool-icon.development {
-      background: #000000;
-    }
-
-    [data-theme="dark"] .tool-icon.development {
-      background: var(--accent);
+      background: rgba(0, 255, 0, 0.1);
     }
 
     .tool-badge {
       padding: 4px 10px;
       border-radius: 0;
       font-size: 0.7rem;
-      font-weight: 700;
-      border: 2px solid var(--frame-border);
-      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 600;
+      font-family: 'Source Code Pro', monospace;
+      border: 1px solid var(--border-color);
+      background: transparent;
+      color: var(--text-secondary);
     }
 
     .badge-featured {
-      background: var(--accent);
-      color: #ffffff;
-      border-color: var(--frame-border);
+      border-color: rgba(255, 176, 0, 0.5);
+      color: var(--amber);
     }
 
     @keyframes livePulse {
@@ -1174,20 +1021,14 @@
     }
 
     .badge-live-data {
-      background: #000000;
-      color: #ffffff;
-      border-color: var(--frame-border);
+      border-color: rgba(0, 255, 0, 0.5);
+      color: var(--highlight-color);
       animation: livePulse 2.5s ease-in-out infinite;
     }
 
-    [data-theme="dark"] .badge-live-data {
-      background: #f0f0f0;
-      color: #0d0d0d;
-    }
-
     .tool-title {
-      font-family: 'Noto Sans JP', sans-serif;
-      font-size: 1.2rem;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 12px;
       color: var(--text-color);
@@ -1195,11 +1036,12 @@
     }
 
     .tool-description {
+      font-family: 'Source Code Pro', monospace;
       color: var(--text-secondary);
       line-height: 1.6;
       margin-bottom: 20px;
       flex-grow: 1;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .tool-tags {
@@ -1211,15 +1053,15 @@
 
     .tool-tag {
       padding: 3px 10px;
-      background: var(--surface-alt);
-      border: 2px solid var(--border-color);
+      background: transparent;
+      border: 1px solid var(--border-color);
       border-radius: 0;
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-      font-weight: 500;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: 'Source Code Pro', monospace;
     }
 
-    /* Links section - thick-bordered manga-style pills */
+    /* ---- Links Section ---- */
     .links {
       display: flex;
       flex-wrap: wrap;
@@ -1238,33 +1080,33 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 24px;
-      background: var(--surface-color);
+      padding: 10px 20px;
+      background: transparent;
       color: var(--text-color);
       text-decoration: none;
       border-radius: 0;
-      font-weight: 700;
-      transition: all 0.15s ease;
-      box-shadow: var(--card-shadow);
-      border: 3px solid var(--frame-border);
-      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      transition: all 0.1s ease;
+      border: 1px solid var(--border-color);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.85rem;
     }
 
     .links a:hover {
-      background: var(--accent);
-      color: white;
-      transform: translate(-1px, -1px);
-      box-shadow: var(--card-shadow-hover);
-      border-color: var(--accent);
+      background: var(--highlight-color);
+      color: #000;
+      border-color: var(--highlight-color);
+      box-shadow: var(--glow);
+      text-shadow: none;
     }
 
     .links a:hover i,
     .links a:hover svg {
-      color: white;
-      fill: white;
+      color: #000;
+      fill: #000;
     }
 
-    /* GitHub repository link */
+    /* ---- GitHub Repository Link ---- */
     .github-repo-link {
       display: flex;
       justify-content: center;
@@ -1277,41 +1119,41 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 12px 24px;
-      background: var(--surface-color);
+      padding: 10px 20px;
+      background: transparent;
       color: var(--text-color);
       text-decoration: none;
       border-radius: 0;
-      font-weight: 700;
-      transition: all 0.15s ease;
-      box-shadow: var(--card-shadow);
-      border: 3px solid var(--frame-border);
-      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 500;
+      transition: all 0.1s ease;
+      border: 1px solid var(--border-color);
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.85rem;
     }
 
     .github-repo-link a:hover {
-      background: var(--accent);
-      color: white;
-      transform: translate(-1px, -1px);
-      box-shadow: var(--card-shadow-hover);
-      border-color: var(--accent);
+      background: var(--highlight-color);
+      color: #000;
+      border-color: var(--highlight-color);
+      box-shadow: var(--glow);
+      text-shadow: none;
     }
 
     .github-repo-link a:hover i {
-      color: white;
+      color: #000;
     }
 
-    /* Copyright */
+    /* ---- Copyright ---- */
     .copyright {
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       margin-top: 20px;
       margin-bottom: 16px;
-      font-family: 'Noto Sans JP', sans-serif;
+      font-family: 'Source Code Pro', monospace;
     }
 
-    /* Responsive - 768px */
+    /* ---- Responsive: 768px ---- */
     @media (max-width: 768px) {
       body {
         padding: 40px 15px;
@@ -1336,22 +1178,6 @@
         min-width: 180px;
       }
 
-      .theme-toggle {
-        top: 20px;
-        right: 20px;
-        width: 44px;
-        height: 44px;
-      }
-
-      .theme-toggle.expanded {
-        min-width: 140px;
-        padding: 8px 14px;
-      }
-
-      .theme-toggle .toggle-label {
-        display: none;
-      }
-
       .elegant-frame {
         padding: 40px 30px;
       }
@@ -1361,11 +1187,11 @@
       }
 
       .tagline {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
       }
 
       .section-title {
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
 
       .roles-grid {
@@ -1396,7 +1222,6 @@
         gap: 32px;
       }
 
-      /* Fix Ecosystem Communities callout for mobile */
       .ecosystem-highlight .community-stats {
         grid-template-columns: 1fr !important;
         gap: 24px;
@@ -1422,7 +1247,7 @@
       }
     }
 
-    /* Responsive - 480px */
+    /* ---- Responsive: 480px ---- */
     @media (max-width: 480px) {
       body {
         padding: 20px 10px;
@@ -1430,11 +1255,11 @@
 
       .elegant-frame {
         padding: 30px 20px;
-        border-width: 4px;
+        border-width: 1px;
       }
 
       h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
       }
 
       .profile-img {
@@ -1443,7 +1268,7 @@
       }
 
       .section-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
       }
 
       .role-card, .project-card, .tool-card {
@@ -1455,7 +1280,6 @@
         gap: 24px;
       }
 
-      /* Ensure Ecosystem Communities callout stacks on small mobile */
       .ecosystem-highlight .community-stats {
         grid-template-columns: 1fr !important;
         gap: 24px;
@@ -1467,7 +1291,7 @@
       }
 
       .stat-number {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .project-stats {
@@ -1480,7 +1304,7 @@
       }
     }
 
-    /* Animations */
+    /* ---- Animations ---- */
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -1493,11 +1317,11 @@
     }
 
     .elegant-frame {
-      animation: fadeInUp 0.5s ease-out;
+      animation: fadeInUp 0.4s ease-out;
     }
 
     .header, .major-section, .links {
-      animation: fadeInUp 0.4s ease-out;
+      animation: fadeInUp 0.3s ease-out;
     }
 
     .major-section:nth-child(3) { animation-delay: 0.05s; }
@@ -1505,46 +1329,35 @@
     .major-section:nth-child(5) { animation-delay: 0.15s; }
     .links { animation-delay: 0.2s; }
 
-    /* Brand logos in role cards */
+    /* ---- Brand Logos ---- */
     .role-card { position: relative; }
     .role-card.has-brand { padding-left: 24px; }
     .role-card.has-brand .brand-logo { position: static; width: 48px; height: 48px; margin-right: 8px; }
     .role-card.has-brand .brand-logo.dark { display: none; }
     .role-card.has-brand .role-header { display: flex; align-items: center; gap: 12px; }
 
-    /* Theme-based logo switching */
-    :root[data-theme="light"] .role-card.has-brand .brand-logo.dark { display: none; }
-    :root[data-theme="light"] .role-card.has-brand .brand-logo.light { display: block; }
+    /* Dark-only: always show dark brand logos */
+    .role-card.has-brand .brand-logo.light { display: none; }
+    .role-card.has-brand .brand-logo.dark { display: block; }
 
-    :root[data-theme="dark"] .role-card.has-brand .brand-logo.light { display: none; }
-    :root[data-theme="dark"] .role-card.has-brand .brand-logo.dark { display: block; }
-
-    /* Project card brand header and dark-mode switching */
+    /* Project card brand header */
     .project-card.has-brand .brand-logo { width: 48px; height: 48px; margin-right: 8px; vertical-align: middle; }
-    .project-card.has-brand .brand-logo.dark { display: none; }
+    .project-card.has-brand .brand-logo.light { display: none; }
+    .project-card.has-brand .brand-logo.dark { display: block; }
     .project-card.has-brand .project-header { display: flex; align-items: center; gap: 12px; }
 
-    :root[data-theme="light"] .project-card.has-brand .brand-logo.dark { display: none; }
-    :root[data-theme="light"] .project-card.has-brand .brand-logo.light { display: block; }
-
-    :root[data-theme="dark"] .project-card.has-brand .brand-logo.light { display: none; }
-    :root[data-theme="dark"] .project-card.has-brand .brand-logo.dark { display: block; }
-
-    /* The Graph extended logo - light/dark mode switching */
-    :root[data-theme="light"] .graph-extended-logo.light { display: block; }
-    :root[data-theme="light"] .graph-extended-logo.dark { display: none; }
-
-    :root[data-theme="dark"] .graph-extended-logo.light { display: none; }
-    :root[data-theme="dark"] .graph-extended-logo.dark { display: block; }
+    /* The Graph extended logo - always dark */
+    .graph-extended-logo.light { display: none; }
+    .graph-extended-logo.dark { display: block; }
 
     /* Farcaster button icon spacing */
     a[aria-label="Farcaster"] svg { margin-right: 6px; vertical-align: -2px; }
 
-</style>
+  </style>
 
   <!-- Load fonts asynchronously to prevent render blocking -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Kosugi+Maru&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Kosugi+Maru&display=swap" rel="stylesheet" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
 
   <!-- Load Font Awesome asynchronously to prevent render blocking -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -1552,53 +1365,14 @@
 
   <!-- Fallback script for browsers that don't support onload on link elements -->
   <script>
-    !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
+    !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
   </script>
 
   <script>
-    // Dark mode functionality
-    let expandTimeout = null;
-    function toggleTheme() {
-      const html = document.documentElement;
-      const themeIcon = document.getElementById('theme-icon');
-      const themeToggleBtn = document.getElementById('theme-toggle-btn');
-      const currentTheme = html.getAttribute('data-theme');
-
-      if (themeToggleBtn) {
-        if (expandTimeout) {
-          clearTimeout(expandTimeout);
-        }
-        themeToggleBtn.classList.add('expanded');
-        expandTimeout = setTimeout(() => {
-          themeToggleBtn.classList.remove('expanded');
-          expandTimeout = null;
-        }, 2000);
-      }
-
-      if (currentTheme === 'dark') {
-        html.setAttribute('data-theme', 'light');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-sun';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'false');
-        }
-        localStorage.setItem('theme', 'light');
-      } else {
-        html.setAttribute('data-theme', 'dark');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-moon';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'true');
-        }
-        localStorage.setItem('theme', 'dark');
-      }
-    }
-
     // Design selector functionality
     let designSelectorInitialized = false;
     function initDesignSelector() {
+      // Prevent multiple initializations
       if (designSelectorInitialized) {
         return;
       }
@@ -1606,6 +1380,7 @@
       const selector = document.getElementById('design-selector');
       const button = document.getElementById('design-selector-button');
 
+      // Early return if elements don't exist
       if (!selector || !button) {
         return;
       }
@@ -1615,19 +1390,19 @@
       const options = selector.querySelectorAll('.design-selector-option');
       const currentThemeSpan = button.querySelector('.current-theme');
 
+      // Get current page theme name
       const currentPage = window.location.pathname.split('/').pop() || 'index.html';
       const themeNames = {
         'index.html': 'Elegant Frame',
         'index-material.html': 'Material Design',
         'index-popart.html': 'Pop Art',
-        'index-renaissance.html': 'Renaissance',
-        'index-gothic.html': 'Gothic Cathedral',
         'index-cyberpunk.html': 'Cyberpunk Neon',
-        'index-manga.html': 'Manga'
+        'index-terminal.html': 'Terminal'
       };
 
+      // Update button text and active state
       if (currentThemeSpan) {
-        currentThemeSpan.textContent = themeNames[currentPage] || 'Manga';
+        currentThemeSpan.textContent = themeNames[currentPage] || 'Terminal';
       }
       if (options && options.length > 0) {
         options.forEach(option => {
@@ -1647,6 +1422,7 @@
         });
       }
 
+      // Toggle menu on button click
       button.addEventListener('click', function(e) {
         e.stopPropagation();
         if (selector) {
@@ -1655,8 +1431,10 @@
         }
       });
 
+      // Handle option clicks and keyboard events
       if (options && options.length > 0) {
         options.forEach(option => {
+        // Make option keyboard accessible
         if (!option.hasAttribute('tabindex')) {
           option.setAttribute('tabindex', '0');
         }
@@ -1688,6 +1466,7 @@
       });
       }
 
+      // Close menu when clicking outside
       document.addEventListener('click', function(e) {
         if (selector && button && !selector.contains(e.target)) {
           selector.classList.remove('expanded');
@@ -1695,6 +1474,7 @@
         }
       });
 
+      // Close menu on Escape key
       document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && selector && selector.classList.contains('expanded')) {
           selector.classList.remove('expanded');
@@ -1715,35 +1495,9 @@
       document.body.classList.add('loaded');
     }
 
-    // Initialize theme on page load - DEFAULT TO DARK MODE
+    // Initialize on page load - always dark mode
     document.addEventListener('DOMContentLoaded', function() {
-      const savedTheme = localStorage.getItem('theme');
-      const themeIcon = document.getElementById('theme-icon');
-      const themeToggleBtn = document.getElementById('theme-toggle-btn');
-
-      if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', toggleTheme);
-      }
-
       initDesignSelector();
-
-      if (savedTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'light');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-sun';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'false');
-        }
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        if (themeIcon) {
-          themeIcon.className = 'fas fa-moon';
-        }
-        if (themeToggleBtn) {
-          themeToggleBtn.setAttribute('aria-pressed', 'true');
-        }
-      }
     });
   </script>
 </head>
@@ -1755,24 +1509,27 @@
   <div class="design-selector" id="design-selector">
     <button class="design-selector-button" id="design-selector-button" aria-label="Select design theme" aria-expanded="false" aria-controls="design-selector-menu" aria-haspopup="true">
       <i class="fas fa-palette"></i>
-      <span class="current-theme">Manga</span>
+      <span class="current-theme">Terminal</span>
       <i class="fas fa-chevron-down"></i>
     </button>
     <div class="design-selector-menu" id="design-selector-menu" role="menu">
-      <div class="design-selector-option" data-theme="index.html" role="menuitem" tabindex="0"><i></i><span>Elegant Frame</span></div>
-      <div class="design-selector-option" data-theme="index-material.html" role="menuitem" tabindex="0"><i></i><span>Material Design</span></div>
-      <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0"><i></i><span>Pop Art</span></div>
-      <div class="design-selector-option" data-theme="index-renaissance.html" role="menuitem" tabindex="0"><i></i><span>Renaissance</span></div>
-      <div class="design-selector-option" data-theme="index-gothic.html" role="menuitem" tabindex="0"><i></i><span>Gothic Cathedral</span></div>
-      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0"><i></i><span>Cyberpunk Neon</span></div>
-      <div class="design-selector-option active" data-theme="index-manga.html" role="menuitem" tabindex="0"><i class="fas fa-check"></i><span>Manga</span></div>
+      <div class="design-selector-option" data-theme="index.html" role="menuitem" tabindex="0">
+        <i></i><span>Elegant Frame</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-material.html" role="menuitem" tabindex="0">
+        <i></i><span>Material Design</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-popart.html" role="menuitem" tabindex="0">
+        <i></i><span>Pop Art</span>
+      </div>
+      <div class="design-selector-option" data-theme="index-cyberpunk.html" role="menuitem" tabindex="0">
+        <i></i><span>Cyberpunk Neon</span>
+      </div>
+      <div class="design-selector-option active" data-theme="index-terminal.html" role="menuitem" tabindex="0">
+        <i class="fas fa-check"></i><span>Terminal</span>
+      </div>
     </div>
   </div>
-
-  <button type="button" class="theme-toggle" id="theme-toggle-btn" aria-label="Toggle dark/light mode" aria-pressed="true">
-    <i class="fas fa-moon" id="theme-icon"></i>
-    <span class="toggle-label">Dark/Light Mode</span>
-  </button>
 
   <main id="main-content" class="elegant-frame">
     <!-- Corner decorations -->
@@ -1811,6 +1568,12 @@
     </div>
 
     <header class="header">
+      <!-- Performance: Critical image optimizations:
+           - fetchpriority="high": Prioritize loading this above-the-fold image
+           - width/height: Explicit dimensions prevent layout shift (improves CLS)
+           - decoding="async": Non-blocking image decode for faster rendering
+           - Preloaded in <head> for fastest LCP -->
+      <!-- Performance: Critical above-the-fold image optimized with fetchpriority, explicit dimensions, and async decoding -->
       <img src="./images/me2024.jpg" alt="Paolo Diomede's Profile Picture" class="profile-img" fetchpriority="high" width="120" height="120" decoding="async" loading="eager" />
       <h1>Paolo Diomede</h1>
       <p class="tagline">Securing and growing web3 through technical excellence and ecosystem leadership</p>
@@ -1820,7 +1583,11 @@
     <section class="major-section" aria-label="Current Roles">
       <div class="roles-grid">
         <div class="role-card has-brand">
+          <!-- Performance: Below-the-fold images use loading="lazy" for deferred loading
+               and explicit width/height to prevent layout shift -->
           <div class="role-header">
+            <!-- Performance: Below-the-fold images optimized with lazy loading and async decoding -->
+            <!-- Note: Consider optimizing certora.jpg to WebP format for better compression (~43KB savings) -->
             <img class="brand-logo light" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/certora.jpg" alt="Certora logo" loading="lazy" width="48" height="48" decoding="async" />
 
@@ -1922,7 +1689,7 @@
 
         <div class="tool-card">
           <div class="tool-header">
-            <div class="tool-icon" style="background: var(--accent); color: white; border: 2px solid var(--frame-border);">
+            <div class="tool-icon" style="background: rgba(0, 255, 0, 0.1); color: var(--highlight-color);">
               <i class="fas fa-chart-line"></i>
             </div>
             <div class="tool-badge badge-featured">Industry Recognition</div>
@@ -1951,7 +1718,7 @@
             <img class="graph-extended-logo light" src="./images/TheGraph_Extended_Logo_light_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
             <img class="graph-extended-logo dark" src="./images/TheGraph_Extended_Logo_dark_mode.svg" alt="The Graph logo" width="200" height="48" style="height: 48px;" loading="lazy" decoding="async" />
           </div>
-          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color); font-family: 'Noto Sans JP', sans-serif; font-weight: 700;">Ecosystem Communities</h3>
+          <h3 style="font-size: 1.5rem; margin-bottom: 16px; color: var(--text-color);">Ecosystem Communities</h3>
 
           <div class="community-stats" style="display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center;">
             <div class="stat-card with-button">
@@ -1970,7 +1737,7 @@
             </div>
 
             <div class="stat-card with-button">
-              <div class="stat-icon" style="width: 48px; height: 48px; background: var(--accent); color: white; border-radius: 0; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto; border: 2px solid var(--frame-border);">
+              <div class="stat-icon" style="width: 48px; height: 48px; background: rgba(0, 255, 0, 0.1); color: var(--highlight-color); border-radius: 0; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin: 0 auto 16px auto; border: 1px solid var(--border-color);">
                 <i class="fas fa-users-cog"></i>
               </div>
               <div class="stat-title">Graph AdvocatesDAO</div>
@@ -1986,9 +1753,12 @@
       <div class="community-projects">
         <div class="project-card has-brand">
           <div class="project-header">
+            <!-- Performance: PNG images optimized with lazy loading and async decoding -->
+            <!-- Note: Consider converting PNG logos to WebP or optimizing PNG compression for better delivery -->
             <img class="brand-logo light" src="./images/The_Graph_Logomark_light_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
             <img class="brand-logo dark" src="./images/The_Graph_Logomark_dark_mode.png" alt="The Graph logo" loading="lazy" width="48" height="48" decoding="async" />
 
+            <!-- Commented out: project icon with blue background -->
             <div class="project-status" style="background: rgba(185, 28, 28, 0.1); color: #dc2626; border-color: rgba(185, 28, 28, 0.2);">Past Role</div>
           </div>
           <h3 class="project-title">Ecosystem Manager</h3>
@@ -2032,7 +1802,7 @@
 
         <div class="project-card">
           <div class="project-header">
-            <div class="project-icon" style="background: var(--accent);">
+            <div class="project-icon" style="background: rgba(0, 255, 0, 0.1); color: var(--highlight-color);">
               <i class="fas fa-users"></i>
             </div>
             <div class="project-status" style="background: rgba(185, 28, 28, 0.1); color: #dc2626; border-color: rgba(185, 28, 28, 0.2);">Not Active</div>
