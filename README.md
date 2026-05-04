@@ -16,19 +16,19 @@ Personal portfolio highlighting work in:
 - **Business Development** - Technical Account Manager at [Certora](https://www.certora.com)
 - **Ecosystem Building** - Advisory Board Member at [Livepeer](https://livepeer.org)
 - **Community Leadership** - Former Ecosystem Manager at [The Graph Foundation](https://thegraph.com) (2022-2025), Founder of [Graphtronauts](https://graphtronauts.app) and [Live Pioneers](https://livepioneers.app)
-- **Innovation** - Creator of [IndexerScore.com](https://indexerscore.com) and [GraphTools.pro](https://graphtools.pro)
+- **Innovation** - Creator of [IndexerScore.com](https://indexerscore.com), [GraphTools.pro](https://graphtools.pro), and [URLReporter.com](https://urlreporter.com)
 
 ---
 
 ## ✨ Features
 
-- ⚡ **Performance** - Optimized loading, lazy images, Core Web Vitals optimized
-- ♿ **Accessibility** - WCAG 2.1 AAA compliant, keyboard navigation, ARIA labels
-- 🔍 **SEO** - Complete meta tags, Schema.org structured data, Open Graph
-- 🔒 **Security** - Content Security Policy, SRI, secure headers
-- 🌗 **Dark Mode** - System preference detection with manual toggle
-- 📱 **Responsive** - Mobile-first design, works on all devices
-- 🎨 **Design Variants** - Five distinct themes: Elegant Frame, Cyberpunk Neon, Material Design, Pop Art, and Terminal
+- **Performance** - Optimized loading, lazy images, Core Web Vitals optimized
+- **Accessibility** - WCAG 2.1 AAA compliant, keyboard navigation, ARIA labels
+- **SEO** - Complete meta tags, Schema.org structured data, Open Graph
+- **Security** - Content Security Policy, SRI, secure headers
+- **Dark Mode** - System preference detection with manual toggle
+- **Responsive** - Mobile-first design, works on all devices
+- **Design Variants** - Five distinct themes: Elegant Frame, Cyberpunk Neon, Material Design, Pop Art, and Terminal
 
 ---
 
@@ -148,7 +148,7 @@ All critical HTTP security headers are properly configured via meta tags in HTML
 
 ## 📧 Contact
 
-- **Email**: pdiomede@yahoo.com
+- **Email**: me@pdiomede.com
 - **LinkedIn**: [linkedin.com/in/pdiomede](https://linkedin.com/in/pdiomede/)
 - **Twitter/X**: [@pdiomede](https://x.com/pdiomede)
 - **Farcaster**: [farcaster.xyz/pdiomede](https://farcaster.xyz/pdiomede)

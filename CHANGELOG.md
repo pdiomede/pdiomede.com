@@ -7,6 +7,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.5.2] - 2026-05-04
+
+### Added
+- **Innovation Lab: URL Reporter card**
+  - Added new "URL Reporter" card to the Innovation Lab section as the first card
+  - Links to [urlreporter.com](https://urlreporter.com), a passive security scanner that aggregates twelve public scanners (TLS, HTTP headers, DNSSEC, email auth, and more) into a single report
+  - Uses shield icon (`fa-shield-halved`) and a "New" badge
+  - Tags: Security, Scanner, Tools
+
+### Changed
+- **Innovation Lab layout: 3-column grid → constrained 2x2 grid**
+  - Changed `grid-template-columns` from `repeat(3, 1fr)` to `repeat(2, 1fr)` across all 5 theme variants
+  - Constrained `.innovation-tools` to `max-width: 800px` with `margin: 0 auto` so cards render closer to square instead of stretched landscape
+  - Applied to: index.html, index-material.html, index-cyberpunk.html, index-popart.html, index-terminal.html
+
+### Documentation
+- **README.md consistency pass**
+  - Added URLReporter.com to the "Innovation" bullet in the About section
+  - Updated contact email from `pdiomede@yahoo.com` to `me@pdiomede.com` to match the HTML files
+  - Removed leading emojis from the Features section bullet points
+
+---
+
 ## [2.5.1] - 2026-01-27
 
 ### Fixed
