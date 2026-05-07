@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.5.4] - 2026-05-07
+
+### Removed
+- **Browser-warned no-op meta tags**: removed `<meta http-equiv="X-Frame-Options">` and `<meta http-equiv="X-Content-Type-Options">` from all 5 themes, and removed `frame-ancestors 'none'` from the CSP meta tag. None of these are honored by browsers when delivered via `<meta>` (Chrome warns explicitly for X-Frame-Options and CSP frame-ancestors). All three protections continue to be enforced via real HTTP response headers served by Cloudflare.
+
+### Changed
+- Updated the head-section comment to reflect that HSTS, Permissions-Policy, X-Frame-Options, X-Content-Type-Options, and CSP `frame-ancestors` are all served via Cloudflare HTTP headers.
+
+---
+
 ## [2.5.3] - 2026-05-07
 
 ### Security
