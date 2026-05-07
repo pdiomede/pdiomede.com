@@ -8,6 +8,8 @@
 
 🔗 **Live Site**: [pdiomede.com](https://pdiomede.com)
 
+> 🔒 **Secured with [URLReporter.com](https://urlreporter.com)**: posture audited and hardened across TLS, HTTP security headers, CSP, DNSSEC, CAA, email authentication (SPF / DKIM / DMARC), and `/.well-known/security.txt` (RFC 9116). See the [Security](#-security) section below for details.
+
 ---
 
 ## 📋 About
@@ -69,6 +71,10 @@ pdiomede.com/
 ├── index-material.html     # Material Design variant
 ├── index-popart.html       # Pop Art variant
 ├── index-terminal.html     # Terminal/Hacker variant (dark only)
+├── js/
+│   └── main.js             # Shared theme toggle and design selector logic
+├── .well-known/
+│   └── security.txt        # Vulnerability reporting contact (RFC 9116)
 ├── README.md               # This file
 ├── CHANGELOG.md            # Version history
 ├── LICENSE.md              # MIT License
@@ -108,23 +114,27 @@ pdiomede.com/
 
 ![Security Headers Grade A](./images/security-headers-grade-a.png)
 
-**Security Headers Status:**
-- ✅ Content-Security-Policy (CSP)
-- ✅ Strict-Transport-Security (HSTS)
-- ✅ X-Frame-Options
-- ✅ X-Content-Type-Options
-- ✅ Referrer-Policy
-- ✅ Permissions-Policy
+**HTTP Response Headers** (served via Cloudflare):
+- ✅ Content-Security-Policy: `script-src 'self'` (no `unsafe-inline`), strict object/frame restrictions
+- ✅ Strict-Transport-Security: HSTS with `includeSubDomains; preload`
+- ✅ X-Frame-Options: `DENY`
+- ✅ X-Content-Type-Options: `nosniff`
+- ✅ Referrer-Policy: `strict-origin-when-cross-origin`
+- ✅ Permissions-Policy: camera, microphone, geolocation, payment, USB all disabled
 
-**CSP Security Features:**
-- Restricts script sources to `'self'` and trusted CDNs (cdnjs.cloudflare.com)
-- Restricts style sources to `'self'` and trusted sources (Google Fonts, cdnjs)
-- Blocks embedded objects, frames from external sources
-- Subresource Integrity (SRI) on external Font Awesome resources
+**DNS / Mail Security:**
+- ✅ DNSSEC enabled and validating
+- ✅ CAA records pin certificate issuance to Let's Encrypt (with `iodef` reporting)
+- ✅ DMARC: `p=quarantine` with aggregate reports to `me@pdiomede.com`
+- ✅ SPF: `-all` (hardfail) with Hostinger as the only authorized sender
+- ✅ DKIM enabled (Hostinger CNAMEs, DNS-only)
+
+**Other:**
+- ✅ Subresource Integrity (SRI) on Font Awesome CDN
+- ✅ Inline JavaScript extracted to `js/main.js` (eliminates the need for `'unsafe-inline'`)
+- ✅ Vulnerability reporting contact published at `/.well-known/security.txt` (RFC 9116)
 
 **Test Results:** [View full report](https://securityheaders.com/?q=https://pdiomede.com)
-
-All critical HTTP security headers are properly configured via meta tags in HTML files, ensuring protection against common web vulnerabilities including clickjacking, MIME-type sniffing, and XSS attacks.
 
 ---
 

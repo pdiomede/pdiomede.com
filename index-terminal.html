@@ -14,7 +14,7 @@
 
   <!--
     Author:       Paolo Diomede
-    Version:      v2.5.2
+    Version:      v2.5.3
     Description:  Personal portfolio website showcasing web3 ecosystem building,
                   governance expertise, and community leadership
     Theme:        Terminal
@@ -36,7 +36,7 @@
   <link rel="canonical" href="https://pdiomede.com/index-terminal.html" />
 
   <!-- Security Headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'" />
   <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
   <meta http-equiv="X-Content-Type-Options" content="nosniff" />
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
@@ -1111,42 +1111,6 @@
     }
 
     /* ---- GitHub Repository Link ---- */
-    .github-repo-link {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 12px;
-      margin-bottom: 20px;
-    }
-
-    .github-repo-link a {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 20px;
-      background: transparent;
-      color: var(--text-color);
-      text-decoration: none;
-      border-radius: 0;
-      font-weight: 500;
-      transition: all 0.1s ease;
-      border: 1px solid var(--border-color);
-      font-family: 'Source Code Pro', monospace;
-      font-size: 0.85rem;
-    }
-
-    .github-repo-link a:hover {
-      background: var(--highlight-color);
-      color: #000;
-      border-color: var(--highlight-color);
-      box-shadow: var(--glow);
-      text-shadow: none;
-    }
-
-    .github-repo-link a:hover i {
-      color: #000;
-    }
-
     /* ---- Copyright ---- */
     .copyright {
       text-align: center;
@@ -1359,151 +1323,11 @@
 
   </style>
 
-  <!-- Load fonts asynchronously to prevent render blocking -->
-  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Load Font Awesome asynchronously to prevent render blocking -->
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" rel="stylesheet" />
 
-  <!-- Fallback script for browsers that don't support onload on link elements -->
-  <script>
-    !function(e){"use strict";var t=function(t,n,o){var i,r=e.document,a=e.getComputedStyle,c=r.createElement("link"),l=r.getElementsByTagName("script")[0],s=r.styleSheets;return c.rel="stylesheet",c.href=t,c.media="only x",function(){if(n)try{n.call(r,c)}catch(e){if(!o)throw e}for(var t=c.href,i=s.length;i--;)if(s[i].href===t)return;r.getElementsByTagName("head")[0].appendChild(c)}()}(),c.media=n||"all",l.parentNode.insertBefore(c,l),c};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);
-  </script>
-
-  <script>
-    // Design selector functionality
-    let designSelectorInitialized = false;
-    function initDesignSelector() {
-      // Prevent multiple initializations
-      if (designSelectorInitialized) {
-        return;
-      }
-
-      const selector = document.getElementById('design-selector');
-      const button = document.getElementById('design-selector-button');
-
-      // Early return if elements don't exist
-      if (!selector || !button) {
-        return;
-      }
-
-      designSelectorInitialized = true;
-
-      const options = selector.querySelectorAll('.design-selector-option');
-      const currentThemeSpan = button.querySelector('.current-theme');
-
-      // Get current page theme name
-      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-      const themeNames = {
-        'index.html': 'Elegant Frame',
-        'index-material.html': 'Material Design',
-        'index-popart.html': 'Pop Art',
-        'index-cyberpunk.html': 'Cyberpunk Neon',
-        'index-terminal.html': 'Terminal'
-      };
-
-      // Update button text and active state
-      if (currentThemeSpan) {
-        currentThemeSpan.textContent = themeNames[currentPage] || 'Terminal';
-      }
-      if (options && options.length > 0) {
-        options.forEach(option => {
-          const themeFile = option.getAttribute('data-theme');
-          const icon = option.querySelector('i');
-          if (themeFile === currentPage) {
-            option.classList.add('active');
-            if (icon) {
-              icon.className = 'fas fa-check';
-            }
-          } else {
-            option.classList.remove('active');
-            if (icon) {
-              icon.className = '';
-            }
-          }
-        });
-      }
-
-      // Toggle menu on button click
-      button.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (selector) {
-          selector.classList.toggle('expanded');
-          button.setAttribute('aria-expanded', selector.classList.contains('expanded'));
-        }
-      });
-
-      // Handle option clicks and keyboard events
-      if (options && options.length > 0) {
-        options.forEach(option => {
-        // Make option keyboard accessible
-        if (!option.hasAttribute('tabindex')) {
-          option.setAttribute('tabindex', '0');
-        }
-
-        const handleOptionSelect = function() {
-          const themeFile = this.getAttribute('data-theme');
-          if (themeFile && themeFile !== currentPage) {
-            window.location.href = themeFile;
-          } else {
-            if (selector && button) {
-              selector.classList.remove('expanded');
-              button.setAttribute('aria-expanded', 'false');
-            }
-          }
-        };
-
-        option.addEventListener('click', function(e) {
-          e.stopPropagation();
-          handleOptionSelect.call(this);
-        });
-
-        option.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            e.stopPropagation();
-            handleOptionSelect.call(this);
-          }
-        });
-      });
-      }
-
-      // Close menu when clicking outside
-      document.addEventListener('click', function(e) {
-        if (selector && button && !selector.contains(e.target)) {
-          selector.classList.remove('expanded');
-          button.setAttribute('aria-expanded', 'false');
-        }
-      });
-
-      // Close menu on Escape key
-      document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && selector && selector.classList.contains('expanded')) {
-          selector.classList.remove('expanded');
-          if (button) {
-            button.setAttribute('aria-expanded', 'false');
-            button.focus();
-          }
-        }
-      });
-    }
-
-    // Optimize FCP
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', function() {
-        document.body.classList.add('loaded');
-      });
-    } else {
-      document.body.classList.add('loaded');
-    }
-
-    // Initialize on page load - always dark mode
-    document.addEventListener('DOMContentLoaded', function() {
-      initDesignSelector();
-    });
-  </script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <!-- Skip to main content for accessibility -->
@@ -1886,12 +1710,5 @@
     &copy; 2026 Paolo Diomede. All rights reserved.
   </div>
 
-  <!-- GitHub Repository Link -->
-  <div class="github-repo-link">
-    <a href="https://github.com/pdiomede/pdiomede.com" target="_blank" rel="noopener noreferrer" aria-label="View this repo on GitHub">
-      <i class="fab fa-github"></i>
-      View this repo on GitHub
-    </a>
-  </div>
 </body>
 </html>

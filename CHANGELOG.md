@@ -7,6 +7,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.5.3] - 2026-05-07
+
+### Security
+- **CSP hardening: removed `'unsafe-inline'` from `script-src`**
+  - Extracted ~200 lines of inline theme/selector JavaScript from each of the 5 HTML files into a single shared `js/main.js`
+  - Replaced the `<link rel="preload" as="style" onload="...">` lazy-load CSS pattern with plain `<link rel="stylesheet">` links, eliminating all `onload=` inline event handlers
+  - Removed the inline loadCSS polyfill (no longer needed without the preload trick)
+  - Updated CSP in all 5 themes: `script-src 'self'` (was `'self' 'unsafe-inline' https://cdnjs.cloudflare.com`)
+  - Mozilla Observatory CSP penalty (-20) eliminated
+- **Added `/.well-known/security.txt`** (RFC 9116) with `Contact`, `Expires` (2027-05-07), `Preferred-Languages`, and `Canonical` fields
+- **HTTP security headers** now served via Cloudflare Transform Rule (Strict-Transport-Security, X-Content-Type-Options, X-Frame-Options, Referrer-Policy, Permissions-Policy, and Content-Security-Policy as a real response header in addition to the meta tag)
+- **DNS hardening**:
+  - CAA records added (Let's Encrypt issue/issuewild + iodef contact)
+  - DMARC moved from `p=none` to `p=quarantine`
+  - SPF tightened from `~all` (softfail) to `-all` (hardfail)
+  - DKIM CNAMEs switched to DNS-only (Cloudflare proxy was breaking the CNAME-to-TXT chain)
+
+### Removed
+- **"View this repo on GitHub" footer button**: removed from all 5 themes along with its `.github-repo-link` CSS rules
+
+### Changed
+- **Removed CSS lazy-load preload trick**: small loss of first-paint optimization in exchange for a meaningfully simpler CSP and one less inline-script vector
+
+### Documentation
+- **README.md**: added "Secured by URLReporter.com" note at the top, refreshed the Security section to reflect the new CSP and Cloudflare-served headers
+
+---
+
 ## [2.5.2] - 2026-05-04
 
 ### Added

@@ -1,0 +1,7 @@
+# Security contact for pdiomede.com
+# If you have discovered a security issue, please report it to the address below.
+
+Contact: mailto:me@pdiomede.com
+Expires: 2027-05-07T00:00:00.000Z
+Preferred-Languages: en, it
+Canonical: https://pdiomede.com/.well-known/security.txt
