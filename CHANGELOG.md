@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.5.5] - 2026-05-09
+
+### Changed
+- **URL Reporter "NEW" badge**: introduced a dedicated `.badge-new` class across all 5 themes (replacing the reused `.badge-featured`) and matched its pulse cadence to the `.badge-live-data` badge (2.5s in Elegant Frame, Material, Cyberpunk, and Terminal; 2s in Pop Art) so the two animated badges in the Innovation Lab section stay visually in sync.
+
+### Added
+- Local `runGit.sh` helper added to `.gitignore`.
+
+---
+
 ## [2.5.4] - 2026-05-07
 
 ### Removed
