@@ -1187,6 +1187,19 @@
       animation: livePulse 2.5s ease-in-out infinite;
     }
 
+    .badge-new {
+      background: rgba(59, 130, 246, 0.12);
+      color: #2563eb;
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      animation: livePulse 1.2s ease-in-out infinite;
+    }
+
+    [data-theme="dark"] .badge-new {
+      background: rgba(96, 165, 250, 0.15);
+      color: #60a5fa;
+      border-color: rgba(96, 165, 250, 0.4);
+    }
+
     .tool-title {
       font-size: 1.2rem;
       font-weight: 700;
@@ -1693,7 +1706,7 @@
             <div class="tool-icon development">
               <i class="fas fa-shield-halved"></i>
             </div>
-            <div class="tool-badge badge-featured">New</div>
+            <div class="tool-badge badge-new">NEW</div>
           </div>
           <h3 class="tool-title">URL Reporter</h3>
           <p class="tool-description">

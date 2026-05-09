@@ -1,3 +1,6 @@
+# Local scripts
+runGit.sh
+
 # macOS
 .DS_Store
 .AppleDouble
